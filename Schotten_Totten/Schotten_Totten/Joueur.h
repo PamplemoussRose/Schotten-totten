@@ -11,6 +11,7 @@ private:
 public:
 	int getNbreCartes() { return nbreCartes; };
 	int getnbreCartesTactiquesJoués() { return nbreCartesTactiquesJoués; };
+	void ajoutCarte(Carte carte);
 	vector<unique_ptr<Carte>> getMainJoueur() { return mainJoueur; };
 };
 #endif

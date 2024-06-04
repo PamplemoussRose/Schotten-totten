@@ -7,7 +7,5 @@ private:
 	vector<CarteClan> cartesClan;
 public:
 	vector<CarteClan> getCartesClan() { return cartesClan; }
-	void retirerCarteClan();
-	void ajoutFinPioche(CarteClan carte);
 };
 #endif
