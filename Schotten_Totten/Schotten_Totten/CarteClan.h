@@ -10,7 +10,8 @@ private:
 public:
 	string getCouleur(){ return couleur; };
 	int getValeur(){ return valeur; };
-
+	void setCouleur(string nouvCoul) { couleur = nouvCoul; };
+	void setValeur(int nouvVal) { valeur = nouvVal; };
 
 };
 #endif

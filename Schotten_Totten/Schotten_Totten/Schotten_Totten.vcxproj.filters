@@ -55,7 +55,7 @@
       <Filter>Fichiers sources\Controleur</Filter>
     </ClCompile>
     <ClCompile Include="Joueur.cpp">
-      <Filter>Fichiers d%27en-tête\Modele</Filter>
+      <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -80,9 +80,6 @@
     <ClInclude Include="Carte.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
-    <ClInclude Include="Joueur.h">
-      <Filter>Fichiers sources\Modele</Filter>
-    </ClInclude>
     <ClInclude Include="Borne.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
@@ -93,6 +90,9 @@
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
     <ClInclude Include="PiocheClan.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueur.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
   </ItemGroup>
