@@ -11,7 +11,3 @@ public:
 };
 #endif
 
-template<class ...Args>
-inline void Carte::effet(Args ...args)
-{
-}
