@@ -54,6 +54,9 @@
     <ClCompile Include="ControleurVariante.cpp">
       <Filter>Fichiers sources\Controleur</Filter>
     </ClCompile>
+    <ClCompile Include="Joueur.cpp">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ControleurJeu.h">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="Carte.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueur.h">
+      <Filter>Fichiers sources\Modele</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

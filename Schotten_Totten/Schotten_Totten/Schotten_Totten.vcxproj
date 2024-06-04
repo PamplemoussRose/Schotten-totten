@@ -145,6 +145,7 @@
     <ClCompile Include="ControleurParametre.cpp" />
     <ClCompile Include="ControleurPioche.cpp" />
     <ClCompile Include="ControleurVariante.cpp" />
+    <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Schotten_Totten.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +156,7 @@
     <ClInclude Include="ControleurParametre.h" />
     <ClInclude Include="ControleurPioche.h" />
     <ClInclude Include="ControleurVariante.h" />
+    <ClInclude Include="Joueur.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
