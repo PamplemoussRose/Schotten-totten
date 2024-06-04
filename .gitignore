@@ -31,5 +31,8 @@
 *.out
 *.app
 
-
+# Chemin a ignorer pour pouvoir push sur GIT
 *.vs/
+*x64/
+*.vcxproj*
+*.db
