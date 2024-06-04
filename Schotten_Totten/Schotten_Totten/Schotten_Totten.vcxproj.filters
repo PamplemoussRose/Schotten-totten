@@ -13,10 +13,22 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\Modele">
+      <UniqueIdentifier>{2ebcaa9f-bc2c-4cbd-bcc9-58c80da5b12b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Controleur">
+      <UniqueIdentifier>{2e9e620d-f75c-45a3-8af2-0d1c20558601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Vue">
+      <UniqueIdentifier>{f82cf7aa-5b4f-41ba-b29a-820901145260}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Schotten_Totten.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Carte.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
