@@ -22,6 +22,15 @@
     <Filter Include="Fichiers sources\Vue">
       <UniqueIdentifier>{f82cf7aa-5b4f-41ba-b29a-820901145260}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Vue">
+      <UniqueIdentifier>{01b3e051-22b6-445c-9cc5-bc9649cfb4e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Controleur">
+      <UniqueIdentifier>{1c6b91e0-e111-4dfd-ab36-6a9739388191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Modele">
+      <UniqueIdentifier>{5ff71a3d-0ce2-437e-8292-8583b9ae48e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Schotten_Totten.cpp">
@@ -30,10 +39,49 @@
     <ClCompile Include="Carte.cpp">
       <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
+    <ClCompile Include="ControleurJeu.cpp">
+      <Filter>Fichiers sources\Controleur</Filter>
+    </ClCompile>
+    <ClCompile Include="ControleurJeuV1.cpp">
+      <Filter>Fichiers sources\Controleur</Filter>
+    </ClCompile>
+    <ClCompile Include="ControleurParametre.cpp">
+      <Filter>Fichiers sources\Controleur</Filter>
+    </ClCompile>
+    <ClCompile Include="ControleurPioche.cpp">
+      <Filter>Fichiers sources\Controleur</Filter>
+    </ClCompile>
+    <ClCompile Include="ControleurVariante.cpp">
+      <Filter>Fichiers sources\Controleur</Filter>
+    </ClCompile>
+    <ClCompile Include="Joueur.cpp">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ControleurJeu.h">
+      <Filter>Fichiers d%27en-tête\Controleur</Filter>
+    </ClInclude>
+    <ClInclude Include="ControleurJeuV1.h">
+      <Filter>Fichiers d%27en-tête\Controleur</Filter>
+    </ClInclude>
+    <ClInclude Include="ControleurParametre.h">
+      <Filter>Fichiers d%27en-tête\Controleur</Filter>
+    </ClInclude>
+    <ClInclude Include="ControleurPioche.h">
+      <Filter>Fichiers d%27en-tête\Controleur</Filter>
+    </ClInclude>
+    <ClInclude Include="ControleurVariante.h">
+      <Filter>Fichiers d%27en-tête\Controleur</Filter>
+    </ClInclude>
     <ClInclude Include="Application.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Carte.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueur.h">
+      <Filter>Fichiers sources\Modele</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
