@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Carte.cpp" />
     <ClCompile Include="Schotten_Totten.cpp" />
   </ItemGroup>
   <ItemGroup>
