@@ -140,11 +140,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Carte.cpp" />
+    <ClCompile Include="ControleurJeu.cpp" />
+    <ClCompile Include="ControleurJeuV1.cpp" />
+    <ClCompile Include="ControleurParametre.cpp" />
+    <ClCompile Include="ControleurPioche.cpp" />
+    <ClCompile Include="ControleurVariante.cpp" />
     <ClCompile Include="Schotten_Totten.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Carte.h" />
+    <ClInclude Include="ControleurJeu.h" />
+    <ClInclude Include="ControleurJeuV1.h" />
+    <ClInclude Include="ControleurParametre.h" />
+    <ClInclude Include="ControleurPioche.h" />
+    <ClInclude Include="ControleurVariante.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
