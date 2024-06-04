@@ -3,6 +3,7 @@
 
 class Controleur {
 
+	virtual void afficheVue() = 0;
 };
 
 #endif // !GUARD_CONTROLEUR
