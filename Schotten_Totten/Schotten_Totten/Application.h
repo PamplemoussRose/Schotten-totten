@@ -1,1 +1,6 @@
-#pragma once
+#ifndef GUARD_APPLICATION
+#define GUARD_APPLICATION
+
+// test
+
+#endif // !GUARD_APPLICATION
