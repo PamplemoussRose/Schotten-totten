@@ -77,5 +77,20 @@
     <ClInclude Include="Carte.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
+    <ClInclude Include="Borne.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="CarteClan.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="CarteTactique.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Pioche.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="PiocheClan.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
