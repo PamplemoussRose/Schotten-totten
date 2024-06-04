@@ -1,6 +1,8 @@
 #ifndef GUARD_APPLICATION
 #define GUARD_APPLICATION
 
-// test
+class Application {
+
+};
 
 #endif // !GUARD_APPLICATION
