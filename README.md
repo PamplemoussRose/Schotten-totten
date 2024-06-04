@@ -1,2 +1,1 @@
-# Schotten-totten
-Projet C++ moderne
+# Schotten-Totten-C-
