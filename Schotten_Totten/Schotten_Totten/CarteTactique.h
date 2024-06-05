@@ -1,14 +1,26 @@
-
-#include "Carte.h"
 #ifndef CARTETACTIQUE_HEADER
 #define CARTETACTIQUE_HEADER
-using namespace std;
 
-class CarteTactique : public Carte{
+#include "Carte.h"
+
+class CarteTactique : virtual public Carte{
 private:
+	// Attributs
+
+	/* nom de la carte */
 	string nom;
 public:
+	// Methodes
+	
+	// delete du constructeur par defaut pour garantir la coherence des cartes
+	CarteTactique() = delete;
+	/*!
+	* \brief constructeur a un parametre
+	*/
+	CarteTactique(string nomCarte) { nom = nomCarte; }
+	/*!
+	* \brief revoie le nom de la carte
+	*/
 	string getNom() { return nom; };
-
 };
-#endif
+#endif // !CARTETACTIQUE_HEADER
