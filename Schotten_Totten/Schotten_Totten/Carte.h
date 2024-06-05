@@ -8,17 +8,12 @@
 using namespace std;
 
 class Carte {
-<<<<<<< Updated upstream
-private:
-
-=======
 public:
 	// Methodes
 
 	/*!
 	* \brief Renvoie la liste des choix possible avec la liste de valeurs possibles
 	*/
->>>>>>> Stashed changes
 	vector<vector<int>> choixEffet();
 	/*!
 	* \brief Effet de la carte

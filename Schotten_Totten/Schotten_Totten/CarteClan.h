@@ -5,31 +5,7 @@
 
 class CarteClan : virtual public Carte {
 private:
-<<<<<<< Updated upstream
-	//Atributs
-	string couleur;
-	int valeur;
-public:
-	//Methodes
-	/**
-	* \brief retourne couleur carte
-	*/
-	string getCouleur(){ return couleur; };
-	/**
-	* \brief retourne valeur carte
-	*/
-	int getValeur(){ return valeur; };
-	/**
-	* \brief modifie couleur carte
-	*/
-	void setCouleur(string nouvCoul) { couleur = nouvCoul; };
-	/**
-	* \brief modifie valeur carte
-	*/
-	void setValeur(int nouvVal) { valeur = nouvVal; };
-=======
 	// Attributs 
->>>>>>> Stashed changes
 
 	/* Couleur de la carte */
 	string couleur;
