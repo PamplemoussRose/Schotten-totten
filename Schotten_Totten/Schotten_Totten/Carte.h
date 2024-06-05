@@ -1,24 +1,15 @@
-#ifndef GUARD_CARTE
-#define GUARD_CARTE
-
+#ifndef CARTE_HEADER
+#define CARTE_HEADER
 #include <vector>
 #include <string>
 #include <memory>
-
 using namespace std;
 
 class Carte {
 public:
-	// Methodes
-
-	/*!
-	* \brief Renvoie la liste des choix possible avec la liste de valeurs possibles
-	*/
-	vector<vector<int>> choixEffet();
-	/*!
-	* \brief Effet de la carte
-	*/
+	//Methode
+	vector<vector<int>> choixEffet;
 	template<class ...Args> void effet(Args... args);
 };
+#endif
 
-#endif // !GUARD_CARTE

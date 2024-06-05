@@ -145,7 +145,10 @@
     <ClCompile Include="ControleurParametre.cpp" />
     <ClCompile Include="ControleurPioche.cpp" />
     <ClCompile Include="ControleurVariante.cpp" />
+    <ClCompile Include="EtatJeu.cpp" />
     <ClCompile Include="Joueur.cpp" />
+    <ClCompile Include="Pioche.cpp" />
+    <ClCompile Include="PiocheClan.cpp" />
     <ClCompile Include="Schotten_Totten.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,14 +156,17 @@
     <ClInclude Include="Borne.h" />
     <ClInclude Include="Carte.h" />
     <ClInclude Include="CarteClan.h" />
+    <ClInclude Include="Controleur.h" />
     <ClInclude Include="ControleurJeu.h" />
     <ClInclude Include="ControleurJeuV1.h" />
     <ClInclude Include="ControleurParametre.h" />
     <ClInclude Include="ControleurPioche.h" />
     <ClInclude Include="ControleurVariante.h" />
+    <ClInclude Include="EtatJeu.h" />
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="Pioche.h" />
     <ClInclude Include="PiocheClan.h" />
+    <ClInclude Include="Plateau.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

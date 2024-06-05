@@ -8,9 +8,10 @@ private:
 	int numero;
 	int statut;
 	unsigned int nbCartesRevendiquer;
-	vector<unique_ptr<CarteClan>> cartesJ1;
-	vector<unique_ptr<CarteClan>> cartesJ2;
+	vector<CarteClan*> cartesJ1;
+	vector<CarteClan*> cartesJ2;
 public:
+	Borne() :cartesJ1(), cartesJ2() {};
 	//Methodes
 	/*!
 	* \brief retourne le numero
@@ -35,19 +36,19 @@ public:
 	/*!
 	* brief retourne les cartes de J1 sur la borne
 	*/
-	vector<CarteClan&> getCartesJ1();
+	vector<CarteClan*> getCartesJ1() { return cartesJ1; };
 	/**
 	* \brief retourne les cartes de J2 sur la borne
 	*/
-	vector<CarteClan&> getCartesJ2();
+	vector<CarteClan*> getCartesJ2() { return cartesJ2; };
 	/*!
-	* \brief Ajoute une carte de J1
+	* \brief Ajoute une carte de J1 à la borne
 	*/
-	void AjouterCarteJ1(CarteClan carteJ1);
+	void AjouterCarteJ1(CarteClan& carteJ1);
 	/*!
-	* \brief Ajoute une carte de J2
+	* \brief Ajoute une carte de J2 à la borne
 	*/
-	void AjouterCarteJ2(CarteClan carteJ2);
+	void AjouterCarteJ2(CarteClan& carteJ2);
 
 };
 #endif

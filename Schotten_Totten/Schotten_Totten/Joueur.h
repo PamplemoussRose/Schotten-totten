@@ -5,10 +5,17 @@
 
 class Joueur {
 private:
+	//Attributs
 	int nbreCartes;
 	int nbreCartesTactiquesJoués;
-	vector<unique_ptr<Carte>> mainJoueur;
+	vector<Carte*> mainJoueur;
 public:
+	//Constructeur
+	/*!
+	* \brief construit le joueur
+	*/
+	Joueur() :mainJoueur() {};
+	//Methodes
 	/*!
 	* \brief retourne nombre cartes
 	*/
@@ -24,6 +31,6 @@ public:
 	/*!
 	* \brief retourne main joueur
 	*/
-	vector<unique_ptr<Carte>> getMainJoueur();
+	vector<Carte*> getMainJoueur() {return mainJoueur;};
 };
 #endif

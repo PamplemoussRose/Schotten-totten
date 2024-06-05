@@ -6,10 +6,10 @@ using namespace std;
 
 class ControleurJeu {
 public:
-	void initPartie();
-	void deroulementTours();
-	void deroulementPartie();
-	void finPartie();
+	virtual void initPartie()=0;
+	virtual void deroulementTours()=0;
+	virtual void deroulementPartie()=0;
+	virtual void finPartie()=0;
 
 };
 #endif

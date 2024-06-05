@@ -57,6 +57,15 @@
     <ClCompile Include="Joueur.cpp">
       <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
+    <ClCompile Include="EtatJeu.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
+    </ClCompile>
+    <ClCompile Include="PiocheClan.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
+    </ClCompile>
+    <ClCompile Include="Pioche.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ControleurJeu.h">
@@ -94,6 +103,15 @@
     </ClInclude>
     <ClInclude Include="Joueur.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="EtatJeu.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Plateau.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Controleur.h">
+      <Filter>Fichiers d%27en-tête\Controleur</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
