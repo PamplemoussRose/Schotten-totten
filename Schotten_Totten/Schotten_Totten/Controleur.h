@@ -1,6 +1,7 @@
 #ifndef GUARD_CONTROLEUR
 #define GUARD_CONTROLEUR
 
+//Classe abstraite
 class Controleur {
 
 	virtual void afficheVue() = 0;

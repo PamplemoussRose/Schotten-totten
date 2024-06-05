@@ -6,7 +6,8 @@
 using namespace std;
 
 class Carte {
-public:
+private:
+
 	vector<vector<int>> choixEffet();
 	template<class ...Args> void effet(Args... args);
 };

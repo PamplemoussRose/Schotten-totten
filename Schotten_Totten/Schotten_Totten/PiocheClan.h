@@ -4,8 +4,13 @@
 #include "Pioche.h"
 class PiocheClan : public Pioche {
 private:
-	vector<CarteClan> cartesClan;
+	//Attributs
+	vector<CarteClan*> cartesClan;
 public:
-	vector<CarteClan> getCartesClan() { return cartesClan; }
+	//Methodes
+	/*!
+	* \brief retourne pioche cartes clan
+	*/
+	vector<CarteClan*>& getCartesClan() { return cartesClan; };
 };
 #endif
