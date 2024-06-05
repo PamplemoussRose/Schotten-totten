@@ -6,6 +6,7 @@
 
 class EtatJeu {
 private:
+	//Attributs
 	EtatJeu* instance;
 	shared_ptr<Plateau> plateau;
 	shared_ptr<Joueur> joueur1;

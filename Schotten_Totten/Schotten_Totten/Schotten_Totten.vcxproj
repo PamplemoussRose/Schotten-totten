@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Borne.cpp" />
     <ClCompile Include="Carte.cpp" />
     <ClCompile Include="ControleurJeu.cpp" />
     <ClCompile Include="ControleurJeuV1.cpp" />

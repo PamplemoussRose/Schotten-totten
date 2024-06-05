@@ -2,7 +2,6 @@
 #define JOUEUR_HEADER
 #include "Carte.h"
 
-
 class Joueur {
 private:
 	//Attributs
@@ -12,7 +11,7 @@ private:
 public:
 	//Constructeur
 	/*!
-	* \brief construit le joueur
+	* \brief construit Joueur
 	*/
 	Joueur() :mainJoueur() {};
 	//Methodes
@@ -27,7 +26,7 @@ public:
 	/*!
 	* \brief ajoute carte dans sa main
 	*/
-	void ajoutCarte(Carte carte);
+	void ajoutCarte(Carte& carte);
 	/*!
 	* \brief retourne main joueur
 	*/

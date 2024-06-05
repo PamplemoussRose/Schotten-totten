@@ -66,6 +66,9 @@
     <ClCompile Include="Pioche.cpp">
       <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
+    <ClCompile Include="Borne.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ControleurJeu.h">
