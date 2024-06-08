@@ -151,12 +151,16 @@
     <ClCompile Include="Pioche.cpp" />
     <ClCompile Include="PiocheClan.cpp" />
     <ClCompile Include="Schotten_Totten.cpp" />
+    <ClCompile Include="VueParametre.cpp" />
+    <ClCompile Include="VueVariante.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Borne.h" />
     <ClInclude Include="Carte.h" />
     <ClInclude Include="CarteClan.h" />
+    <ClInclude Include="CarteTactique.h" />
+    <ClInclude Include="CarteTroupeElite.h" />
     <ClInclude Include="Controleur.h" />
     <ClInclude Include="ControleurJeu.h" />
     <ClInclude Include="ControleurJeuV1.h" />
@@ -168,6 +172,15 @@
     <ClInclude Include="Pioche.h" />
     <ClInclude Include="PiocheClan.h" />
     <ClInclude Include="Plateau.h" />
+    <ClInclude Include="Espion.h" />
+    <ClInclude Include="Joker.h" />
+    <ClInclude Include="Joueur.h" />
+    <ClInclude Include="Pioche.h" />
+    <ClInclude Include="PiocheClan.h" />
+    <ClInclude Include="PorteBouclier.h" />
+    <ClInclude Include="Vue.h" />
+    <ClInclude Include="VueParametre.h" />
+    <ClInclude Include="VueVariante.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
