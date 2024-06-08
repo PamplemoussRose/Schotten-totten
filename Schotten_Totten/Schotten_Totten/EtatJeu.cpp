@@ -1,8 +1,8 @@
 #include "EtatJeu.h"
-
+/*
 EtatJeu* EtatJeu::getInstance()
 {
-	if (instance == NULL) {
+	if (instance == nullptr) {
 		instance = new EtatJeu();
 		//instance = make_unique<EtatJeu()>;
 	}
@@ -14,3 +14,4 @@ EtatJeu::EtatJeu() {
 	joueur1 = NULL;
 	joueur2 = NULL;
 }
+*/
