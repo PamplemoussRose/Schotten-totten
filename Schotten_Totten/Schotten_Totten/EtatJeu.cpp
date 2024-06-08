@@ -1,5 +1,5 @@
 #include "EtatJeu.h"
-/*
+
 EtatJeu* EtatJeu::getInstance()
 {
 	if (instance == nullptr) {
@@ -14,4 +14,3 @@ EtatJeu::EtatJeu() {
 	joueur1 = NULL;
 	joueur2 = NULL;
 }
-*/

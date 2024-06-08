@@ -14,30 +14,30 @@ private:
 	/*!
 	* \brief Constructeur privé
 	*/
-	//EtatJeu();
+	EtatJeu();
 public:
 
 	//Methodes
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/
-	//EtatJeu* getInstance();
+	EtatJeu* getInstance();
  
 	// Suppression des constructeurs de copie et d'affectation
-	//EtatJeu(const EtatJeu&) = delete;
-	//EtatJeu& operator=(const EtatJeu&) = delete;
+	EtatJeu(const EtatJeu&) = delete;
+	EtatJeu& operator=(const EtatJeu&) = delete;
 	/*!
 	* \brief retourne le plateau
 	*/
-	//shared_ptr<Plateau> getPlateau() { return plateau; };
+	shared_ptr<Plateau> getPlateau() { return plateau; };
 	/*!
 	* \brief retourne le joueur1
 	*/
-	//shared_ptr<Joueur> getJoueur1() { return joueur1; };
+	shared_ptr<Joueur> getJoueur1() { return joueur1; };
 	/*!
 	* \brief retourne le joueur2
 	*/
-	//shared_ptr<Joueur> getJoueur2() { return joueur2; };
+	shared_ptr<Joueur> getJoueur2() { return joueur2; };
 
 };
 
