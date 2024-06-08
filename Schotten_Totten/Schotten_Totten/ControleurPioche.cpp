@@ -2,7 +2,7 @@
 
 void ControleurPioche::piocher(Joueur joueur)
 {
-	//joueur.ajoutCarte(getCartesClan().end());
+	//joueur.ajouteCarte(getCartesClan().end());
 	//pioche.pop();
 	//setNbCartesRestantes(getNbCratesRestantes - 1);
 

@@ -5,7 +5,7 @@
 class Joueur {
 private:
 	//Attributs
-	int nbreCartes;
+	int nbreCartes; //nombre de cartes dans sa main
 	int nbreCartesTactiquesJoués;
 	vector<Carte*> mainJoueur;
 public:
@@ -31,5 +31,10 @@ public:
 	* \brief retourne main joueur
 	*/
 	vector<Carte*> getMainJoueur() {return mainJoueur;};
+	/*!
+	* \brief retire carte dans sa main
+	*/
+	void retireCarte(Carte& carte);
 };
+
 #endif

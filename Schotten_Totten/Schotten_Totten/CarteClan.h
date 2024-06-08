@@ -6,7 +6,6 @@
 class CarteClan : virtual public Carte {
 private:
 	// Attributs 
-
 	/* Couleur de la carte */
 	string couleur;
 	/* Valeur de la carte */

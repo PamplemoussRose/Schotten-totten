@@ -10,6 +10,8 @@ public:
 	//Methode
 	vector<vector<int>> choixEffet();
 	template<class ...Args> void effet(Args... args);
+
+	
 };
 #endif
 

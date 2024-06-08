@@ -34,5 +34,10 @@ public:
 	* \brief ajoute  la carte en dessous de la pioche (debut du vector)
 	*/
 	void ajouterDessous(Carte& carte);
+	/*!
+	* \brief melange les cartes de la pioche
+	*/
+	void melange();
+
 };
 #endif
