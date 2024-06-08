@@ -12,6 +12,9 @@ private:
 	vector<Carte*> pioche;
 public:
 	//Constructeur
+	/*!
+	* \brief construit la pioche
+	*/
 	Pioche() :pioche() {};
 	//Methodes
 	/*!
