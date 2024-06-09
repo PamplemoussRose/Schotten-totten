@@ -57,6 +57,15 @@
     <ClCompile Include="Joueur.cpp">
       <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
+    <ClCompile Include="Builder.cpp">
+      <Filter>Fichiers sources\Controleur</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderClassique.cpp">
+      <Filter>Fichiers sources\Controleur</Filter>
+    </ClCompile>
+    <ClCompile Include="Plateau.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ControleurJeu.h">
@@ -93,6 +102,15 @@
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
     <ClInclude Include="Joueur.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Builder.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="BuilderClassique.h">
+      <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Plateau.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
   </ItemGroup>
