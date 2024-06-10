@@ -4,7 +4,7 @@ BuilderClassique::BuilderClassique()
 {
     this->Reset();
 }
-BuilderClassique::BuilderClassique(BuilderClassique&& other) noexcept {
+BuilderClassique::BuilderClassique(BuilderClassique&& other) {
     plateauBuild = other.plateauBuild;
     other.plateauBuild = nullptr;
 }

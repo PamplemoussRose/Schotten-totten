@@ -1,6 +1,6 @@
 #include "Plateau.h"
 
-void Plateau::setBornes(vector<Borne> lstBornes)
+void Plateau::setBornes(vector<Borne> &&lstBornes)
 {
 	this->vBornes = lstBornes;
 }
@@ -23,7 +23,7 @@ Borne Plateau::getBornePosition(int position)
 	}
 }
 
-void Plateau::setPioche(vector<Pioche> lstPioche)
+void Plateau::setPioche(vector<Pioche> &&lstPioche)
 {
 	this->vPioche = lstPioche;
 }
