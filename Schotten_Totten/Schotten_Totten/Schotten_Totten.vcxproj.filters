@@ -78,6 +78,9 @@
     <ClCompile Include="Borne.cpp">
       <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
+    <ClCompile Include="Plateau.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ControleurJeu.h">
@@ -151,6 +154,24 @@
     </ClInclude>
     <ClInclude Include="Espion.h">
       <Filter>Fichiers d%27en-tête\Modele\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueur.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Pioche.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="PiocheClan.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueur.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Pioche.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="PiocheClan.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

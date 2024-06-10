@@ -150,6 +150,7 @@
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Pioche.cpp" />
     <ClCompile Include="PiocheClan.cpp" />
+    <ClCompile Include="Plateau.cpp" />
     <ClCompile Include="Schotten_Totten.cpp" />
     <ClCompile Include="VueParametre.cpp" />
     <ClCompile Include="VueVariante.cpp" />

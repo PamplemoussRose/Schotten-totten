@@ -8,7 +8,10 @@ private:
 	Controleur* controleur;
 
 public:
-	void setControleur(Controleur* pControleur) : controleur(pControleur) { };
+	void setControleur(Controleur* pControleur) {
+		controleur = pControleur
+			;
+	}
 
 	virtual void affiche()=0;
 };
