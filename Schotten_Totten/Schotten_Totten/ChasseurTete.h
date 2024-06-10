@@ -15,6 +15,6 @@ private:
 	/*!
 	* Methode d'effet de la carte espion
 	*/
-	void effet();
+	void effet(unsigned int carte);
 };
 #endif // !CAHSSEURTETE_H
