@@ -12,9 +12,8 @@ private:
 	unsigned int valeur;
 public:
 	// Methodes
-	CarteClan() { Carte(); };
 	// delete du constructeur par defaut pour garantir la coherence des cartes
-	//CarteClan() = delete;
+	CarteClan() = delete;
 	/*!
 	* \brief constructeur à deux parametres
 	*/

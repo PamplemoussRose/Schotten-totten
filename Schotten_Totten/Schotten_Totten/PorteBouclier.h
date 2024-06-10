@@ -6,18 +6,6 @@
 class PorteBouclier : public CarteTroupeElite
 {
 public:
-	PorteBouclier();
-	~PorteBouclier();
-
-private:
 
 };
-
-PorteBouclier::PorteBouclier()
-{
-}
-
-PorteBouclier::~PorteBouclier()
-{
-}
 #endif // !PORTEBOUCLIER_H

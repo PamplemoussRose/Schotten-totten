@@ -8,10 +8,16 @@ using namespace std;
 class Carte {
 public:
 	//Methode
+	/*!
+	* Methode pour les differents choix a faire pour l'effet de la carte
+	*/
 	vector<vector<int>> choixEffet();
+	/*!
+	* Methode d'application de l'effet de la carte
+	*/
 	template<class ...Args> void effet(Args... args);
 
 	
 };
-#endif
+#endif // !CARTE_HEADER
 

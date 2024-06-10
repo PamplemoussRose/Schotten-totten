@@ -6,18 +6,6 @@
 class Joker : public CarteTroupeElite
 {
 public:
-	Joker();
-	~Joker();
-
-private:
 
 };
-
-Joker::Joker()
-{
-}
-
-Joker::~Joker()
-{
-}
 #endif // !JOKER_H

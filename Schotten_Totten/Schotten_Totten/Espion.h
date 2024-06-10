@@ -5,19 +5,7 @@
 
 class Espion : public CarteTroupeElite
 {
-public:
-	Espion();
-	~Espion();
-
-private:
+public::
 
 };
-
-Espion::Espion()
-{
-}
-
-Espion::~Espion()
-{
-}
 #endif // !ESPION_H
