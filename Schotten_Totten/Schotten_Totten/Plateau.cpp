@@ -24,7 +24,7 @@ Borne* Plateau::getBornePosition(int position)
 	throw ::out_of_range("error dans getBornePosition");
 }
 
-void Plateau::setPioche(vector<Pioche*> &&lstPioche)
+void Plateau::setPioche(vector<Pioche*> &&lstPioche) 
 {
 	this->vPioche = move(lstPioche);
 }
