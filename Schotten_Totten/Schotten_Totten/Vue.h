@@ -2,6 +2,8 @@
 #define GUARD_VUE
 #include "Controleur.h"
 
+class Controleur;
+
 class Vue
 {
 private:
@@ -13,7 +15,7 @@ public:
 	/*!
 	* \definit le controleur
 	*/
-	void setControleur(Controleur* pControleur) : controleur(pControleur) { };
+	void setControleur(Controleur* pControleur) { controleur = pControleur; };
 	/*!
 	* \Recupere le controleur
 	*/

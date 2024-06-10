@@ -6,6 +6,7 @@
 #include "Application.h"
 using namespace std;
 
+class VueParametre;
 
 class ControleurParametre : public Controleur
 {

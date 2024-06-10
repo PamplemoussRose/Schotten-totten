@@ -4,7 +4,7 @@ inline void Carte::effet(Args ...args)
 {
 }
 
-vector<vector<int>> Carte::choixEffet()
+vector<vector<unsigned int>> Carte::choixEffet()
 {
-	return vector<vector<int>>();
+	return vector<vector<unsigned int>>();
 }

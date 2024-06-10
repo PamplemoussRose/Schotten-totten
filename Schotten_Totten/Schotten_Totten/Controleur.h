@@ -2,6 +2,9 @@
 #define GUARD_CONTROLEUR
 #include "Vue.h"
 
+class Vue;
+
+
 //Classe abstraite
 class Controleur {
 protected:

@@ -3,6 +3,8 @@
 #include "Vue.h"
 #include "ControleurParametre.h"
 
+class ControleurParametre;
+
 class VueParametre : public Vue
 {
 public:
@@ -17,7 +19,7 @@ public:
 	/*!
 	* \renvoie le controleur parametre
 	*/
-	ControleurParametre* getControleur() { return (ControleurParametre*)Vue::getControleur(); }
+	ControleurParametre* getControleur() { return (ControleurParametre*) Vue::getControleur(); }
 	/*!
 	* \gere l'erreur de saisie de choixIAHumain
 	*/

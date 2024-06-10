@@ -4,12 +4,15 @@
 #include "ControleurVariante.h"
 #include <iostream>
 
+class ControleurVariante;
+
 class VueVariante : public Vue
 {
 public:
 	void setControleur(ControleurVariante* pControleur) { Vue::setControleur(pControleur); };
 
 	void affiche() override;
+	void erreurChoixVariante();
 
 private:
 	void afficheTitre();
