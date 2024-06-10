@@ -1,11 +1,20 @@
 #ifndef GUARD_CONTROLEUR
 #define GUARD_CONTROLEUR
+#include "Vue.h"
 
 //Classe abstraite
 class Controleur {
-
-	virtual void afficheVue() = 0;
+protected:
+	Vue* vue;
 	
+public:
+	Controleur(Vue& pVue) {
+		vue = &pVue;
+	}
+
+	virtual void afficheVue() {
+		vue->affiche();
+	};
 };
 
 #endif // !GUARD_CONTROLEUR

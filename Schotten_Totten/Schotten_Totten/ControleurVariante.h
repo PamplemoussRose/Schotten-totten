@@ -1,12 +1,15 @@
 #ifndef CONTROLEURVARIANTE_HEADER
 #define CONTROLEURVARIANTE_HEADER
-#include <vector>
+#include "VueVariante.h"
+#include "Controleur.h"
 using namespace std;
 
 
-class ControleurVariante {
+class ControleurVariante : public Controleur
+{
 public:
-	ControleurVariante();
+	ControleurVariante(VueVariante& vue) : Controleur(vue) { vue.setControleur(this); };
+
 	void choisirVariante();
 };
 #endif
