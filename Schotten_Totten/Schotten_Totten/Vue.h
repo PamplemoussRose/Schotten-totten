@@ -5,14 +5,22 @@
 class Vue
 {
 private:
+	//Attributs
 	Controleur* controleur;
 
 public:
-	void setControleur(Controleur* pControleur) {
-		controleur = pControleur
-			;
-	}
-
+	//Methodes
+	/*!
+	* \definit le controleur
+	*/
+	void setControleur(Controleur* pControleur) : controleur(pControleur) { };
+	/*!
+	* \Recupere le controleur
+	*/
+	Controleur* getControleur() { return controleur; };
+	/*!
+	* \methode virtuelle d'affichage
+	*/
 	virtual void affiche()=0;
 };
 

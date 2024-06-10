@@ -34,7 +34,7 @@ public:
 	/*!
 	* \brief retire carte dans sa main
 	*/
-	void retireCarte(Carte& carte);
+	void retireCarte(unsigned int indice);
 };
 
 #endif
