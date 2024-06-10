@@ -1,0 +1,20 @@
+#ifndef BANSCHEE_H
+#define BANSCHEE_H
+
+#include "CarteRuse.h"
+
+class Banschee : public CarteRuse
+{
+private:
+	// Methodes
+
+	/*!
+	* Methode donnant les choix possibles avec leurs valeurs possibles
+	*/
+	vector<vector<unsigned int>> choixEffet();
+	/*!
+	* Methode d'effet de la carte espion
+	*/
+	void effet();
+};
+#endif // !BANSCHEE_H
