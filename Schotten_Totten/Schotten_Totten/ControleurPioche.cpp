@@ -2,7 +2,7 @@
 
 void ControleurPioche::piocher(Joueur joueur)
 {
-	//joueur.ajoutCarte(getCartesClan().end());
+	//joueur.ajouteCarte(getCartesClan().end());
 	//pioche.pop();
 	//setNbCartesRestantes(getNbCratesRestantes - 1);
 
@@ -11,12 +11,7 @@ void ControleurPioche::piocher(Joueur joueur)
 bool ControleurPioche::estVide()
 {
 	//return (getNbCartesRestantes() == 0);
+	return false;
 }
 
-void ControleurPioche::distribInit()
-{
-	for (int i = 0; i < 6; i++) {
-		//piocher(getJoueur1());
-		//piocher(getJoueur2())
-	}
-}
+

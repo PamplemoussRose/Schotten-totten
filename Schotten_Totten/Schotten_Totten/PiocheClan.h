@@ -3,9 +3,15 @@
 #include "CarteClan.h"
 #include "Pioche.h"
 class PiocheClan : public Pioche {
-private:
-	vector<CarteClan> cartesClan;
+
 public:
-	vector<CarteClan> getCartesClan() { return cartesClan; }
+	//constructeur
+	/*!
+	* \brief construit la pioche de carte clan
+	*/
+	PiocheClan() :Pioche() {};
+	//Methodes
+
+
 };
 #endif

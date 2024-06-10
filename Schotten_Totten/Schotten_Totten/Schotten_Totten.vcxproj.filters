@@ -31,6 +31,9 @@
     <Filter Include="Fichiers d%27en-tête\Modele">
       <UniqueIdentifier>{5ff71a3d-0ce2-437e-8292-8583b9ae48e7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Modele\Cartes">
+      <UniqueIdentifier>{b50da4d3-701b-466e-808d-8460430daa34}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Schotten_Totten.cpp">
@@ -54,16 +57,25 @@
     <ClCompile Include="ControleurVariante.cpp">
       <Filter>Fichiers sources\Controleur</Filter>
     </ClCompile>
+    <ClCompile Include="VueParametre.cpp">
+      <Filter>Fichiers sources\Vue</Filter>
+    </ClCompile>
+    <ClCompile Include="VueVariante.cpp">
+      <Filter>Fichiers sources\Vue</Filter>
+    </ClCompile>
     <ClCompile Include="Joueur.cpp">
       <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
-    <ClCompile Include="Builder.cpp">
-      <Filter>Fichiers sources\Controleur</Filter>
+    <ClCompile Include="EtatJeu.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
-    <ClCompile Include="BuilderClassique.cpp">
-      <Filter>Fichiers sources\Controleur</Filter>
+    <ClCompile Include="PiocheClan.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
-    <ClCompile Include="Plateau.cpp">
+    <ClCompile Include="Pioche.cpp">
+      <Filter>Fichiers sources\Modele</Filter>
+    </ClCompile>
+    <ClCompile Include="Borne.cpp">
       <Filter>Fichiers sources\Modele</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,13 +98,7 @@
     <ClInclude Include="Application.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
-    <ClInclude Include="Carte.h">
-      <Filter>Fichiers d%27en-tête\Modele</Filter>
-    </ClInclude>
     <ClInclude Include="Borne.h">
-      <Filter>Fichiers d%27en-tête\Modele</Filter>
-    </ClInclude>
-    <ClInclude Include="CarteClan.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
     <ClInclude Include="Pioche.h">
@@ -104,14 +110,47 @@
     <ClInclude Include="Joueur.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
-    <ClInclude Include="Builder.h">
-      <Filter>Fichiers d%27en-tête\Modele</Filter>
-    </ClInclude>
-    <ClInclude Include="BuilderClassique.h">
+    <ClInclude Include="EtatJeu.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
     </ClInclude>
     <ClInclude Include="Plateau.h">
       <Filter>Fichiers d%27en-tête\Modele</Filter>
+    </ClInclude>
+    <ClInclude Include="Controleur.h">
+      <Filter>Fichiers d%27en-tête\Controleur</Filter>
+    </ClInclude>
+    <ClInclude Include="Controleur.h">
+      <Filter>Fichiers d%27en-tête\Controleur</Filter>
+    </ClInclude>
+    <ClInclude Include="Vue.h">
+      <Filter>Fichiers d%27en-tête\Vue</Filter>
+    </ClInclude>
+    <ClInclude Include="VueParametre.h">
+      <Filter>Fichiers d%27en-tête\Vue</Filter>
+    </ClInclude>
+    <ClInclude Include="VueVariante.h">
+      <Filter>Fichiers d%27en-tête\Vue</Filter>
+    </ClInclude>
+    <ClInclude Include="Carte.h">
+      <Filter>Fichiers d%27en-tête\Modele\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="CarteClan.h">
+      <Filter>Fichiers d%27en-tête\Modele\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="CarteTactique.h">
+      <Filter>Fichiers d%27en-tête\Modele\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="CarteTroupeElite.h">
+      <Filter>Fichiers d%27en-tête\Modele\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="Joker.h">
+      <Filter>Fichiers d%27en-tête\Modele\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="PorteBouclier.h">
+      <Filter>Fichiers d%27en-tête\Modele\Cartes</Filter>
+    </ClInclude>
+    <ClInclude Include="Espion.h">
+      <Filter>Fichiers d%27en-tête\Modele\Cartes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
