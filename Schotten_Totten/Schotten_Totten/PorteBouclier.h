@@ -6,6 +6,15 @@
 class PorteBouclier : public CarteTroupeElite
 {
 public:
+	// Methodes
 
+	/*!
+	* Methode donnant les choix possibles avec leurs valeurs possibles
+	*/
+	vector<vector<unsigned int>> choixEffet();
+	/*!
+	* Methode d'effet de la carte porte bouclier
+	*/
+	void effet(unsigned int val, unsigned int coul, unsigned int numBorne);
 };
 #endif // !PORTEBOUCLIER_H

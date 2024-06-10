@@ -1,11 +1,11 @@
-#ifndef ESPION_H
-#define ESPION_H
+#ifndef COLINMAILLARD_H
+#define COLINMAILLARD_H
 
-#include "CarteTroupeElite.h"
+#include "CarteModeCombat.h"
 
-class Espion : public CarteTroupeElite
+class ColinMaillard : public CarteModeCombat
 {
-public:
+private:
 	// Methodes
 
 	/*!
@@ -15,6 +15,6 @@ public:
 	/*!
 	* Methode d'effet de la carte espion
 	*/
-	void effet(unsigned int coul, unsigned int numBorne);
+	void effet();
 };
-#endif // !ESPION_H
+#endif // !COLINMAILLARD_H

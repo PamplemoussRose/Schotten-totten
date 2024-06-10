@@ -9,9 +9,9 @@ class Carte {
 public:
 	//Methode
 	/*!
-	* Methode pour les differents choix a faire pour l'effet de la carte
+	* Methode donnant les choix possibles avec leurs valeurs possibles
 	*/
-	vector<vector<int>> choixEffet();
+	vector<vector<unsigned int>> choixEffet();
 	/*!
 	* Methode d'application de l'effet de la carte
 	*/

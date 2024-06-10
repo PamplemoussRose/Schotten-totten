@@ -1,11 +1,11 @@
-#ifndef ESPION_H
-#define ESPION_H
+#ifndef STRATEGE_H
+#define STRATEGE_H
 
-#include "CarteTroupeElite.h"
+#include "CarteRuse.h"
 
-class Espion : public CarteTroupeElite
+class Stratege : public CarteRuse
 {
-public:
+private:
 	// Methodes
 
 	/*!
@@ -15,6 +15,6 @@ public:
 	/*!
 	* Methode d'effet de la carte espion
 	*/
-	void effet(unsigned int coul, unsigned int numBorne);
+	void effet();
 };
-#endif // !ESPION_H
+#endif // !STRATEGE_H
