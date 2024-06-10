@@ -6,8 +6,6 @@
 class Controleur {
 protected:
 	Vue* vue;
-
-	virtual void afficheVue() = 0;
 	
 public:
 	Controleur(Vue& pVue) {
