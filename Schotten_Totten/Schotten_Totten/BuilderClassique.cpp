@@ -38,10 +38,8 @@ void BuilderClassique::setPiocheBuilder()
 }
 
 Plateau* BuilderClassique::GetResult()
-{//creation de Bornes et ajout de la pioche au jeu
-    vector<Pioche*> lstPioche;
-    for (int i = 0; i < 54; ++i) {// verifier bon nombre de cartes
-        lstPioche.push_back(new Pioche());
-    }
-    plateauBuild->setPioche(move(lstPioche));
+{
+    Plateau * result = this->plateauBuild;
+    this->Reset();
+    return result;
 }
