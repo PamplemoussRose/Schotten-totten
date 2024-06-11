@@ -13,8 +13,9 @@ private:
 	*/
 	vector<vector<unsigned int>> choixEffet();
 	/*!
-	* Methode d'effet de la carte espion
+	* Methode d'effet de la carte combatboue
+	* borne est la borne sur laquelle la carte prend effet
 	*/
-	void effet();
+	void effet(unsigned int borne);
 };
 #endif // !COMBATBOUE_H

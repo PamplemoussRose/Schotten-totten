@@ -1,0 +1,44 @@
+﻿  BuilderClassique.cpp
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(27,38): error C2664: 'void Plateau::setBornes(std::vector<Borne *,std::allocator<Borne *>> &&)' : impossible de convertir l'argument 1 de 'std::vector<Borne,std::allocator<Borne>>' en 'std::vector<Borne *,std::allocator<Borne *>> &&'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(27,38): message : Raison : impossible de convertir de 'std::vector<Borne,std::allocator<Borne>>' en 'std::vector<Borne *,std::allocator<Borne *>>'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(27,29): message : Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Plateau.h(16,7): message : voir la déclaration de 'Plateau::setBornes'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(36,38): error C2664: 'void Plateau::setPioche(std::vector<Pioche *,std::allocator<Pioche *>> &&)' : impossible de convertir l'argument 1 de 'std::vector<Pioche,std::allocator<Pioche>>' en 'std::vector<Pioche *,std::allocator<Pioche *>> &&'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(36,38): message : Raison : impossible de convertir de 'std::vector<Pioche,std::allocator<Pioche>>' en 'std::vector<Pioche *,std::allocator<Pioche *>>'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(36,29): message : Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Plateau.h(28,7): message : voir la déclaration de 'Plateau::setPioche'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(45,38): error C2664: 'void Plateau::setPioche(std::vector<Pioche *,std::allocator<Pioche *>> &&)' : impossible de convertir l'argument 1 de 'std::vector<Pioche,std::allocator<Pioche>>' en 'std::vector<Pioche *,std::allocator<Pioche *>> &&'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(45,38): message : Raison : impossible de convertir de 'std::vector<Pioche,std::allocator<Pioche>>' en 'std::vector<Pioche *,std::allocator<Pioche *>>'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(45,29): message : Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Plateau.h(28,7): message : voir la déclaration de 'Plateau::setPioche'
+  Carte.cpp
+  ControleurParametre.cpp
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueParametre.h(18,55): error C2664: 'void Vue::setControleur(Controleur *)' : impossible de convertir l'argument 1 de 'ControleurParametre *' en 'Controleur *'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueParametre.h(18,76): message : Les types pointés n'ont aucun rapport entre eux ; conversion nécessitant reinterpret_cast, cast de style C ou cast de style fonction
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Vue.h(18,7): message : voir la déclaration de 'Vue::setControleur'
+  ControleurPioche.cpp
+  ControleurVariante.cpp
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Controleur.h(26,1): error C2027: utilisation du type non défini 'Vue'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Controleur.h(5): message : voir la déclaration de 'Vue'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueVariante.h(12,54): error C2664: 'void Vue::setControleur(Controleur *)' : impossible de convertir l'argument 1 de 'ControleurVariante *' en 'Controleur *'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueVariante.h(12,75): message : Les types pointés n'ont aucun rapport entre eux ; conversion nécessitant reinterpret_cast, cast de style C ou cast de style fonction
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Vue.h(18,7): message : voir la déclaration de 'Vue::setControleur'
+  EtatJeu.cpp
+  Plateau.cpp
+  VueParametre.cpp
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Controleur.h(26,1): error C2027: utilisation du type non défini 'Vue'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Controleur.h(5): message : voir la déclaration de 'Vue'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurParametre.h(17,21): error C2664: 'Controleur::Controleur(Vue &)' : impossible de convertir l'argument 1 de 'VueParametre' en 'Vue &'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Controleur.h(19,2): message : voir la déclaration de 'Controleur::Controleur'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurParametre.h(17,21): error C2027: utilisation du type non défini 'VueParametre'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurParametre.h(9): message : voir la déclaration de 'VueParametre'
+  VueVariante.cpp
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Controleur.h(26,1): error C2027: utilisation du type non défini 'Vue'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Controleur.h(5): message : voir la déclaration de 'Vue'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurVariante.h(13,20): error C2664: 'Controleur::Controleur(Vue &)' : impossible de convertir l'argument 1 de 'VueVariante' en 'Vue &'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Controleur.h(19,2): message : voir la déclaration de 'Controleur::Controleur'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurVariante.h(13,20): error C2027: utilisation du type non défini 'VueVariante'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurVariante.h(7): message : voir la déclaration de 'VueVariante'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueVariante.cpp(20,19): error C2039: 'choisirVariante' n'est pas membre de 'Controleur'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Vue.h(5): message : voir la déclaration de 'Controleur'
+  Génération de code en cours...

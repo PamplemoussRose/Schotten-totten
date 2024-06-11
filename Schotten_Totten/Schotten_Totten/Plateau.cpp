@@ -10,12 +10,12 @@ vector<Borne*> Plateau::getBornes()
 	return vBornes;
 }
 
-Borne* Plateau::getBornePosition(int position)
+Borne* Plateau::getBornePosition(unsigned int position)
 {
 	if (position < 0 || position >= vBornes.size()) {
 		throw ::invalid_argument("position given is not correct");
 	}
-	int cpt = 0;
+	unsigned int cpt = 0;
 	for (auto iter = vBornes.begin(); iter != vBornes.end() && cpt <= position; iter++, cpt++) {
 		if (cpt == position) {
 			return *iter;
@@ -34,12 +34,12 @@ vector<Pioche*> Plateau::getPioche()
 	return vPioche;
 }
 
-Pioche Plateau::getPiochePosition(int position)
+Pioche Plateau::getPiochePosition(unsigned int position)
 {
 	if (position < 0 || position >= vPioche.size()) {
 		throw ::invalid_argument("position given is not correct");
 	}
-	int cpt = 0;
+	unsigned int cpt = 0;
 	for (auto iter = vPioche.begin(); iter != vPioche.end() && cpt <= position; iter++, cpt++) {
 		if (cpt == position) {
 			return **iter;
