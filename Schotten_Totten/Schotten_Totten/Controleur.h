@@ -4,7 +4,6 @@
 
 class Vue;
 
-
 //Classe abstraite
 class Controleur {
 protected:

@@ -3,7 +3,7 @@
 
 #include "Carte.h"
 
-class CarteTactique : virtual public Carte{
+class CarteTactique : public Carte{
 private:
 	// Attributs
 
