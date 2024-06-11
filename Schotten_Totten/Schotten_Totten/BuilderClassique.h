@@ -23,10 +23,7 @@ public:
     /*!
     * \brief initialise notre plateau a l'aide de move semantic
     */
-    BuilderClassique(BuilderClassique&& other) noexcept {
-        plateauBuild = other.plateauBuild;
-        other.plateauBuild = nullptr;
-    }
+    BuilderClassique(BuilderClassique&& other) noexcept;
     /*!
     * \brief delete le plateau
     */
