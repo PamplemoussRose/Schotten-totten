@@ -80,13 +80,7 @@ void VueJeu::afficheMain(Joueur& joueur)
 	vector<Carte*> main = joueur.getMainJoueur();
 	cout << "Ta main:" << endl;
 	for (auto iter = main.begin(); iter < main.end(); iter++) {
-		if (typeid(**iter) == typeid(CarteClan)) {
-			afficheCarteClan((CarteClan*)(*iter));
-		}
-		else {
-			afficheCarteTactique((CarteTactique*)(*iter));
-		}
-		cout << " - ";
+		afficheCarte(*iter);
 	}
 }
 
