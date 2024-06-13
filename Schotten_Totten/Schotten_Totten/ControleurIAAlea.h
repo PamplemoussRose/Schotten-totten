@@ -13,6 +13,7 @@ public:
 
 		unsigned int nCarte = (rand() % joueur.getNbreCartes()) + 1; //prend un nombre aléatoire entre 1 et nbreCartes
 		Carte* carteRecuperee = joueur.getCarteMainPosition(nCarte);
+
 		vector<vector<unsigned int>> lstChoix = carteRecuperee->choixEffet(); // Pas d'affichage : retourne les choix
 		/*for (auto iter = lstChoix.begin(); iter != lstChoix.end(); iter++) {
 			iter.effet;
