@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Application.h"
+#include "Test.h"
 
 int main()
 {
@@ -9,4 +10,5 @@ int main()
     app.mainloop();
     */
     std::cout << "Hello World!\n";
+    Test::test();
 }

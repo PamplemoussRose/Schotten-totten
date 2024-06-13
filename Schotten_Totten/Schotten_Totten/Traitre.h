@@ -6,6 +6,13 @@
 class Traitre : public CarteRuse
 {
 private:
+	// Constructeur
+
+	/*!
+	* \brief constructeur a un parametre
+	*/
+	Traitre() : CarteRuse("Traitre") {};
+
 	// Methodes
 
 	/*!

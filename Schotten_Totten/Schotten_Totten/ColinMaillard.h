@@ -5,7 +5,14 @@
 
 class ColinMaillard : public CarteModeCombat
 {
-private:
+public:
+	// Constructeur
+
+	/*!
+	* \brief constructeur a un parametre
+	*/
+	ColinMaillard() : CarteModeCombat("ColinMaillard") {};
+
 	// Methodes
 
 	/*!
