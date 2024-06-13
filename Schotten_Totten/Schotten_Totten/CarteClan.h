@@ -1,8 +1,6 @@
 #ifndef CARTECLAN_HEADER
 #define CARTECLAN_HEADER
-
 #include "Carte.h"
-
 class CarteClan : public Carte {
 private:
 	// Attributs 
