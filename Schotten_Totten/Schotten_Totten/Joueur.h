@@ -15,7 +15,14 @@ public:
 	/*!
 	* \brief construit Joueur
 	*/
-	Joueur() :mainJoueur() {};
+	Joueur() : nbreCartesTactiquesJoués(0), mainJoueur() {};
+
+	/*!
+	* \brief construit Joueur avec nombre de cartes en parametre
+	*/
+	Joueur(int nbreCartesParam) : nbreCartesTactiquesJoués(0), mainJoueur() {
+		nbreCartes = nbreCartesParam;
+	}
 	//Methodes
 	/*!
 	* \brief retourne nombre cartes
