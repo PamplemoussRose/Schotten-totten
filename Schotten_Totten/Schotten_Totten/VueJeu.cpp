@@ -1,5 +1,5 @@
 #include "VueJeu.h"
-
+#include "Couleurs.h"
 void VueJeu::affiche()
 {
 

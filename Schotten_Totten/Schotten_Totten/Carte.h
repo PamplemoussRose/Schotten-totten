@@ -7,7 +7,7 @@
 #include "Couleurs.h"
 
 using namespace std;
-
+#include "Couleurs.h"
 class Carte {
 public:
 	//Methode
