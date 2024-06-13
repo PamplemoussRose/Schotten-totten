@@ -5,6 +5,8 @@
 #include "Joueur.h"
 #include "CarteClan.h"
 #include "CarteTactique.h"
+#include "Couleurs.h"
+#include "ControleurJeu.h"
 
 class VueJeu : public Vue 
 {
@@ -17,6 +19,10 @@ public:
 	* \brief affiche la vue pour jouer
 	*/
 	void affiche();
+	/*!
+	* \brief affichage du tour du joueur
+	*/
+	void afficheTour(Joueur& joueurActuel);
 	/*!
 	* \brief affiche sur console la carte clan
 	*/

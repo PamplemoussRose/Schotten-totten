@@ -1,7 +1,48 @@
 #include "VueJeu.h"
-#include "Couleurs.h"
 void VueJeu::affiche()
 {
+	cout << "DEBUT DU JEU" << endl;
+	bool partie = true;
+	while(partie){
+		//je vois deja pour le tour d'un joueur
+	}
+}
+
+void VueJeu::afficheTour(Joueur& joueurActuel)
+{
+	Carte* carteChoisie;
+	unsigned int indiceCarte;
+	unsigned int numBorne;
+	cout << "Quelle carte voulez vous jouer? (1-6)"<<endl;
+	afficheMain(joueurActuel);
+	cout << "Sur quel borne? (numéro::1-9)" << endl;
+	cin >> numBorne;
+	//JouerCarteSurBorne;
+	/*
+	if (bornes[numBorne - 1].revendiquable()) {
+		string rep;
+		cout <<" Voulez vous revendiquer cette borne ? (y/n)"<<endl;
+		cin >> rep;
+		if (rep == "y") {
+			//si joueur 1
+			if (calculeRevendication(bornes[numBorne - 1]) == 1) {
+				bornes[numBorne - 1].setStatut("Revendiquée:1");
+				cout << "Le joueur 1 revendique la borne" << endl;
+			}
+			//si joueur 2
+			if (calculeRevendication(bornes[numBorne - 1]) == 2) {
+				bornes[numBorne - 1].setStatut("Revendiquée:2");
+				cout << "Le joueur 2 revendique la borne" << endl;
+			}
+			else {
+				cout << "Dommage! L'autre joueur revendique la borne" << endl;
+			}
+		}
+	}
+	*/
+	//controleurjeu piocher joueur qui regourne la carte piochée
+	cout << "Vous avez pioché" <<"cartepiochée"<< endl;
+	cout << "Changement de joueur!Au tour du joueur" << endl;
 
 }
 
