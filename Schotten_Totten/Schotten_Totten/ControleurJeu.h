@@ -5,6 +5,8 @@ using namespace std;
 
 
 class ControleurJeu {
+private:
+
 public:
 	/*!
 	* \methode virtuelle pour initialiser la partie

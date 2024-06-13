@@ -1,5 +1,10 @@
 #include "VueJeu.h"
 
+void VueJeu::affiche()
+{
+
+}
+
 void VueJeu::afficheCarteClan(CarteClan* carte)
 {
 	string cl = carte->getCouleur();

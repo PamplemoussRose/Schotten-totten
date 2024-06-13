@@ -1,8 +1,8 @@
 #include "ControleurPioche.h"
 
-void ControleurPioche::piocher(Joueur joueur)
+void ControleurPioche::piocher(Joueur& joueur)
 {
-	//joueur.ajouteCarte(getCartesClan().end());
+	//joueur.ajoutCarte(getCartesClan().end());
 	//pioche.pop();
 	//setNbCartesRestantes(getNbCratesRestantes - 1);
 

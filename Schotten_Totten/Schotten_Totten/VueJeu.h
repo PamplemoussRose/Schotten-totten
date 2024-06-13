@@ -9,8 +9,14 @@
 class VueJeu : public Vue 
 {
 private:
+	//Attributs
 	VueDemandeCarte* demandeCarte;
 public:
+	//Methode
+	/*!
+	* \affiche la vue pour jouer
+	*/
+	void affiche();
 	/*!
 	* \affiche sur console la carte clan
 	*/
