@@ -3,14 +3,14 @@
 
 #include "Carte.h"
 
-class CarteTactique : virtual public Carte{
+class CarteTactique : public Carte{
 private:
 	// Attributs
 
 	/* nom de la carte */
 	string nom;
 public:
-	// Methodes
+	// Constructeur
 	
 	// delete du constructeur par defaut pour garantir la coherence des cartes
 	CarteTactique() = delete;
@@ -18,6 +18,9 @@ public:
 	* \brief constructeur a un parametre
 	*/
 	CarteTactique(string nomCarte) { nom = nomCarte; }
+
+	// Methodes
+
 	/*!
 	* \brief revoie le nom de la carte
 	*/

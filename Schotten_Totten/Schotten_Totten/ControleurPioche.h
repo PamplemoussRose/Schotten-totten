@@ -2,6 +2,6 @@
 #include "Joueur.h"
 class ControleurPioche {
 public:
-	void piocher(Joueur joueur);
-	bool estVide();
+	void piocher(Pioche& pioche,Joueur& joueur);
+	bool estVide(Pioche& pioche);
 };

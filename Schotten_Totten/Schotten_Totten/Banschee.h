@@ -13,8 +13,8 @@ private:
 	*/
 	vector<vector<unsigned int>> choixEffet();
 	/*!
-	* Methode d'effet de la carte espion
+	* Methode d'effet de la carte banschee
 	*/
-	void effet();
+	void effet(unsigned int borne, unsigned int carte);
 };
 #endif // !BANSCHEE_H

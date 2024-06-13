@@ -5,6 +5,7 @@ Carte* Pioche::enleverCarteDessus()
 {
 	Carte* carteEnlevée = *pioche.end() ;
 	pioche.pop_back();
+	nbCartesRestantes -= 1;
 	return carteEnlevée;
 }
 

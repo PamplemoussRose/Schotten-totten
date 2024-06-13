@@ -1,17 +1,15 @@
 #include "ControleurPioche.h"
 
-void ControleurPioche::piocher(Joueur joueur)
+void ControleurPioche::piocher(Pioche& pioche,Joueur& joueur)
 {
-	//joueur.ajouteCarte(getCartesClan().end());
-	//pioche.pop();
-	//setNbCartesRestantes(getNbCratesRestantes - 1);
-
+	Carte* carte;
+	carte=pioche.enleverCarteDessus();
+	joueur.ajoutCarte(*carte);
 }
 
-bool ControleurPioche::estVide()
+bool ControleurPioche::estVide(Pioche& pioche)
 {
-	//return (getNbCartesRestantes() == 0);
-	return false;
+	return (pioche.getNbCartesRestantes() == 0);
 }
 
 

@@ -5,10 +5,24 @@ using namespace std;
 
 
 class ControleurJeu {
+private:
+
 public:
+	/*!
+	* \methode virtuelle pour initialiser la partie
+	*/
 	virtual void initPartie()=0;
+	/*!
+	* \methode virtuelle pour le deroulement du tour
+	*/
 	virtual void deroulementTours()=0;
+	/*!
+	* \methode virtuelle pour deroulement de la partie
+	*/
 	virtual void deroulementPartie()=0;
+	/*!
+	* \methode virtuelle pour la fin de la partie
+	*/
 	virtual void finPartie()=0;
 
 };

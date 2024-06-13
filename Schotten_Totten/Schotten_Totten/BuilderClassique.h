@@ -16,46 +16,38 @@ private:
     Plateau* plateauBuild;
 public:
     //Constructeur et destructeurs
-/********************************************************
-* BuilderClassique
-* Sorties : void
-* Entraine : initialise notre plateau
-*********************************************************/
+    /*!
+    * \brief initialise notre plateau
+    */
     BuilderClassique();
-
-    BuilderClassique(BuilderClassique&& other);
-/********************************************************
-* ~BuilderClassique
-* Sorties : void
-* Entraine : delete le plateau
-*********************************************************/
+    /*!
+    * \brief initialise notre plateau a l'aide de move semantic
+    */
+    BuilderClassique(BuilderClassique&& other) noexcept;
+    /*!
+    * \brief delete le plateau
+    */
     ~BuilderClassique();
 
-//Methodes
-/********************************************************
-* Reset
-* Sorties : void
-* Entraine : renitialise le plateau
-*********************************************************/
+    //Methodes
+    /*!
+    * \brief renitialise le plateau
+    */
     void Reset();
 
-/********************************************************
-* setBornesBuilder
-* Sorties : void
-* Entraine : creation de 9 bornes et ajout des bornes au jeu
-*********************************************************/
+    /*!
+    * \brief creation de 9 bornes et ajout des bornes au jeu
+    */
     void setBornesBuilder();
-/********************************************************
-* setPiocheBuilder
-* Sorties : void
-* Entraine : creation de de la pioche et ajout de la pioche au jeu
-*********************************************************/
+
+    /*!
+    * \brief creation de de la pioche et ajout de la pioche au jeu
+    */
     void setPiocheBuilder();
-/********************************************************
-* GetResult
-* Sorties : un pointeur vers le plateau
-* Entraine : copie le plateau actuel et le retourne et renitilise le plateau
-*********************************************************/
+
+    /*!
+    * \brief copie le plateau actuel et le retourne avec un pointeur et renitilise le plateau
+    */
     Plateau* GetResult();
 };
 

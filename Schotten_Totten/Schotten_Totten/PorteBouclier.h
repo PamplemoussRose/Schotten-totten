@@ -6,14 +6,21 @@
 class PorteBouclier : public CarteTroupeElite
 {
 public:
+	// Constructeur
+
+	/*!
+	* \brief Constructeur d'une carte troupe elite
+	*/
+	PorteBouclier() : CarteTroupeElite("Porte Bouclier", "COULEUR", 0) {};
+
 	// Methodes
 
 	/*!
-	* Methode donnant les choix possibles avec leurs valeurs possibles
+	* \brief Methode donnant les choix possibles avec leurs valeurs possibles
 	*/
 	vector<vector<unsigned int>> choixEffet();
 	/*!
-	* Methode d'effet de la carte porte bouclier
+	* \brief Methode d'effet de la carte porte bouclier
 	*/
 	void effet(unsigned int val, unsigned int coul, unsigned int numBorne);
 };

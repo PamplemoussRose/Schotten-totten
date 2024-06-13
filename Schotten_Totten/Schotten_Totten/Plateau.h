@@ -25,7 +25,7 @@ public:
 	/*!
 	* \brief retourne un pointeur vers une borne d'une position donee
 	*/
-	Borne* getBornePosition(int position);
+	Borne* getBornePosition(unsigned int position);
 	/*!
 	* \brief defini la pioche du plateau
 	*/
@@ -37,6 +37,6 @@ public:
 	/*!
 	* \brief retourne un pointeur vers la pioche a une position donnee
 	*/
-	Pioche getPiochePosition(int position);
+	Pioche getPiochePosition(unsigned int position);
 };
 #endif
