@@ -8,7 +8,7 @@ private:
 	// Attributs 
 
 	/* Couleur de la carte */
-	string couleur;
+	Couleurs couleur;
 	/* Valeur de la carte */
 	unsigned int valeur;
 public:
@@ -19,18 +19,18 @@ public:
 	/*!
 	* \brief constructeur à deux parametres
 	*/
-	CarteClan(string coul, unsigned int val) { couleur = coul; valeur = val; }
+	CarteClan(Couleurs coul, unsigned int val) { couleur = coul; valeur = val; }
 
 	// Methodes
 	
 	/*!
 	* \brief retourne la couleur de la carte
 	*/
-	string getCouleur(){ return couleur; };
+	Couleurs getCouleur(){ return couleur; };
 	/*!
 	* \brief modifie la couleur de la carte
 	*/
-	void setCouleur(string nouvCoul) { couleur = nouvCoul; };
+	void setCouleur(Couleurs nouvCoul) { couleur = nouvCoul; };
 	/*!
 	* \brief retourne la valeur de la carte
 	*/

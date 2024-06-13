@@ -23,5 +23,6 @@ void Joueur::retireCarte(Carte& carte)
 		// Effacer l'�l�ment trouv�
 		mainJoueur.erase(it);
 		nbreCartes -= 1;
+	}
 }
 

@@ -4,7 +4,7 @@
 #include <string>
 #include <memory>
 using namespace std;
-
+#include "Couleurs.h"
 class Carte {
 public:
 	//Methode
