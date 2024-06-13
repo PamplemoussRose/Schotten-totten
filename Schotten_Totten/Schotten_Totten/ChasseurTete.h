@@ -5,7 +5,14 @@
 
 class ChasseurTete : public CarteRuse
 {
-private:
+public:
+	// Constructeur
+
+	/*!
+	* \brief constructeur a un parametre
+	*/
+	ChasseurTete() : CarteRuse("Chasseur de Tete") {};
+
 	// Methodes
 
 	/*!

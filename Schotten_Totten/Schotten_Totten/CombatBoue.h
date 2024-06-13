@@ -5,7 +5,14 @@
 
 class CombatBoue : public CarteModeCombat
 {
-private:
+public:
+	// Constructeur
+
+	/*!
+	* \brief constructeur a un parametre
+	*/
+	CombatBoue() : CarteModeCombat("Combat de Boue") {};
+
 	// Methodes
 
 	/*!

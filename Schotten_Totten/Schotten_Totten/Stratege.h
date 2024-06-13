@@ -6,6 +6,13 @@
 class Stratege : public CarteRuse
 {
 private:
+	// Constructeur
+
+	/*!
+	* \brief constructeur a un parametre
+	*/
+	Stratege() : CarteRuse("Stratege") {};
+
 	// Methodes
 
 	/*!

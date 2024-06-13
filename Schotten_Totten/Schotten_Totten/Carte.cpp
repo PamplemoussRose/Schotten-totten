@@ -1,9 +1,11 @@
 #include "Carte.h"
+
+vector<vector<unsigned int>> Carte::choixEffet() {
+	/* RECUPERATION DES CHOIX */
+	return vector<vector<unsigned int>>();
+}
+
 template<class ...Args>
 inline void Carte::effet(Args ...args) {
 
-}
-
-vector<vector<unsigned int>> Carte::choixEffet() {
-	return vector<vector<unsigned int>>();
 }

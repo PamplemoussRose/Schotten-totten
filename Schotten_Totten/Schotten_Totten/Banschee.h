@@ -5,7 +5,14 @@
 
 class Banschee : public CarteRuse
 {
-private:
+public:
+	// Constructeur
+
+	/*!
+	* \brief constructeur a un parametre
+	*/
+	Banschee() : CarteRuse("Banschee") {};
+
 	// Methodes
 
 	/*!

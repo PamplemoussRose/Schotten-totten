@@ -12,7 +12,7 @@ private:
 	/* Valeur de la carte */
 	unsigned int valeur;
 public:
-	// Methodes
+	// Constructeur
 	
 	// delete du constructeur par defaut pour garantir la coherence des cartes
 	CarteClan() = delete;
@@ -20,6 +20,9 @@ public:
 	* \brief constructeur à deux parametres
 	*/
 	CarteClan(string coul, unsigned int val) { couleur = coul; valeur = val; }
+
+	// Methodes
+	
 	/*!
 	* \brief retourne la couleur de la carte
 	*/
