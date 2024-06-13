@@ -10,8 +10,9 @@ class VueVariante;
 class ControleurVariante : public Controleur
 {
 public:
-	ControleurVariante(VueVariante* vue);
+	inline ControleurVariante(VueVariante* vue);
+	VueVariante* getVue() { return (VueVariante*) Controleur::getVue(); }
 
-	void choisirVariante(string choix);
+	void choisirVariante(int choix);
 };
 #endif

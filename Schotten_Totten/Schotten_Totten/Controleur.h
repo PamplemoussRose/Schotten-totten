@@ -6,7 +6,7 @@ class Vue;
 
 //Classe abstraite
 class Controleur {
-protected:
+private:
 	//Attributs
 	Vue* vue;
 	

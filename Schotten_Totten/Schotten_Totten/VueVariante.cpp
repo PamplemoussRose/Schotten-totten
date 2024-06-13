@@ -10,7 +10,7 @@ void VueVariante::afficheTitre() {
 }
 
 void VueVariante::afficheChoixVariantes() {
-	string choix;
+	int choix;
 
 	cout << "Veuillez choisir la variante du jeu :" << endl;
 	cout << "\t1. Jeu classique" << endl;
