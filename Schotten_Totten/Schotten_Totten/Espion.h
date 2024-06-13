@@ -11,7 +11,7 @@ public:
 	/*!
 	* \brief Constructeur d'une carte espion
 	*/
-	Espion() : CarteTroupeElite("Espion", "COULEUR", 7) {};
+	Espion() : CarteTroupeElite("Espion", Couleurs::NONE, 7) {};
 
 	// Methodes
 

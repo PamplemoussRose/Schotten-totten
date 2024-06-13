@@ -4,6 +4,10 @@
 
 ControleurVariante::ControleurVariante(VueVariante* vue) : Controleur((Vue*)vue) { vue->setControleur(this); };
 
-void ControleurVariante::choisirVariante(string choix)
+void ControleurVariante::choisirVariante(int choix)
 {
+	// Gestion de l'erreur
+	if (choix == 0) {
+		//getVue()->erreurChoixVariante();
+	}
 }

@@ -18,7 +18,7 @@ Carte* Joueur::getCarteMainPosition(unsigned int position)
 void Joueur::retireCarte(Carte& carte)
 {
 	//enleve la carte  dans la mainJoueur
-	auto it = std::find(mainJoueur.begin(), mainJoueur.end(), carte);
+	auto it = std::find(mainJoueur.begin(), mainJoueur.end(), &carte);
 	if (it != mainJoueur.end()) {
 		// Effacer l'�l�ment trouv�
 		mainJoueur.erase(it);
