@@ -2,7 +2,7 @@
 #define BORNE_HEADER
 #include "CarteClan.h"
 #include <memory>
-
+#include <iostream>
 class CarteClan;
 
 class Borne {

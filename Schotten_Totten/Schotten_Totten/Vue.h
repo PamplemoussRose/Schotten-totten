@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#include <iostream
+#include <iostream>
 class Vue
 {
 	/*
