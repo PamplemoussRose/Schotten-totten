@@ -2,7 +2,6 @@
 
 void ControleurPioche::piocher(Pioche& pioche,Joueur& joueur)
 {
-
 	Carte* carte;
 	carte=pioche.enleverCarteDessus();
 	joueur.ajoutCarte(*carte);
