@@ -15,6 +15,6 @@ public:
 	/*!
 	* \brief Constructeur d'une carte troupe elite
 	*/
-	CarteTroupeElite(string nomCarte, string coul, unsigned int val) : CarteTactique(nomCarte), CarteClan(coul, val) {};
+	CarteTroupeElite(string nomCarte, Couleurs coul, unsigned int val) : CarteTactique(nomCarte), CarteClan(coul, val) {};
 };
 #endif // !CARTETROUPEELITE_H

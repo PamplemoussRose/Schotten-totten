@@ -11,6 +11,7 @@ enum Couleurs
     rouge,
     jaune,
     violet,
-    marron
+    marron,
+    NONE
 };
 #endif // !COULEUR_H

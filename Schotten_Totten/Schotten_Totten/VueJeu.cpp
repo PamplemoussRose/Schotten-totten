@@ -7,24 +7,24 @@ void VueJeu::affiche()
 
 void VueJeu::afficheCarteClan(CarteClan* carte)
 {
-	string cl = carte->getCouleur();
+	Couleurs cl = carte->getCouleur();
 	int v = carte->getValeur();
-	if (cl=="rouge") {
+	if (cl==Couleurs::rouge) {
 		std::cout <<" \e[41m "<<v<<" \e[0m";
 	}
-	else if(cl == "vert") {
+	else if(cl == Couleurs::vert) {
 		std::cout << " \e[42m "<<v<<" \e[0m" ;
 	}
-	else if (cl == "jaune") {
+	else if (cl == Couleurs::jaune) {
 		std::cout << " \e[43m " << v << " \e[0m" ;
 	}
-	else if (cl == "violet") {
+	else if (cl == Couleurs::violet) {
 		std::cout << " \e[45m " << v << " \e[0m";
 	}
-	else if (cl == "bleu") {
+	else if (cl == Couleurs::bleu) {
 		std::cout << " \e[46m " << v << " \e[0m" ;
 	}
-	else if (cl == "marron") {
+	else if (cl == Couleurs::marron) {
 		std::cout << " \e[94; 53; 17; 0; 255m "<< v<<" \e[0m";
 	}	
 }

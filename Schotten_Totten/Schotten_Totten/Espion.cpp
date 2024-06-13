@@ -7,7 +7,7 @@ vector<vector<unsigned int>> Espion::choixEffet() {
 
 void Espion::effet(unsigned int coul, unsigned int borne) {
 	/* GESTION DE LA COULEUR EN FONCTION DE 'coul' */
-	string couleur = "mauve";
+	Couleurs couleur = Couleurs::violet;
 	setCouleur(couleur);
 	/* GESTION DU PLACEMENT DE LA CARTE SUR LE PLATEAU */
 }

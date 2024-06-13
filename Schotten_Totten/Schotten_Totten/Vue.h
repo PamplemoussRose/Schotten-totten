@@ -1,6 +1,10 @@
 #ifndef GUARD_VUE
 #define GUARD_VUE
 
+#include <iostream>
+
+using namespace std;
+
 class Vue
 {
 	/*

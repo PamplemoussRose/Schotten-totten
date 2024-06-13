@@ -11,7 +11,7 @@ public:
 	/*!
 	* \brief Constructeur d'une carte troupe elite
 	*/
-	Joker() : CarteTroupeElite("Joker", "COULEUR", 0) {};
+	Joker() : CarteTroupeElite("Joker", Couleurs::NONE, 0) {};
 
 	// Methodes
 

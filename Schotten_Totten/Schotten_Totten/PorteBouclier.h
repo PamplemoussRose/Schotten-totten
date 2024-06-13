@@ -11,7 +11,7 @@ public:
 	/*!
 	* \brief Constructeur d'une carte troupe elite
 	*/
-	PorteBouclier() : CarteTroupeElite("Porte Bouclier", "COULEUR", 0) {};
+	PorteBouclier() : CarteTroupeElite("Porte Bouclier", Couleurs::NONE, 0) {};
 
 	// Methodes
 

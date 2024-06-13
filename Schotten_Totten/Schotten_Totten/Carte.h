@@ -1,8 +1,11 @@
 #ifndef CARTE_HEADER
 #define CARTE_HEADER
+
 #include <vector>
 #include <string>
 #include <memory>
+#include "Couleurs.h"
+
 using namespace std;
 
 class Carte {
