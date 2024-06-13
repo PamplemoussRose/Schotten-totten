@@ -36,6 +36,7 @@ public:
 	* \brief retourne le le nombre de cartes pour revendiquer la borne
 	*/
 	unsigned int getNbCartesRevendiquer() { return nbCartesRevendiquer;};
+	unsigned int setNbCartesRevendiquer(unsigned int nb) { nbCartesRevendiquer = nb; };
 	/*!
 	* brief retourne les cartes de J1 sur la borne
 	*/

@@ -14,39 +14,39 @@ private:
 public:
 	//Methode
 	/*!
-	* \affiche la vue pour jouer
+	* \brief affiche la vue pour jouer
 	*/
 	void affiche();
 	/*!
-	* \affiche sur console la carte clan
+	* \brief affiche sur console la carte clan
 	*/
 	void afficheCarteClan(CarteClan* carte);
 	/*!
-	* \affiche sur console la carte tactique
+	* \brief affiche sur console la carte tactique
 	*/
 	void afficheCarteTactique(CarteTactique* carte);
 	/*!
-	* \affiche sur console la carte
+	* \brief affiche sur console la carte
 	*/
 	void afficheCarte(Carte* carte);
 	/*!
-	* \retourne sur la console les bornes du jeu
+	* \brief retourne sur la console les bornes du jeu
 	*/
 	void afficheBornes();
 	/*!
-	* \affiche la main du joueur en cours
+	* \brief affiche la main du joueur en cours
 	*/
 	void afficheMain(Joueur& joueur);
 	/*!
-	* \affiche la carte choisit par l'adversaire
+	* \brief affiche la carte choisit par l'adversaire
 	*/
 	void afficheCarteJouee(Carte* carte);
 	/*!
-	* \affiche la carte piochee par le joueur en cours
+	* \brief affiche la carte piochee par le joueur en cours
 	*/
 	void affichecartePiochee(Carte* carte);
 	/*!
-	* \affiche le gagnant du jeu
+	* \brief affiche le gagnant du jeu
 	*/
 	void afficheGagnant(Joueur* joueur);
 	

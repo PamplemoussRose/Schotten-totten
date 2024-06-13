@@ -88,3 +88,8 @@ void ControleurBorne::calculeRevendication(Borne& borne)
 	else if (combi[1] == "Suite") { win = 2; }
 	else { cout << "pas d'autres cas normalement" << endl; }
 }
+
+void ControleurBorne::modeCombatBoue(Borne& borne)
+{
+	borne.setNbCartesRevendiquer(4);
+}

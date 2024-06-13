@@ -9,19 +9,19 @@ class ControleurBorne{
 public:
 	unsigned int sommeCartes(vector<CarteClan*> cartes);
 	/*!
-	* \calcule type liste carte des 2 joueurs
+	* \brief calcule type liste carte des 2 joueurs
 	*/
 	vector<string> combinaisonCartesJoueur(Borne& borne);
 	/*!
-	* \retourne 1 si joueur1 l'emporte 2 sinon
+	* \brief retourne 1 si joueur1 l'emporte 2 sinon
 	*/
 	void calculeRevendication(Borne& borne);
 	/*!
-	* \met en mode combat boue la borne
+	* \brief met le nb de cartes pour revendiquer à 4
 	*/
 	void modeCombatBoue(Borne& borne);
 	/*!
-	* \met en mode Colin maillard la borne
+	* \brief la seule combinaison pour cette borne sera la somme
 	*/
 	void ModeColinMaillard(Borne& borne);
 };
