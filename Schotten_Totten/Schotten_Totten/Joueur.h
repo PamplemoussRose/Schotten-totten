@@ -34,6 +34,11 @@ public:
 	*/
 	vector<Carte*> getMainJoueur() {return mainJoueur;};
 	/*!
+	* \brief retourne une carte de la main a une position donnee
+	*/
+	Carte* getCarteMainPosition(unsigned int position);
+
+	/*!
 	* \brief retire carte dans sa main
 	*/
 	void retireCarte(Carte& carte);
