@@ -1,5 +1,5 @@
-#ifndef GUARD_VUE_VARIANTE
-#define GUARD_VUE_VARIANTE
+#ifndef GUARD_VUE_PARAMETRE
+#define GUARD_VUE_PARAMETRE
 #include "Vue.h"
 #include "ControleurParametre.h"
 
@@ -7,19 +7,22 @@ class ControleurParametre;
 
 class VueParametre : public Vue
 {
+private:
+	ControleurParametre* controleur;
+	
 public:
 	/*!
 	* \demande à l'utilisateur de choisir avec qui il veut jouer
 	*/
-	int choixIAHumain();
+	void choixIAHumain();
 	/*!
 	* \met le controleur Parametre en ant que controleur
 	*/
-	void setControleur(ControleurParametre* pControleur) { Vue::setControleur(pControleur); };
+	void setControleur(ControleurParametre* pControleur) { controleur = pControleur; };
 	/*!
 	* \renvoie le controleur parametre
 	*/
-	ControleurParametre* getControleur() { return (ControleurParametre*) Vue::getControleur(); }
+	ControleurParametre* getControleur() { return controleur; }
 	/*!
 	* \gere l'erreur de saisie de choixIAHumain
 	*/

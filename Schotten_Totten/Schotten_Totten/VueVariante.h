@@ -8,8 +8,12 @@ class ControleurVariante;
 
 class VueVariante : public Vue
 {
+private:
+	ControleurVariante* controleur;
+
 public:
-	void setControleur(ControleurVariante* pControleur) { Vue::setControleur(pControleur); };
+	void setControleur(ControleurVariante* pControleur) { controleur = pControleur; };
+	ControleurVariante* getControleur() { return controleur; }
 
 	void affiche() override;
 	void erreurChoixVariante();

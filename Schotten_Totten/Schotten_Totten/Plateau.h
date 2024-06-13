@@ -3,6 +3,10 @@
 #include "Borne.h"
 #include "Pioche.h"
 #include <stdexcept>
+
+class Borne;
+class Pioche;
+
 class Plateau {
 private:
 	//Attributs

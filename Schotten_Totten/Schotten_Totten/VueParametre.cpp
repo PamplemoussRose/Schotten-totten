@@ -1,5 +1,4 @@
 #include "VueParametre.h"
-#include "VueParametre.h"
 using namespace std;
 #include <iostream>
 void VueParametre::erreurChoix()
@@ -11,7 +10,7 @@ void VueParametre::affiche() {
     choixIAHumain();
 }
 
-int VueParametre::choixIAHumain()
+void VueParametre::choixIAHumain()
 {
     int mode;
     cout << "Avec qui voulez vous jouez? (1,2 ou 3";

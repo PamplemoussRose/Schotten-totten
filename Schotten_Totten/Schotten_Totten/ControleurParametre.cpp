@@ -1,4 +1,8 @@
 #include "ControleurParametre.h"
+#include "Vue.h"
+#include "VueParametre.h"
+
+ControleurParametre::ControleurParametre(VueParametre* vue) : Controleur((Vue*)vue) { vue->setControleur(this); };
 
 void ControleurParametre::definirParametresJeu(int mode)
 {

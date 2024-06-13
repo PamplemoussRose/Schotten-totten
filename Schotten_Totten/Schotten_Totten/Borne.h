@@ -2,6 +2,9 @@
 #define BORNE_HEADER
 #include "CarteClan.h"
 #include <memory>
+
+class CarteClan;
+
 class Borne {
 private:
 	//Attributs

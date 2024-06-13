@@ -4,6 +4,9 @@
 #include "Carte.h"
 #include <random>
 using namespace std;
+
+class Carte;
+
 class Pioche {
 private:
 	//Attributs

@@ -4,7 +4,6 @@
 
 class Vue;
 
-
 //Classe abstraite
 class Controleur {
 protected:
@@ -16,13 +15,13 @@ public:
 	/*!
 	* \lie la vue au controleur
 	*/
-	Controleur(Vue& pVue) {
-		vue = &pVue;
+	Controleur(Vue* pVue) {
+		vue = pVue;
 	}
 	/*!
 	* \appelle la fonction affiche de vue
 	*/
-	virtual void afficheVue() {
+	void afficheVue() {
 		vue->affiche();
 	};
 	/*!

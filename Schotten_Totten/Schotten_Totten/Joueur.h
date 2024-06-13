@@ -2,6 +2,8 @@
 #define JOUEUR_HEADER
 #include "Carte.h"
 
+class Carte;
+
 class Joueur {
 private:
 	//Attributs

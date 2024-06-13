@@ -2,10 +2,9 @@
 #define CONTROLEURPARAMETRE_HEADER
 #include <vector>
 #include "Controleur.h"
-#include "VueParametre.h"
-#include "Application.h"
 using namespace std;
 
+class Vue;
 class VueParametre;
 
 class ControleurParametre : public Controleur
@@ -14,11 +13,11 @@ public:
 	/*!
 	* \lie la vueParametre à  ce controleur
 	*/
-	ControleurParametre(VueParametre& vue) : Controleur(vue) { vue.setControleur(this); };
+	inline ControleurParametre(VueParametre* vue);
 	/*!
 	* \retourne la vue Parametre
 	*/
-	VueParametre* getVue() { return (VueParametre*)getVue(); }
+	VueParametre* getVue() { return (VueParametre*) Controleur::getVue(); }
 	/*!
 	* \definit les parametres de jeu
 	*/
