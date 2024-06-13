@@ -3,6 +3,7 @@
 void Joueur::ajoutCarte(Carte& carte)
 {
 	mainJoueur.push_back(&carte);
+	nbreCartes += 1;
 }
 Carte* Joueur::getCarteMainPosition(unsigned int position)
 {
@@ -13,11 +14,14 @@ Carte* Joueur::getCarteMainPosition(unsigned int position)
 		}
 	}
 }
-//avec Carte nom possible car toute Carte==Carte car pas d'attributs
-void Joueur::retireCarte(unsigned int indice)
-{
-	//enleve la carte à l'indice indiqué dans la mainJoueur
-	mainJoueur.erase(next(mainJoueur.begin(), indice));
-}
 
+void Joueur::retireCarte(Carte& carte)
+{
+	//enleve la carte  dans la mainJoueur
+	auto it = std::find(mainJoueur.begin(), mainJoueur.end(), carte);
+	if (it != mainJoueur.end()) {
+		// Effacer l'ï¿½lï¿½ment trouvï¿½
+		mainJoueur.erase(it);
+		nbreCartes -= 1;
+}
 

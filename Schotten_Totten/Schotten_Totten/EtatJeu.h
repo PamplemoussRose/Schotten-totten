@@ -3,6 +3,8 @@
 #include "Plateau.h"
 #include "Joueur.h"
 
+class Plateau;
+class Joueur;
 
 class EtatJeu {
 private:

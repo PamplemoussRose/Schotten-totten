@@ -6,14 +6,21 @@
 class Espion : public CarteTroupeElite
 {
 public:
+	// Constructeur
+
+	/*!
+	* \brief Constructeur d'une carte espion
+	*/
+	Espion() : CarteTroupeElite("Espion", "COULEUR", 7) {};
+
 	// Methodes
 
 	/*!
-	* Methode donnant les choix possibles avec leurs valeurs possibles
+	* \brief Methode donnant les choix possibles avec leurs valeurs possibles
 	*/
 	vector<vector<unsigned int>> choixEffet();
 	/*!
-	* Methode d'effet de la carte espion
+	* \brief Methode d'effet de la carte espion
 	*/
 	void effet(unsigned int coul, unsigned int numBorne);
 };

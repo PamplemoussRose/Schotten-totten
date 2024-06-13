@@ -13,8 +13,14 @@ private:
 	*/
 	vector<vector<unsigned int>> choixEffet();
 	/*!
-	* Methode d'effet de la carte espion
+	* Methode d'effet de la carte stratege
+	* Deplacement de la carte d'une borne a une autre
 	*/
-	void effet();
+	void effet(unsigned int borneDep, unsigned int carte, unsigned int borneArr);
+	/*!
+	* Methode d'effet de la carte stratege
+	* Deplacement de la carte d'une borne a la defausse
+	*/
+	void effet(unsigned int borne, unsigned int carte);
 };
 #endif // !STRATEGE_H

@@ -2,6 +2,8 @@
 #define JOUEUR_HEADER
 #include "Carte.h"
 
+class Carte;
+
 class Joueur {
 private:
 	//Attributs
@@ -39,7 +41,7 @@ public:
 	/*!
 	* \brief retire carte dans sa main
 	*/
-	void retireCarte(unsigned int indice);
+	void retireCarte(Carte& carte);
 };
 
 #endif
