@@ -18,29 +18,25 @@ void VueJeu::afficheTour(Joueur& joueurActuel)
 	cout << "Sur quel borne? (numéro::1-9)" << endl;
 	cin >> numBorne;
 	//JouerCarteSurBorne;
-	/*
-	if (bornes[numBorne - 1].revendiquable()) {
+
+	if (controleur->getBornes()[numBorne - 1].revendiquable()) {
 		string rep;
-		cout <<" Voulez vous revendiquer cette borne ? (y/n)"<<endl;
+		cout <<" Revendiquer(1) ou piocher(2) ? "<<endl;
 		cin >> rep;
-		if (rep == "y") {
+		if (rep == "1") {
 			//si joueur 1
-			if (calculeRevendication(bornes[numBorne - 1]) == 1) {
-				bornes[numBorne - 1].setStatut("Revendiquée:1");
-				cout << "Le joueur 1 revendique la borne" << endl;
+			if (controleur->getBornes()[numBorne - 1]).calculeRevendication() == 1) {
+			controleur.getBornes()[numBorne - 1].setStatut("Revendiquée:1");
+			cout << "Le joueur 1 revendique la borne" << endl;
 			}
 			//si joueur 2
-			if (calculeRevendication(bornes[numBorne - 1]) == 2) {
-				bornes[numBorne - 1].setStatut("Revendiquée:2");
-				cout << "Le joueur 2 revendique la borne" << endl;
-			}
-			else {
-				cout << "Dommage! L'autre joueur revendique la borne" << endl;
+			if (controleur->getBornes()[numBorne - 1]).calculeRevendication() == 2) {
+			controleur.getBornes()[numBorne - 1].setStatut("Revendiquée:2");
+			cout << "Le joueur 2 revendique la borne" << endl;
 			}
 		}
 	}
-	*/
-	//controleurjeu piocher joueur qui regourne la carte piochée
+	//controleurjeu piocher joueur qui regarde la carte piochée
 	cout << "Vous avez pioché" <<"cartepiochée"<< endl;
 	cout << "Changement de joueur!Au tour du joueur" << endl;
 

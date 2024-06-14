@@ -12,6 +12,10 @@ public:
 	* \brief calcule type liste carte des 2 joueurs
 	*/
 	vector<string> combinaisonCartesJoueur(Borne& borne);
+	/**
+* \brief retourne vrai si cette borne peut etre revendiquée
+*/
+	bool revendiquable(Borne& borne);
 	/*!
 	* \brief retourne 1 si joueur1 l'emporte 2 sinon
 	*/

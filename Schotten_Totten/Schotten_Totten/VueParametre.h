@@ -12,23 +12,23 @@ private:
 	
 public:
 	/*!
-	* \demande à l'utilisateur de choisir avec qui il veut jouer
+	* \brief demande à l'utilisateur de choisir avec qui il veut jouer
 	*/
 	void choixIAHumain();
 	/*!
-	* \met le controleur Parametre en ant que controleur
+	* \brief met le controleur Parametre en ant que controleur
 	*/
 	void setControleur(ControleurParametre* pControleur) { controleur = pControleur; };
 	/*!
-	* \renvoie le controleur parametre
+	* \brief renvoie le controleur parametre
 	*/
 	ControleurParametre* getControleur() { return controleur; }
 	/*!
-	* \gere l'erreur de saisie de choixIAHumain
+	* \brief gere l'erreur de saisie de choixIAHumain
 	*/
 	void erreurChoix();
 	/*!
-	* \surcharge de affiche dans vue appelle choixIAHumain
+	* \brief surcharge de affiche dans vue appelle choixIAHumain
 	*/
 	void affiche() override;
 };

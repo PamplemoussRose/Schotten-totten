@@ -1,13 +1,15 @@
 #ifndef CONTROLEURJEU_HEADER
 #define CONTROLEURJEU_HEADER
 #include <vector>
+#include "ControleurBorne.h"
 using namespace std;
 
 
 class ControleurJeu {
 private:
-
+	vector<ControleurBorne*> bornes;
 public:
+	vector<ControleurBorne*> getBornes(){ return bornes; };
 	/*!
 	* \methode virtuelle pour initialiser la partie
 	*/

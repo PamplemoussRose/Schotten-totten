@@ -13,8 +13,11 @@ class VueJeu : public Vue
 private:
 	//Attributs
 	VueDemandeCarte* demandeCarte;
+	ControleurJeu* controleur;
+
 public:
-	//Methode
+	void setControleur(ControleurJeu* pControleur) { controleur = pControleur; };
+	ControleurJeu* getControleur() { return controleur; }
 	/*!
 	* \brief affiche la vue pour jouer
 	*/

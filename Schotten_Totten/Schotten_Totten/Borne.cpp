@@ -1,9 +1,5 @@
 #include "Borne.h"
 
-bool Borne::revendiquable()
-{
-	return (cartesJ1.size() == nbCartesRevendiquer && cartesJ2.size() == nbCartesRevendiquer);
-}
 
 void Borne::AjouterCarteJ1(CarteClan& carteJ1)
 {

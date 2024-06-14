@@ -48,10 +48,7 @@ public:
 	* \brief retourne les cartes de J2 sur la borne
 	*/
 	vector<CarteClan*> getCartesJ2() { return cartesJ2; };
-	/**
-	* \brief retourne vrai si cette borne peut etre revendiquée
-	*/
-	bool revendiquable();
+
 	/*!
 	* \brief Ajoute une carte de J1 à la borne
 	*/
