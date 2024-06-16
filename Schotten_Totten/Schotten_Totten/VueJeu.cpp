@@ -8,6 +8,25 @@ void VueJeu::affiche()
 	}
 }
 
+void VueJeu::affichePlateau()
+{
+	/*
+	vector<Borne*> bornes = (*controleur).getEtatJeu().getPlateau().getBornes();
+	int maxJ1 = (*controleur).getEtatJeu().getMaxCartesJ1();
+	for (int b = 0; b < 9; b++) {
+		vector<Carte> cartesJ1 = bornes[b].getCartesJ1();
+		for (int c = 0; c < cartesJ1.size(); c++) {
+			afficheCarte(cartesJ1[c]);//commetn avoir la liste de carte sur cette borne
+		}
+	}
+	cout << endl;
+	cout << endl;
+	afficheBornes();
+	cout << endl;
+	cout << endl;
+	*/
+}
+
 void VueJeu::afficheTour(Joueur& joueurActuel)
 {
 	Carte* carteChoisie;
@@ -18,8 +37,8 @@ void VueJeu::afficheTour(Joueur& joueurActuel)
 	cout << "Sur quel borne? (numéro::1-9)" << endl;
 	cin >> numBorne;
 	//JouerCarteSurBorne;
-
-	if (controleur->getBornes()[numBorne - 1].revendiquable()) {
+	/*
+	if (controleur->getBornes()[numBorne - 1]->revendiquable()) {
 		string rep;
 		cout <<" Revendiquer(1) ou piocher(2) ? "<<endl;
 		cin >> rep;
@@ -35,7 +54,8 @@ void VueJeu::afficheTour(Joueur& joueurActuel)
 			cout << "Le joueur 2 revendique la borne" << endl;
 			}
 		}
-	}
+		
+	}*/
 	//controleurjeu piocher joueur qui regarde la carte piochée
 	cout << "Vous avez pioché" <<"cartepiochée"<< endl;
 	cout << "Changement de joueur!Au tour du joueur" << endl;
@@ -47,22 +67,22 @@ void VueJeu::afficheCarteClan(CarteClan* carte)
 	Couleurs cl = carte->getCouleur();
 	int v = carte->getValeur();
 	if (cl==Couleurs::rouge) {
-		std::cout <<" \e[41m "<<v<<" \e[0m";
+		std::cout <<" \033[41m "<<v<<" \033[0m";
 	}
 	else if(cl == Couleurs::vert) {
-		std::cout << " \e[42m "<<v<<" \e[0m" ;
+		std::cout << " \033[42m "<<v<<" \033[0m" ;
 	}
 	else if (cl == Couleurs::jaune) {
-		std::cout << " \e[43m " << v << " \e[0m" ;
+		std::cout << " \033[43m " << v << " \033[0m" ;
 	}
 	else if (cl == Couleurs::violet) {
-		std::cout << " \e[45m " << v << " \e[0m";
+		std::cout << " \033[45m " << v << " \033[0m";
 	}
 	else if (cl == Couleurs::bleu) {
-		std::cout << " \e[46m " << v << " \e[0m" ;
+		std::cout << " \033[46m" << v << " \033[0m";
 	}
 	else if (cl == Couleurs::marron) {
-		std::cout << " \e[94; 53; 17; 0; 255m "<< v<<" \e[0m";
+		std::cout << " \033[94; 53; 17; 0; 255m "<< v<<" \033[0m";
 	}	
 }
 
@@ -72,31 +92,31 @@ void VueJeu::afficheCarteTactique(CarteTactique* carte)
 {
 	string nom = carte->getNom();
 	if (nom=="Joker") {
-		std::cout << " \e[40;37m J \e[0m";
+		std::cout << " \033[40;37m J \033[0m";
 	}
 	else if (nom == "PorteBouclier") {
-		cout << "\e[m 123 \e[0m " ;
+		cout << "\033[m 123 \033[0m " ;
 	}
 	else if (nom == "Espion") {
-		cout << "\e[40;37m 7 \e[0m " ;
+		cout << "\033[40;37m 7 \033[0m " ;
 	}
 	else if (nom == "Colin Maillard") {
-		cout << "\e[40;38; 2; 145; 81; 25m CM \e[0m " ;
+		cout << "\033[40;38; 2; 145; 81; 25m CM \033[0m " ;
 	}
 	else if (nom == "Combat de boue") {
-		cout << "\e[40;38; 2; 145; 81; 25m CB \e[0m " ;
+		cout << "\033[40;38; 2; 145; 81; 25m CB \033[0m " ;
 	}
 	else if (nom == "Chasseur de têtes") {
-		cout << "\e[40;38; 2; 234; 34; 103m CT \e[0m " ;
+		cout << "\033[40;38; 2; 234; 34; 103m CT \033[0m " ;
 	}
 	else if (nom == "Stratege") {
-		cout << "\e[40;38; 2; 234; 34; 103m S \e[0m " ;
+		cout << "\033[40;38; 2; 234; 34; 103m S \033[0m " ;
 	}
 	else if (nom == "Banshee") {
-		cout << "\e[40;38; 2; 234; 34; 103m B \e[0m " << endl;
+		cout << "\033[40;38; 2; 234; 34; 103m B \033[0m " << endl;
 	}
 	else if (nom == "Traitre") {
-		cout << "\e[40;38; 2; 234; 34; 103m T \e[0m " << endl;
+		cout << "\033[40;38; 2; 234; 34; 103m T \033[0m " << endl;
 	}
 }
 void VueJeu::afficheCarte(Carte* carte) {
@@ -111,7 +131,7 @@ void VueJeu::afficheCarte(Carte* carte) {
 void VueJeu::afficheBornes()
 {
 	for (unsigned int i = 1; i < 10; i++) {
-		cout << " \e[47;30m B"<<i<< "\e[0m";
+		cout << " \033[47;30m B"<<i<<" \033[0m";
 	}
 }
 

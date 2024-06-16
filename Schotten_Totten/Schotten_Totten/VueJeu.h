@@ -23,6 +23,10 @@ public:
 	*/
 	void affiche();
 	/*!
+	* \brief affiche le plateau
+	*/
+	void affichePlateau();
+	/*!
 	* \brief affichage du tour du joueur
 	*/
 	void afficheTour(Joueur& joueurActuel);

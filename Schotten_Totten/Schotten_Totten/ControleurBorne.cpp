@@ -97,3 +97,4 @@ bool ControleurBorne::revendiquable(Borne& borne)
 {
 	return (borne.getCartesJ1().size() == borne.getNbCartesRevendiquer() && borne.getCartesJ2().size() == borne.getNbCartesRevendiquer());
 }
+

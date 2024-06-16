@@ -3,9 +3,9 @@
 #include <vector>
 #include "ControleurBorne.h"
 using namespace std;
+#include "Controleur.h"
 
-
-class ControleurJeu {
+class ControleurJeu : Controleur{
 private:
 	vector<ControleurBorne*> bornes;
 public:

@@ -22,8 +22,9 @@ public:
 	* \brief retourne un pointeur vers les bornes
 	*/
 	vector<Borne*> getBornes();
+	unsigned int getMaxCartesJ1();
 	/*!
-	* \brief retourne un pointeur vers une borne d'une position donee
+	* \brief retourne un pointeur vers une borne d'une position donnee
 	*/
 	Borne* getBornePosition(unsigned int position);
 	/*!
