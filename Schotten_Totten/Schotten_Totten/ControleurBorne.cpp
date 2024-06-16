@@ -11,24 +11,33 @@ unsigned int ControleurBorne::sommeCartes(vector<CarteClan*> cartes)
 vector<string> ControleurBorne::combinaisonCartesJoueur(Borne& borne)
 {
 	vector<string> resultatJoueur;
-	vector<CarteClan*> cartes;
+	vector<Carte*> cartes;
 	for (int j = 1; j < 3; j++) {
-		//Pour la liste de carte du joueur 1 puis ud joueur 2
+		//Pour la liste de carte du joueur 1 puis du joueur 2
 		if (j == 1) {
 			cartes = borne.getCartesJ1();
 		}
 		else {
 			cartes = borne.getCartesJ2();
 		}
-		Couleurs couleurCarte = (*cartes.begin())->getCouleur();
-		int valeurCarte = (*cartes.begin())->getValeur();
+		vector<CarteClan*> cartesClan;
+		// Copier les pointeurs de Carte* dans CarteClan*
+		for (Carte* carte : cartes) {
+			CarteClan* carteClan = dynamic_cast<CarteClan*>(carte);
+			if (carteClan) {
+				cartesClan.push_back(carteClan);
+			}
+		}
+
+		Couleurs couleurCarte = (*cartesClan.begin())->getCouleur();
+		int valeurCarte = (*cartesClan.begin())->getValeur();
 		bool brelan = true;
 		bool suiteCoul = true;
 		bool suite = true;
 		bool couleur = true;
 		int cpt = 0;
 		//Parcours des cartes
-		for (auto it1 = cartes.begin()++; it1 < cartes.end(); it1++) {
+		for (auto it1 = cartesClan.begin()++; it1 < cartesClan.end(); it1++) {
 			//si elles sont de couleurs différentes
 			if ((*it1)->getCouleur() != couleurCarte) {
 				couleur = false; //ce n'est pas une couleur
@@ -73,7 +82,25 @@ void ControleurBorne::calculeRevendication(Borne& borne)
 	int win = 0; //1: joueur 1 revendique 2: joueur 2 gagne
 	//si egalité de combinaison
 	if (combi[0]== combi[1]) {
-		if (sommeCartes(borne.getCartesJ1()) > sommeCartes(borne.getCartesJ2())) {
+		vector<Carte*> cJ1 = borne.getCartesJ1();
+		vector<Carte*> cJ2 = borne.getCartesJ2();
+		vector<CarteClan*> cartesClan1;
+		// Copier les pointeurs de Carte* dans CarteClan*
+		for (Carte* carte1 : cJ1) {
+			CarteClan* carteClan1 = dynamic_cast<CarteClan*>(carte1);
+			if (carteClan1) {
+				cartesClan1.push_back(carteClan1);
+			}
+		}
+		vector<CarteClan*> cartesClan2;
+		// Copier les pointeurs de Carte* dans CarteClan*
+		for (Carte* carte2 : cJ2) {
+			CarteClan* carteClan2 = dynamic_cast<CarteClan*>(carte2);
+			if (carteClan2) {
+				cartesClan2.push_back(carteClan2);
+			}
+		}
+		if (sommeCartes(cartesClan1) > sommeCartes(cartesClan2)) {
 			win = 1;
 		}
 		else { win = 2; }

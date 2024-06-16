@@ -39,7 +39,7 @@ public:
 	/**
 	* \brief remplace le nombre pour revndiquer par un autre
 	*/
-	unsigned int setNbCartesRevendiquer(unsigned int nb) { nbCartesRevendiquer = nb; };
+	void setNbCartesRevendiquer(unsigned int nb) { nbCartesRevendiquer = nb; };
 	/*!
 	* brief retourne les cartes de J1 sur la borne
 	*/
