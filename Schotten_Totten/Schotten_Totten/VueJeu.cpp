@@ -10,13 +10,20 @@ void VueJeu::affiche()
 
 void VueJeu::affichePlateau()
 {
-	/*
-	vector<Borne*> bornes = (*controleur).getEtatJeu().getPlateau().getBornes();
-	int maxJ1 = (*controleur).getEtatJeu().getMaxCartesJ1();
-	for (int b = 0; b < 9; b++) {
-		vector<Carte> cartesJ1 = bornes[b].getCartesJ1();
-		for (int c = 0; c < cartesJ1.size(); c++) {
-			afficheCarte(cartesJ1[c]);//commetn avoir la liste de carte sur cette borne
+	shared_ptr<Plateau> plateau = (*(*controleur).getEtatJeu()).getPlateau();
+	vector<Borne*> bornes = (*plateau).getBornes();
+	//Affichage des cartes de Joueur 1 au dessus des bornes
+	if ((*plateau).getMaxCartesJ1() != 0) {
+		unsigned int maxJ1 = (*plateau).getMaxCartesJ1() - 1;
+		for (int ligne = maxJ1; ligne > -1; ligne--) {
+			for (unsigned int b = 0; b < 9; b++) {
+				vector<Carte*> cartesJ1 = (*bornes[b]).getCartesJ1();
+				if (cartesJ1.size() >= ligne + 1) {
+					afficheCarte(cartesJ1[ligne]);
+				}
+				else { cout << "   "; }
+			}
+			cout << endl;
 		}
 	}
 	cout << endl;
@@ -24,7 +31,21 @@ void VueJeu::affichePlateau()
 	afficheBornes();
 	cout << endl;
 	cout << endl;
-	*/
+	//Affichage des cartes de Joueur 2 en dessous des bornes
+	if ((*plateau).getMaxCartesJ2() != 0) {
+		unsigned int maxJ2 = (*plateau).getMaxCartesJ2() - 1;
+		for (int ligne = 0; ligne < maxJ2; ligne++) {
+			for (unsigned int b = 0; b < 9; b++) {
+				vector<Carte*> cartesJ2 = (*bornes[b]).getCartesJ2();
+				if (cartesJ2.size() >= ligne + 1) {
+					afficheCarte(cartesJ2[ligne]);
+				}
+				else { cout << "   "; }
+			}
+			cout << endl;
+		}
+	}
+
 }
 
 void VueJeu::afficheTour(Joueur& joueurActuel)

@@ -5,7 +5,7 @@
 using namespace std;
 #include "Controleur.h"
 
-class ControleurJeu : Controleur{
+class ControleurJeu : public Controleur{
 private:
 	vector<ControleurBorne*> bornes;
 public:

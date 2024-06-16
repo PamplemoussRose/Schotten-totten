@@ -19,6 +19,16 @@ unsigned int Plateau::getMaxCartesJ1()
 	return *max_element(nbCartesBornesJ1.begin(), nbCartesBornesJ1.end());
 }
 
+unsigned int Plateau::getMaxCartesJ2()
+{
+	vector<unsigned int> nbCartesBornesJ2;
+	for (int i = 0; i < 9; i++) {
+		nbCartesBornesJ2.push_back(vBornes[i]->getCartesJ2().size());
+	}
+	return *max_element(nbCartesBornesJ2.begin(), nbCartesBornesJ2.end());
+}
+
+
 Borne* Plateau::getBornePosition(unsigned int position)
 {
 	if (position < 0 || position >= vBornes.size()) {

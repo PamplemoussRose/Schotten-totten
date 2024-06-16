@@ -11,8 +11,8 @@ private:
 	int numero;
 	int statut;
 	unsigned int nbCartesRevendiquer;
-	vector<CarteClan*> cartesJ1;
-	vector<CarteClan*> cartesJ2;
+	vector<Carte*> cartesJ1;
+	vector<Carte*> cartesJ2;
 public:
 	Borne() :cartesJ1(), cartesJ2() {};
 	//Methodes
@@ -43,11 +43,11 @@ public:
 	/*!
 	* brief retourne les cartes de J1 sur la borne
 	*/
-	vector<CarteClan*> getCartesJ1() { return cartesJ1; };
+	vector<Carte*> getCartesJ1() { return cartesJ1; };
 	/**
 	* \brief retourne les cartes de J2 sur la borne
 	*/
-	vector<CarteClan*> getCartesJ2() { return cartesJ2; };
+	vector<Carte*> getCartesJ2() { return cartesJ2; };
 
 	/*!
 	* \brief Ajoute une carte de J1 à la borne
