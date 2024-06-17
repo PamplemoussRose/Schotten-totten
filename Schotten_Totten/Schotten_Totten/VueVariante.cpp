@@ -12,14 +12,19 @@ void VueVariante::afficheTitre() {
 }
 
 void VueVariante::afficheChoixVariantes() {
-	int choix;
+	unsigned int choix;
 
 	cout << "Veuillez choisir la variante du jeu :" << endl;
 	cout << "\t1. Jeu classique" << endl;
 	cout << "\t2. Jeu tactique" << endl;
 	cout << "Choix : ";
 	cin >> choix;
-	getControleur()->choisirVariante(choix);
+	try {
+		getControleur()->choisirVariante(choix);
+	}
+	catch (exception exp) {
+		erreurChoixVariante();
+	}
 }
 
 void VueVariante::erreurChoixVariante() {

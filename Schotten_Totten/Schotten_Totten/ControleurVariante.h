@@ -9,10 +9,35 @@ class VueVariante;
 
 class ControleurVariante : public Controleur
 {
+private:
+	static ControleurVariante* instance;
+	/**
+	* Permet le stock de la variante choisie par l'utilisateur afin d'être utiliser
+	* lors de la création de EtatJeu dans ControleurJeu::initPartie
+	*/
+	static unsigned int choixVariante;
+
+	inline ControleurVariante();
+	//inline ControleurVariante(VueVariante* vue);
+
 public:
-	inline ControleurVariante(VueVariante* vue);
+	/**
+	 * Singletons should not be cloneable.
+	 */
+	ControleurVariante(ControleurVariante& other) = delete;
+	/**
+	 * Singletons should not be assignable.
+	 */
+	void operator=(const ControleurVariante&) = delete;
+	/**
+	* Destruction de l'instance
+	*/
+	//~ControleurVariante() : Controleur::~Controleur() { delete instance; };
+
+	static ControleurVariante* getControleurVariante();
+
 	VueVariante* getVue() { return (VueVariante*) Controleur::getVue(); }
 
-	void choisirVariante(int choix);
+	void choisirVariante(unsigned int choix);
 };
 #endif

@@ -11,4 +11,5 @@ int main()
     */
     std::cout << "Hello World!\n";
     Test::test();
+    Test::testLancementApp();
 }

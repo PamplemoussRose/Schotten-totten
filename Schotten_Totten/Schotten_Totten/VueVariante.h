@@ -16,11 +16,11 @@ public:
 	ControleurVariante* getControleur() { return controleur; }
 
 	void affiche() override;
-	void erreurChoixVariante();
 
 private:
 	void afficheTitre();
 	void afficheChoixVariantes();
+	void erreurChoixVariante();
 };
 
 #endif

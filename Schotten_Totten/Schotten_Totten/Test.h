@@ -3,6 +3,7 @@
 
 #include "Plateau.h"
 #include "Couleurs.h"
+#include "Application.h"
 
 #include <iostream>
 using namespace std;
@@ -14,6 +15,7 @@ class Test
 {
 public:
 	static void test();
+	static void testLancementApp();
 };
 
 #endif // !TEST_H

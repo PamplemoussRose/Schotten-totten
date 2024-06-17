@@ -8,8 +8,15 @@ using namespace std;
 class ControleurJeu : public Controleur{
 private:
 	vector<ControleurBorne*> bornes;
+
+	EtatJeu* etatJeu;
 public:
 	vector<ControleurBorne*> getBornes(){ return bornes; };
+
+	/*!
+	* \retourne etatJeu
+	*/
+	EtatJeu* getEtatJeu() { return etatJeu; };
 	/*!
 	* \methode virtuelle pour initialiser la partie
 	*/

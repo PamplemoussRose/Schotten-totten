@@ -1,26 +1,34 @@
 #include "Application.h"
 
-Application::Application() {
+Application* Application::instance = nullptr;
 
+Application::Application() {
+	changeControleurVariante();
 }
 
-Application Application::getApplication() {
+Application* Application::getApplication() {
 	if (instance == nullptr) {
 		instance = new Application();
 	}
-	return *instance;
+	return instance;
 }
 
-void Application::mainloop(){
-	controleurActuel.afficheVue();
+void Application::commencerVueActuel(){
+	controleurActuel->afficheVue();
 }
 
 void Application::changeControleurVariante() {
-	controleurActuel = 
+	if (controleurActuel) {
+		delete controleurActuel;
+	}
+	controleurActuel = ControleurVariante::getControleurVariante();
 }
 
 void Application::changeControleurParametre() {
-
+	if (controleurActuel) {
+		delete controleurActuel;
+	}
+	controleurActuel = ControleurParametre::getControleurParametre();
 }
 
 void Application::changeControleurJeu() {
