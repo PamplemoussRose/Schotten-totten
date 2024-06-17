@@ -28,7 +28,7 @@ void Application::changeControleurParametre() {
 	if (controleurActuel) {
 		delete controleurActuel;
 	}
-	controleurActuel = ControleurParametre::getControleurParametre();
+	//controleurActuel = ControleurParametre::getControleurParametre();
 }
 
 void Application::changeControleurJeu() {

@@ -4,6 +4,7 @@
 #include "ControleurBorne.h"
 using namespace std;
 #include "Controleur.h"
+#include "EtatJeu.h"
 
 class ControleurJeu : public Controleur{
 private:

@@ -1,7 +1,6 @@
 #ifndef GUARD_CONTROLEUR
 #define GUARD_CONTROLEUR
 #include "Vue.h"
-#include "Application.h"
 class Vue;
 
 //Classe abstraite

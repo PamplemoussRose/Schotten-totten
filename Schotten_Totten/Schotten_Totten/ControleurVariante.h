@@ -2,6 +2,7 @@
 #define CONTROLEURVARIANTE_HEADER
 #include <string>
 #include "Controleur.h"
+#include "Application.h"
 using namespace std;
 
 class Vue;
