@@ -1,22 +1,31 @@
 #ifndef GUARD_CONTROLEUR
 #define GUARD_CONTROLEUR
 #include "Vue.h"
+#include"EtatJeu.h"
+class Vue;
 
 //Classe abstraite
 class Controleur {
 private:
 	//Attributs
 	Vue* vue;
+	EtatJeu* etatJeu;
 	
 public:
 	//Methodes
 	/*!
-	* \lie la vue au controleur
+	* \Constructeur du controleur
 	*/
-	Controleur(Vue* pVue) {
+	Controleur(Vue* pVue,EtatJeu* etatjeu) {
 		vue = pVue;
+		etatJeu = etatjeu;
+
 	}
 
+	/*!
+	* \retourne etatJeu
+	*/
+	EtatJeu* getEtatJeu() { return etatJeu; };
 	/*!
 	* \retourne la vue
 	*/

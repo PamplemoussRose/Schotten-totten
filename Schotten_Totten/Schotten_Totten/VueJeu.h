@@ -5,48 +5,61 @@
 #include "Joueur.h"
 #include "CarteClan.h"
 #include "CarteTactique.h"
+#include "Couleurs.h"
+#include "ControleurJeu.h"
 
 class VueJeu : public Vue 
 {
 private:
 	//Attributs
 	VueDemandeCarte* demandeCarte;
+	ControleurJeu* controleur;
+
 public:
-	//Methode
+	void setControleur(ControleurJeu* pControleur) { controleur = pControleur; };
+	ControleurJeu* getControleur() { return controleur; }
 	/*!
-	* \affiche la vue pour jouer
+	* \brief affiche la vue pour jouer
 	*/
 	void affiche();
 	/*!
-	* \affiche sur console la carte clan
+	* \brief affiche le plateau
+	*/
+	void affichePlateau();
+	/*!
+	* \brief affichage du tour du joueur
+	*/
+	void afficheTour(Joueur& joueurActuel);
+	/*!
+	* \brief affiche sur console la carte clan
 	*/
 	void afficheCarteClan(CarteClan* carte);
 	/*!
-	* \affiche sur console la carte tactique
+	* \brief affiche sur console la carte tactique
 	*/
 	void afficheCarteTactique(CarteTactique* carte);
 	/*!
-	* \affiche sur console la carte
+	* \brief affiche sur console la carte
 	*/
 	void afficheCarte(Carte* carte);
 	/*!
-	* \retourne sur la console les bornes du jeu
+	* \brief retourne sur la console les bornes du jeu
 	*/
 	void afficheBornes();
 	/*!
-	* \affiche la main du joueur en cours
+	* \brief affiche la main du joueur en cours
 	*/
 	void afficheMain(Joueur& joueur);
 	/*!
-	* \affiche la carte choisit par l'adversaire
+	* \brief affiche la carte choisit par l'adversaire
 	*/
 	void afficheCarteJouee(Carte* carte);
 	/*!
-	* \affiche la carte piochee par le joueur en cours
+	* \brief affiche la carte piochee par le joueur en cours
 	*/
 	void affichecartePiochee(Carte* carte);
 	/*!
-	* \affiche le gagnant du jeu
+	* \brief affiche le gagnant du jeu
 	*/
 	void afficheGagnant(Joueur* joueur);
 	

@@ -2,26 +2,31 @@
 #define CONTROLERJEUV1_HEADER
 #include "ControleurJeu.h"
 #include "ControleurPioche.h"
+#include "ControleurPersonnage.h"
+#include "ControleurDemandeCarte.h"
 class ControleurJeuV1 : public ControleurJeu{
 	//Attributs
 private:
-	ControleurPioche* ControleurPioche;
+	ControleurPioche* controleurPioche;
+	ControleurPersonnage* controleurPerso1;
+	ControleurPersonnage* controleurPerso2;
+	ControleurDemandeCarte* demandeCarte;
 public:
 	/*!
 	* \ initialise la partie
 	*/
-	virtual void initPartie();
+	void initPartie();
 	/*!
 	* \deroulement du tour
 	*/
-	virtual void deroulementTours();
+	void deroulementTours();
 	/*!
 	* \deroulement de la partie
 	*/
-	virtual void deroulementPartie();
+	void deroulementPartie();
 	/*!
 	* \ fin de la partie
 	*/
-	virtual void finPartie();
+	void finPartie();
 };
 #endif

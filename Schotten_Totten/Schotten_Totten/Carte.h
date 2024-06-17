@@ -19,6 +19,7 @@ public:
 	* Methode d'application de l'effet de la carte
 	*/
 	template<class ...Args> void effet(Args... args);
+	virtual ~Carte() = default;  // Destructeur virtuel pour rendre la classe polymorphe
 
 	
 };
