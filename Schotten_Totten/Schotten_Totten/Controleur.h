@@ -2,8 +2,6 @@
 #define GUARD_CONTROLEUR
 #include "Vue.h"
 
-class Vue;
-
 //Classe abstraite
 class Controleur {
 private:
@@ -18,16 +16,17 @@ public:
 	Controleur(Vue* pVue) {
 		vue = pVue;
 	}
+
+	/*!
+	* \retourne la vue
+	*/
+	Vue* getVue() { return vue; };
 	/*!
 	* \appelle la fonction affiche de vue
 	*/
 	void afficheVue() {
 		vue->affiche();
 	};
-	/*!
-	* \retourne la vue
-	*/
-	Vue* getVue() { return vue; };
 };
 
 #endif // !GUARD_CONTROLEUR

@@ -7,7 +7,9 @@ ControleurVariante::ControleurVariante(VueVariante* vue) : Controleur((Vue*)vue)
 void ControleurVariante::choisirVariante(int choix)
 {
 	// Gestion de l'erreur
-	if (choix == 0) {
-		//getVue()->erreurChoixVariante();
+	if (choix == 0 || choix > 2) {
+		getVue()->erreurChoixVariante();
 	}
+
+	// Changement de controleur vers les paramètres de joueurs
 }
