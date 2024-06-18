@@ -8,7 +8,8 @@
 #include "Plateau.h"
 #include "Joueur.h"
 #include "Borne.h"
-#include "Pioche.h"
+#include "PiocheClan.h"
+
 using namespace std;
 
 class BuilderClassique : public Builder {

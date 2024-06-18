@@ -20,3 +20,9 @@ void ControleurJeuV1::initPartie() {
 		controleurPiocheClan->piocher(*piocheClan, *(getEtatJeu()->getJoueur2()));
 	}
 }
+
+void ControleurJeuV1::finPartie() {
+	
+
+	delete getEtatJeu()->getPlateau()->getInstance();
+}

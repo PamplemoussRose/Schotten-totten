@@ -4,11 +4,13 @@ BuilderClassique::BuilderClassique()
 {
     this->Reset();
 }
+
 BuilderClassique::BuilderClassique(BuilderClassique&& other) noexcept
 {
     plateauBuild = other.plateauBuild;
     other.plateauBuild = nullptr;
 }
+
 BuilderClassique::~BuilderClassique()
 {
     delete plateauBuild;
@@ -16,7 +18,7 @@ BuilderClassique::~BuilderClassique()
 
 void BuilderClassique::Reset()
 {
-    plateauBuild = new Plateau();
+    plateauBuild = Plateau::getInstance();
 }
 
 void BuilderClassique::setBornesBuilder()
@@ -30,11 +32,9 @@ void BuilderClassique::setBornesBuilder()
 
 void BuilderClassique::setPiocheBuilder()
 {//creation de Bornes et ajout de la pioche au jeu
-    vector<Pioche*> lstPioche;
-    for (int i = 0; i < 54; ++i) {
-        lstPioche.push_back(new Pioche());
-    }
-    plateauBuild->setPioche(move(lstPioche));
+    PiocheClan* lstPioche;
+    
+    plateauBuild->setPiocheClan(move(lstPioche));
 }
 
 Plateau* BuilderClassique::GetResult()

@@ -16,7 +16,7 @@ private:
 
 	EtatJeu* etatJeu;
 public:
-	ControleurJeu() : Controleur((new VueJeu())) { getVue()->setControleur(this); }
+	ControleurJeu() : Controleur(new VueJeu()) { getVue()->setControleur(this); }
 	VueJeu* getVue() { return (VueJeu*)Controleur::getVue(); }
 
 	vector<ControleurBorne*> getBornes(){ return bornes; };
