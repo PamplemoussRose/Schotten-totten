@@ -22,7 +22,13 @@ public:
 	* \brief retourne un pointeur vers les bornes
 	*/
 	vector<Borne*> getBornes();
+	/*!
+	* \brief retourne le nombre maximum de cartes du J1 sur cette borne
+	*/
 	unsigned int getMaxCartesJ1();
+	/*!
+	* \brief retourne le nombre maximum de cartes du J2 sur cette borne
+	*/
 	unsigned int getMaxCartesJ2();
 	/*!
 	* \brief retourne un pointeur vers une borne d'une position donnee

@@ -57,9 +57,10 @@ void VueJeu::afficheTour(Joueur& joueurActuel)
 	afficheMain(joueurActuel);
 	cout << "Sur quel borne? (numéro::1-9)" << endl;
 	cin >> numBorne;
+	shared_ptr<Plateau> plateau = (*(*controleur).getEtatJeu()).getPlateau();
+	vector<Borne*> bornes = (*plateau).getBornes();
 	//JouerCarteSurBorne;
-	/*
-	if (controleur->getBornes()[numBorne - 1]->revendiquable()) {
+	/*if (bornes[numBorne - 1].revendiquable()) {
 		string rep;
 		cout <<" Revendiquer(1) ou piocher(2) ? "<<endl;
 		cin >> rep;
@@ -78,8 +79,9 @@ void VueJeu::afficheTour(Joueur& joueurActuel)
 		
 	}*/
 	//controleurjeu piocher joueur qui regarde la carte piochée
-	cout << "Vous avez pioché" <<"cartepiochée"<< endl;
-	cout << "Changement de joueur!Au tour du joueur" << endl;
+	cout << "Vous avez pioché";//<<afficheCarte()<< endl;
+	cout << "Changement de joueur!Au tour du joueur" << endl;//avec appli ou etatjeu
+
 
 }
 
@@ -155,7 +157,6 @@ void VueJeu::afficheBornes()
 		cout << " \033[47;30m B"<<i<<" \033[0m";
 	}
 }
-
 
 
 void VueJeu::afficheMain(Joueur& joueur)

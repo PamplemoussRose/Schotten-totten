@@ -7,7 +7,7 @@
 class ControleurJeuV1 : public ControleurJeu{
 	//Attributs
 private:
-	ControleurPioche* controleurPioche;
+	ControleurPioche* controleurPiocheClan;
 	ControleurPersonnage* controleurPerso1;
 	ControleurPersonnage* controleurPerso2;
 	ControleurDemandeCarte* demandeCarte;
