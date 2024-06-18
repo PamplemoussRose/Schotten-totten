@@ -5,6 +5,7 @@ void Joueur::ajoutCarte(Carte& carte)
 	mainJoueur.push_back(&carte);
 	nbreCartes += 1;
 }
+
 Carte* Joueur::getCarteMainPosition(unsigned int position)
 {
 	int i = 0;
