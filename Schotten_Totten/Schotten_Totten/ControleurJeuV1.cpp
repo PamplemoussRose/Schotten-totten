@@ -1,5 +1,5 @@
 #include "ControleurJeuV1.h"
-
+ControleurJeuV1* ControleurJeuV1::instance = nullptr;
 
 ControleurJeuV1* ControleurJeuV1::getInstance()
 {
@@ -13,16 +13,14 @@ void ControleurJeuV1::initPartie() {
 	getEtatJeu()->getInstance();
 	getEtatJeu()->getPlateau();
 	PiocheClan* piocheClan = (PiocheClan*)(getEtatJeu()->getPlateau())->getPiocheClan();
-	controleurPiocheClan->melanger(*piocheClan);
-	//chaque joueur pioche 6 cartes clan de la pioche clan
-	for (int carte = 0; carte < 6; carte++) {
-		controleurPiocheClan->piocher(*piocheClan, *(getEtatJeu()->getJoueur1()));
-		controleurPiocheClan->piocher(*piocheClan, *(getEtatJeu()->getJoueur2()));
-	}
+	ControleurPioche* controleurPiocheClan = new ControleurPioche();
+	//ControleurPersonnage* controleurPerso2= new ControleurHumain();
+	//ControleurPersonnage* controleurPerso1 = new ControleurIAAlea();
+	ControleurDemandeCarte* controleurPerso2 = new ControleurDemandeCarte();
 }
 
 void ControleurJeuV1::finPartie() {
-	
+
 
 	delete getEtatJeu()->getPlateau()->getInstance();
 }
