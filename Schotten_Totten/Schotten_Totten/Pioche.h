@@ -18,7 +18,7 @@ public:
 	/*!
 	* \brief construit la pioche
 	*/
-	Pioche() :pioche() {};
+	Pioche() :pioche() { nbCartesRestantes, nbTotal = 0; };
 	//Methodes
 	/*!
 	* \brief retourne nombre cartes restantes dans pioche
