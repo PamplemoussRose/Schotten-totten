@@ -1,27 +1,28 @@
-#ifndef CONTROLEURJEUV1_HEADER
-#define CONTROLERJEUV1_HEADER
+#ifndef CONTROLERJEUTACTIQUE_HEADER
+#define CONTROLERJEUTACTIQUE_HEADER
 #include "ControleurJeu.h"
 #include "ControleurPioche.h"
 #include "ControleurPersonnage.h"
 #include "ControleurDemandeCarte.h"
-class ControleurJeuV1 : public ControleurJeu{
+class ControleurJeuTactique : public ControleurJeu {
 	//Attributs
 private:
 	ControleurPioche* controleurPiocheClan;
+	ControleurPioche* controleurPiocheTactique;
 	ControleurPersonnage* controleurPerso1;
 	ControleurPersonnage* controleurPerso2;
 	ControleurDemandeCarte* demandeCarte;
-	static ControleurJeuV1* instance;
-	inline ControleurJeuV1() :ControleurJeu(){}
+	static ControleurJeuTactique* instance;
+	inline ControleurJeuTactique() :ControleurJeu() {}
 public:
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/
-	ControleurJeuV1* getInstance();
+	ControleurJeuTactique* getInstance();
 
 	// Suppression des constructeurs de copie et d'affectation
-	ControleurJeuV1(const ControleurJeuV1&) = delete;
-	ControleurJeuV1& operator=(const ControleurJeuV1&) = delete;
+	ControleurJeuTactique(const ControleurJeuTactique&) = delete;
+	ControleurJeuTactique& operator=(const ControleurJeuTactique&) = delete;
 	/*!
 	* \ initialise la partie
 	*/

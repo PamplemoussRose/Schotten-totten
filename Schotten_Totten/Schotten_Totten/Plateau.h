@@ -11,7 +11,8 @@ class Plateau {
 private:
 	//Attributs
 	vector<Borne*> vBornes;
-	vector<Pioche*> vPioche;
+	Pioche* piocheClan;
+	Pioche* piocheTactique;
 public:
 	//Methodes
 	/*!
@@ -35,16 +36,24 @@ public:
 	*/
 	Borne* getBornePosition(unsigned int position);
 	/*!
-	* \brief defini la pioche du plateau
+	* \brief modifie la piocheClan du plateau
 	*/
-	void setPioche(vector<Pioche*>&& lstPioche);
+	void setPiocheClan(Pioche*&& newPioche);
 	/*!
-	* \brief retourne un pointeur vers la pioche
+	* \brief modifie la piocheTactique du plateau
 	*/
-	vector<Pioche*> getPioche();
+	void setPiocheTactique(Pioche*&& newPioche);
+	/*!
+	* \brief retourne un pointeur vers la piocheClan
+	*/
+	Pioche* getPiocheClan() {return piocheClan;};
+	/*!
+	* \brief retourne un pointeur vers la piocheClan
+	*/
+	Pioche* getPiocheTactique() { return piocheTactique; };
 	/*!
 	* \brief retourne un pointeur vers la pioche a une position donnee
 	*/
-	Pioche getPiochePosition(unsigned int position);
+	//Pioche getPiochePosition(unsigned int position);
 };
 #endif

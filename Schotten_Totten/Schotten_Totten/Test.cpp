@@ -2,7 +2,7 @@
 
 void Test::test() {
 	cout << "Methode de test" << endl;
-	cout << Couleurs::bleu << endl;
+	//cout << Couleurs::bleu << endl;
 
 	
 }

@@ -5,6 +5,10 @@
 using namespace std;
 #include "Controleur.h"
 #include "EtatJeu.h"
+#include "VueJeu.h"
+
+class Vue;
+class VueJeu;
 
 class ControleurJeu : public Controleur{
 private:
@@ -12,8 +16,10 @@ private:
 
 	EtatJeu* etatJeu;
 public:
-	vector<ControleurBorne*> getBornes(){ return bornes; };
+	ControleurJeu() : Controleur((new VueJeu())) { getVue()->setControleur(this); }
+	VueJeu* getVue() { return (VueJeu*)Controleur::getVue(); }
 
+	vector<ControleurBorne*> getBornes(){ return bornes; };
 	/*!
 	* \retourne etatJeu
 	*/

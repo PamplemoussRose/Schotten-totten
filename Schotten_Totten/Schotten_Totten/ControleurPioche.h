@@ -1,3 +1,5 @@
+#ifndef GUARD_CONTROLEURPIOCHE
+#define GUARD_CONTROLEURPIOCHE
 #include "PiocheClan.h"
 #include "Joueur.h"
 class ControleurPioche {
@@ -10,4 +12,9 @@ public:
 	* \brief renvoie true si pioche vide
 	*/
 	bool estVide(Pioche& pioche);
+	/*!
+	* \brief melange les cartes dans la pioche
+	*/
+	void melanger(Pioche& pioche);
 };
+#endif
