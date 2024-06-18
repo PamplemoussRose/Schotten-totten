@@ -9,3 +9,19 @@ ControleurJeuTactique* ControleurJeuTactique::getInstance()
 	}
 	return instance;
 }
+
+void ControleurJeuTactique::initPartie()
+{
+}
+
+void ControleurJeuTactique::deroulementTours()
+{
+}
+
+void ControleurJeuTactique::deroulementPartie()
+{
+}
+
+void ControleurJeuTactique::finPartie()
+{
+}

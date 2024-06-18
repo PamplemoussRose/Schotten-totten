@@ -1,5 +1,5 @@
 #include "Plateau.h"
-
+Plateau* Plateau::instance = nullptr;
 Plateau::Plateau() {
 	vBornes = vector<Borne*>();
 	piocheClan = NULL;
@@ -10,7 +10,6 @@ Plateau* Plateau::getInstance()
 {
 	if (instance == nullptr) {
 		instance = new Plateau();
-		//instance = make_unique<EtatJeu()>;
 	}
 	return instance;
 }

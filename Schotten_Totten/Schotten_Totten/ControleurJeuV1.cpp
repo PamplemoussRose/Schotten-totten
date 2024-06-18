@@ -20,3 +20,15 @@ void ControleurJeuV1::initPartie() {
 
 	ControleurDemandeCarte* controleurPerso2 = new ControleurDemandeCarte();
 }
+
+void ControleurJeuV1::deroulementTours()
+{
+}
+
+void ControleurJeuV1::deroulementPartie()
+{
+}
+
+void ControleurJeuV1::finPartie()
+{
+}

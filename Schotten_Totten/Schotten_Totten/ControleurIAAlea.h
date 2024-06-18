@@ -7,6 +7,6 @@
 using namespace std;
 class ControleurIAAlea : public ControleurPersonnage {
 public:
-	void jouerCarte(Joueur joueur, Carte carte);
+	void jouerCarte(Joueur& joueur, Carte& carte);
 };
 #endif
