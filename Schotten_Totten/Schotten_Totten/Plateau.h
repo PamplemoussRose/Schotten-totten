@@ -10,10 +10,28 @@ class Pioche;
 class Plateau {
 private:
 	//Attributs
+	static Plateau* instance;
+
 	vector<Borne*> vBornes;
-	vector<Pioche*> vPioche;
+	Pioche* piocheClan;
+	Pioche* piocheTactique;
+
+	// Constructeur
+	/*!
+	* \brief Constructeur privé
+	*/
+	Plateau();
+
 public:
+	// Suppression des constructeurs de copie et d'affectation
+	Plateau(const Plateau&) = delete;
+	Plateau& operator=(const Plateau&) = delete;
+
 	//Methodes
+	/*!
+	* \brief retourne l'instance unique de la classe
+	*/
+	static Plateau* getInstance();
 	/*!
 	* \brief defini les bornes du plateau
 	*/
@@ -35,16 +53,24 @@ public:
 	*/
 	Borne* getBornePosition(unsigned int position);
 	/*!
-	* \brief defini la pioche du plateau
+	* \brief modifie la piocheClan du plateau
 	*/
-	void setPioche(vector<Pioche*>&& lstPioche);
+	void setPiocheClan(Pioche*&& newPioche);
 	/*!
-	* \brief retourne un pointeur vers la pioche
+	* \brief modifie la piocheTactique du plateau
 	*/
-	vector<Pioche*> getPioche();
+	void setPiocheTactique(Pioche*&& newPioche);
+	/*!
+	* \brief retourne un pointeur vers la piocheClan
+	*/
+	Pioche* getPiocheClan() {return piocheClan;};
+	/*!
+	* \brief retourne un pointeur vers la piocheClan
+	*/
+	Pioche* getPiocheTactique() { return piocheTactique; };
 	/*!
 	* \brief retourne un pointeur vers la pioche a une position donnee
 	*/
-	Pioche getPiochePosition(unsigned int position);
+	//Pioche getPiochePosition(unsigned int position);
 };
 #endif

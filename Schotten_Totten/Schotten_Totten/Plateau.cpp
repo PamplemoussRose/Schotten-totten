@@ -1,5 +1,20 @@
 #include "Plateau.h"
 
+Plateau::Plateau() {
+	vBornes = vector<Borne*>();
+	piocheClan = NULL;
+	piocheTactique = NULL;
+}
+
+Plateau* Plateau::getInstance()
+{
+	if (instance == nullptr) {
+		instance = new Plateau();
+		//instance = make_unique<EtatJeu()>;
+	}
+	return instance;
+}
+
 void Plateau::setBornes(vector<Borne*> &&lstBornes)
 {
 	this->vBornes = move(lstBornes);
@@ -43,19 +58,18 @@ Borne* Plateau::getBornePosition(unsigned int position)
 	throw ::out_of_range("error dans getBornePosition");
 }
 
-void Plateau::setPioche(vector<Pioche*> &&lstPioche) 
+void Plateau::setPiocheClan(Pioche* &&newPioche)
 {
-	this->vPioche = move(lstPioche);
+	this->piocheClan = move(newPioche);
 }
-
-vector<Pioche*> Plateau::getPioche()
+void Plateau::setPiocheTactique(Pioche*&& newPioche)
 {
-	return vPioche;
+	this->piocheTactique = move(newPioche);
 }
-
+/*
 Pioche Plateau::getPiochePosition(unsigned int position)
 {
-	if (position < 0 || position >= vPioche.size()) {
+	if (position < 0 || position >= *piocheClan.size()) {
 		throw ::invalid_argument("position given is not correct");
 	}
 	unsigned int cpt = 0;
@@ -66,3 +80,4 @@ Pioche Plateau::getPiochePosition(unsigned int position)
 	}
 	throw ::out_of_range("error dans getPiochePosition");
 }
+*/

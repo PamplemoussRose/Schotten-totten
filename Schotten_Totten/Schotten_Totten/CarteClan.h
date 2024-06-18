@@ -1,6 +1,8 @@
 #ifndef CARTECLAN_HEADER
 #define CARTECLAN_HEADER
+
 #include "Carte.h"
+
 class CarteClan : public Carte {
 private:
 	// Attributs 
@@ -38,13 +40,9 @@ public:
 	*/
 	void setValeur(int nouvVal) { valeur = nouvVal; };
 	/*!
-	* Methode donnant les choix possibles avec leurs valeurs possibles
-	*/
-	vector<vector<unsigned int>> choixEffet();
-	/*!
 	* \brief methode d'effet de la carte
 	*/
-	void effet(unsigned int numBorne);
+	void effet(unsigned int numBorne, unsigned int joueur);
 };
 
 #endif // !CARTECLAN_HEADER

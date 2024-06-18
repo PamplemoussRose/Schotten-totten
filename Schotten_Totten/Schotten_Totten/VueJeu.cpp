@@ -45,9 +45,9 @@ void VueJeu::affichePlateau()
 			cout << endl;
 		}
 	}
-
 }
 */
+
 void VueJeu::afficheTour(Joueur& joueurActuel)
 {
 	//Carte* carteChoisie;

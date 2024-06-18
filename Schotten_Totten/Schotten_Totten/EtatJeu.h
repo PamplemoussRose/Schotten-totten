@@ -9,7 +9,7 @@ class Joueur;
 class EtatJeu {
 private:
 	//Attributs
-	EtatJeu* instance;
+	static EtatJeu* instance;
 	shared_ptr<Plateau> plateau;
 	shared_ptr<Joueur> joueur1;
 	shared_ptr<Joueur> joueur2;
@@ -23,7 +23,7 @@ public:
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/
-	EtatJeu* getInstance();
+	static EtatJeu* getInstance();
  
 	// Suppression des constructeurs de copie et d'affectation
 	EtatJeu(const EtatJeu&) = delete;

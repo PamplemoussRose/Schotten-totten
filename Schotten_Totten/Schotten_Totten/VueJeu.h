@@ -7,7 +7,7 @@
 #include "CarteTactique.h"
 #include "Couleurs.h"
 #include "ControleurJeu.h"
-
+class ControleurJeu;
 class VueJeu : public Vue 
 {
 private:

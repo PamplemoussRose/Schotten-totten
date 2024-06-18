@@ -12,6 +12,11 @@ bool ControleurPioche::estVide(Pioche& pioche)
 	return (pioche.getNbCartesRestantes() == 0);
 }
 
+void ControleurPioche::melanger(Pioche& pioche)
+{
+	pioche.melange();
+}
+
 
 
 

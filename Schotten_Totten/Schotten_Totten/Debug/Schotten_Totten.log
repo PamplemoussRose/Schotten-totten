@@ -1,31 +1,37 @@
-﻿  BuilderClassique.cpp
+﻿  Application.cpp
+  Banschee.cpp
+  Borne.cpp
+  Builder.cpp
+  BuilderClassique.cpp
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(37,19): error C2039: 'setPioche' n'est pas membre de 'Plateau'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Plateau.h(10): message : voir la déclaration de 'Plateau'
+  CarteClan.cpp
+  ChasseurTete.cpp
+  ColinMaillard.cpp
+  CombatBoue.cpp
+  ControleurBorne.cpp
+  ControleurHumain.cpp
+  ControleurJeu.cpp
   ControleurJeuV1.cpp
   ControleurPioche.cpp
+  ControleurVariante.cpp
+  Espion.cpp
   EtatJeu.cpp
+  Joker.cpp
   Joueur.cpp
-  VueJeu.cpp
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(13,15): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(13,30): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(16,16): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(16,31): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(19,16): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(19,35): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(22,16): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(22,35): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(25,16): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(25,35): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(28,16): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(28,48): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(38,16): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(41,11): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(44,11): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(47,11): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(50,11): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(53,11): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(56,11): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(59,11): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(62,11): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(77,11): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\VueJeu.cpp(77,31): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
+  PiocheClan.cpp
   Génération de code en cours...
-  Schotten_Totten.vcxproj -> C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Debug\Schotten_Totten.exe
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Joueur.cpp(17): warning C4715: 'Joueur::getCarteMainPosition' : les chemins de contrôle ne retournent pas tous une valeur
+  Compilation en cours...
+  Plateau.cpp
+  PorteBouclier.cpp
+  Schotten_Totten.cpp
+  Stratege.cpp
+  Test.cpp
+  Traitre.cpp
+  VueJeu.cpp
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurJeu.h(19,15): error C2027: utilisation du type non défini 'VueJeu'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurJeu.h(11): message : voir la déclaration de 'VueJeu'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurJeu.h(19,30): error C2512: 'Controleur::Controleur' : aucun constructeur par défaut approprié disponible
+  VueVariante.cpp
+  Génération de code en cours...

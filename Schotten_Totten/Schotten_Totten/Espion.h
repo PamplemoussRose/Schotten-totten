@@ -22,6 +22,6 @@ public:
 	/*!
 	* \brief Methode d'effet de la carte espion
 	*/
-	void effet(unsigned int coul, unsigned int numBorne);
+	void effet(unsigned int coul, unsigned int numBorne, unsigned int joueur);
 };
 #endif // !ESPION_H
