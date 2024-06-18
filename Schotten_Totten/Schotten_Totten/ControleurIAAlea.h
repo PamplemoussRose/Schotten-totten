@@ -19,8 +19,6 @@ public:
 			iter.effet;
 		}*/
 
-
-
         vector<int> v1;
         for (int j = 0; j < 9; j++) {
             v1.push_back(rand() % lstChoix.size() + 1);//choisi

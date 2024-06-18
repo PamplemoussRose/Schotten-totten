@@ -2,8 +2,11 @@
 #define CONTROLERJEUV1_HEADER
 #include "ControleurJeu.h"
 #include "ControleurPioche.h"
-#include "ControleurPersonnage.h"
 #include "ControleurDemandeCarte.h"
+#include "ControleurVariante.h"
+#include "ControleurIAAlea.h"
+#include "ControleurHumain.h"
+
 class ControleurJeuV1 : public ControleurJeu{
 	//Attributs
 private:
