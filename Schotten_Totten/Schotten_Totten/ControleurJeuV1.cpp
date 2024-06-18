@@ -14,7 +14,9 @@ void ControleurJeuV1::initPartie() {
 	getEtatJeu()->getPlateau();
 	PiocheClan* piocheClan = (PiocheClan*)(getEtatJeu()->getPlateau())->getPiocheClan();
 	ControleurPioche* controleurPiocheClan = new ControleurPioche();
+
 	//ControleurPersonnage* controleurPerso2= new ControleurHumain();
 	//ControleurPersonnage* controleurPerso1 = new ControleurIAAlea();
+
 	ControleurDemandeCarte* controleurPerso2 = new ControleurDemandeCarte();
 }
