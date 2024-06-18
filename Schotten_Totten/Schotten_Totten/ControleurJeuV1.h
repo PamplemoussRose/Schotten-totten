@@ -3,7 +3,6 @@
 #include "ControleurJeu.h"
 #include "ControleurPioche.h"
 #include "ControleurDemandeCarte.h"
-#include "ControleurVariante.h"
 #include "ControleurIAAlea.h"
 #include "ControleurHumain.h"
 
@@ -15,12 +14,12 @@ private:
 	ControleurPersonnage* controleurPerso2;
 	ControleurDemandeCarte* demandeCarte;
 	static ControleurJeuV1* instance;
-	inline ControleurJeuV1() :ControleurJeu(){}
+	ControleurJeuV1() :ControleurJeu() { initPartie(); }
 public:
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/
-	ControleurJeuV1* getInstance();
+	static ControleurJeuV1* getInstance();
 
 	// Suppression des constructeurs de copie et d'affectation
 	ControleurJeuV1(const ControleurJeuV1&) = delete;

@@ -3,7 +3,7 @@ using namespace std;
 #include <iostream>
 void VueParametre::erreurChoix()
 {
-    cout << " \033[41m " << "Ce caractère n'est pas valide" << " \033[0m" << endl;
+    cout << " \033[41m " << "Ce caractere n'est pas valide" << " \033[0m" << endl;
     choixIAHumain();
 }
 void VueParametre::affiche() {

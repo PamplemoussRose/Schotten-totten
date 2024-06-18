@@ -3,7 +3,7 @@
 #include "Controleur.h"
 #include "ControleurVariante.h"
 #include "ControleurParametre.h"
-#include "ControleurJeu.h"
+#include "ControleurJeuV1.h"
 
 class Application {
 private:
@@ -31,15 +31,15 @@ public:
 	void commencerVueActuel();
 
 	/**
-	* Change le controleur actuel en Controleur variante et lance l'affichage
+	* Change le controleur actuel en Controleur variante
 	*/
 	void changeControleurVariante();
 	/**
-	* Change le controleur actuel en Controleur parametre et lance l'affichage
+	* Change le controleur actuel en Controleur parametre
 	*/
 	void changeControleurParametre();
 	/**
-	* Change le controleur actuel en Controleur jeu et lance l'affichage
+	* Change le controleur actuel en Controleur jeu
 	*/
 	void changeControleurJeu();
 };

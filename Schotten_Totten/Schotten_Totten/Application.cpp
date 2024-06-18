@@ -36,5 +36,13 @@ void Application::changeControleurJeu() {
 	if (controleurActuel != nullptr) {
 		delete (ControleurParametre*)controleurActuel;
 	}
-	// = ControleurJeu::getControleurJeu();
+
+	// Construction du 
+	ChoixUtilisateur* stockageChoix = ChoixUtilisateur::getChoixUtilisateur();
+	if (stockageChoix->estPartieClassique()) {
+		controleurActuel = ControleurJeuV1::getInstance();
+	}
+	else if (stockageChoix->estPartieTactique()) {
+		// Ajout de l'instance de ControleurJeuTactique
+	}
 }

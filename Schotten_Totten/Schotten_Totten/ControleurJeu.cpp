@@ -1,7 +1,8 @@
 #include "ControleurJeu.h"
 #include "VueJeu.h"
 
-ControleurJeu::ControleurJeu() : Controleur((Vue*)(new VueJeu()))
+// Construction (Attention pas de destructeur) ++++++++++++++++++++++++++++++++
+ControleurJeu::ControleurJeu() : Controleur(new VueJeu())
 {
 	getVue()->setControleur(this); 
 	EtatJeu* etatJeu = EtatJeu::getInstance();

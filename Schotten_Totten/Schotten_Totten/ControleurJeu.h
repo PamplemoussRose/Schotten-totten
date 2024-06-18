@@ -15,8 +15,11 @@ private:
 	vector<ControleurBorne*> bornes;
 
 	EtatJeu* etatJeu;
-public:
+protected:
 	ControleurJeu();
+
+public:
+
 	VueJeu* getVue();
 
 	vector<ControleurBorne*> getBornes(){ return bornes; };

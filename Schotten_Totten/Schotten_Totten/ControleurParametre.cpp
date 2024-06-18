@@ -32,5 +32,5 @@ void ControleurParametre::definirParametresJeu(unsigned int mode)
 	stockageChoix->setChoixVariante(mode);
 
 	// Changement de controleur vers la partie
-	Application::getApplication()->changeControleurVariante();
+	Application::getApplication()->changeControleurJeu();
 }
