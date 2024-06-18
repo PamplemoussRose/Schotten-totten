@@ -22,6 +22,6 @@ public:
 	/*!
 	* \brief Methode d'effet de la carte porte bouclier
 	*/
-	void effet(unsigned int val, unsigned int coul, unsigned int numBorne);
+	void effet(unsigned int val, unsigned int coul, unsigned int numBorne, unsigned int joueur);
 };
 #endif // !PORTEBOUCLIER_H
