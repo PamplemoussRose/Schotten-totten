@@ -22,6 +22,6 @@ public:
 	/*!
 	* Methode d'effet de la carte banschee
 	*/
-	void effet(unsigned int borne, unsigned int carte);
+	void effet(unsigned int borne, unsigned int carte, unsigned int joueur);
 };
 #endif // !BANSCHEE_H

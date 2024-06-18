@@ -28,6 +28,6 @@ void VueVariante::afficheChoixVariantes() {
 }
 
 void VueVariante::erreurChoixVariante() {
-	cout << "Faut savoir lire" << endl;
+	cout << " \033[41m " << "Numero de variante non valide" << " \033[0m" << endl;
 	afficheChoixVariantes();
 }

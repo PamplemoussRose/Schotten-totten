@@ -23,11 +23,11 @@ private:
 	* Methode d'effet de la carte stratege
 	* Deplacement de la carte d'une borne a une autre
 	*/
-	void effet(unsigned int borneDep, unsigned int carte, unsigned int borneArr);
+	void effet(unsigned int borneDep, unsigned int carte, unsigned int borneArr, unsigned int joueur);
 	/*!
 	* Methode d'effet de la carte stratege
 	* Deplacement de la carte d'une borne a la defausse
 	*/
-	void effet(unsigned int borne, unsigned int carte);
+	void effet(unsigned int borne, unsigned int carte, unsigned int joueur);
 };
 #endif // !STRATEGE_H

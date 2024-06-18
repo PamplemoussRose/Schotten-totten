@@ -1,4 +1,37 @@
 ﻿  Application.cpp
-  ControleurDemandeCarte.cpp
+  Banschee.cpp
+  Borne.cpp
+  Builder.cpp
+  BuilderClassique.cpp
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\BuilderClassique.cpp(37,19): error C2039: 'setPioche' n'est pas membre de 'Plateau'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Plateau.h(10): message : voir la déclaration de 'Plateau'
+  CarteClan.cpp
+  ChasseurTete.cpp
+  ColinMaillard.cpp
+  CombatBoue.cpp
+  ControleurBorne.cpp
+  ControleurHumain.cpp
+  ControleurJeu.cpp
+  ControleurJeuV1.cpp
+  ControleurPioche.cpp
+  ControleurVariante.cpp
+  Espion.cpp
+  EtatJeu.cpp
+  Joker.cpp
+  Joueur.cpp
+  PiocheClan.cpp
   Génération de code en cours...
-  Schotten_Totten.vcxproj -> C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Debug\Schotten_Totten.exe
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Joueur.cpp(17): warning C4715: 'Joueur::getCarteMainPosition' : les chemins de contrôle ne retournent pas tous une valeur
+  Compilation en cours...
+  Plateau.cpp
+  PorteBouclier.cpp
+  Schotten_Totten.cpp
+  Stratege.cpp
+  Test.cpp
+  Traitre.cpp
+  VueJeu.cpp
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurJeu.h(19,15): error C2027: utilisation du type non défini 'VueJeu'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurJeu.h(11): message : voir la déclaration de 'VueJeu'
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurJeu.h(19,30): error C2512: 'Controleur::Controleur' : aucun constructeur par défaut approprié disponible
+  VueVariante.cpp
+  Génération de code en cours...

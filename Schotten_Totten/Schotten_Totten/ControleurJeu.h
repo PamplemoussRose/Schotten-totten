@@ -18,6 +18,8 @@ private:
 public:
 	ControleurJeu();
 	VueJeu* getVue();
+	ControleurJeu() ;
+	VueJeu* getVue();
 
 	vector<ControleurBorne*> getBornes(){ return bornes; };
 	/*!

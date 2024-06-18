@@ -1,5 +1,20 @@
 #include "Plateau.h"
 
+Plateau::Plateau() {
+	vBornes = vector<Borne*>();
+	piocheClan = NULL;
+	piocheTactique = NULL;
+}
+
+Plateau* Plateau::getInstance()
+{
+	if (instance == nullptr) {
+		instance = new Plateau();
+		//instance = make_unique<EtatJeu()>;
+	}
+	return instance;
+}
+
 void Plateau::setBornes(vector<Borne*> &&lstBornes)
 {
 	this->vBornes = move(lstBornes);

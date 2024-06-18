@@ -28,13 +28,14 @@ void BuilderClassique::setBornesBuilder()
     plateauBuild->setBornes(move(lstBornes));//appeler méthode de notre plateau pour ajouter une borne 
 }
 
-void BuilderClassique::setPiocheBuilder()
-{//creation de Bornes et ajout de la pioche au jeu
-    vector<Pioche*> lstPioche;
+void BuilderClassique::setPiocheBuilder() 
+{
+    Pioche* pioche = new Pioche();
     for (int i = 0; i < 54; ++i) {
-        lstPioche.push_back(new Pioche());
+        Carte* carte = new Carte();
+        pioche->ajouterDessous(*carte);
     }
-    plateauBuild->setPioche(move(lstPioche));
+    plateauBuild->setPiocheClan(move(pioche));
 }
 
 Plateau* BuilderClassique::GetResult()

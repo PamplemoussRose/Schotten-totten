@@ -19,7 +19,8 @@ void Application::commencerVueActuel(){
 
 void Application::changeControleurVariante() {
 	if (controleurActuel) {
-		delete (ControleurJeu*) controleurActuel;
+		delete (ControleurParametre*) controleurActuel;
+		// Cette solution pose pb : On est obligé de passer de Variante -> Paramètre -> Jeu -> Variante
 	}
 	controleurActuel = ControleurVariante::getControleurVariante();
 }
@@ -28,9 +29,12 @@ void Application::changeControleurParametre() {
 	if (controleurActuel!= nullptr) {
 		delete (ControleurVariante*) controleurActuel;
 	}
-	controleurActuel = ControleurVariante::getControleurVariante();
+	controleurActuel = ControleurParametre::getControleurParametre();
 }
 
 void Application::changeControleurJeu() {
-
+	if (controleurActuel != nullptr) {
+		delete (ControleurParametre*)controleurActuel;
+	}
+	// = ControleurJeu::getControleurJeu();
 }

@@ -10,11 +10,28 @@ class Pioche;
 class Plateau {
 private:
 	//Attributs
+	static Plateau* instance;
+
 	vector<Borne*> vBornes;
 	Pioche* piocheClan;
 	Pioche* piocheTactique;
+
+	// Constructeur
+	/*!
+	* \brief Constructeur privé
+	*/
+	Plateau();
+
 public:
+	// Suppression des constructeurs de copie et d'affectation
+	Plateau(const Plateau&) = delete;
+	Plateau& operator=(const Plateau&) = delete;
+
 	//Methodes
+	/*!
+	* \brief retourne l'instance unique de la classe
+	*/
+	static Plateau* getInstance();
 	/*!
 	* \brief defini les bornes du plateau
 	*/
