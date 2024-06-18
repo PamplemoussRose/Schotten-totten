@@ -1,33 +1,44 @@
-#ifndef GUARD_CONTROLEURDEMANDECARTE
-#define GUARD_CONTROLEURDEMANDECARTE
+#ifndef CONTROLEURDEMANDECARTE_HEADER
+#define CONTROLEURDEMANDECARTE_HEADER
+
 #include <iostream>
 #include <vector>
 #include "Carte.h"
+#include "CarteTactique.h"
 #include "Joueur.h"
+
 using namespace std;
+
 class ControleurDemandeCarte {
-
 public:
-	/*
-	demande au joueur la carte qu'il souhaite jouer et la retourne si c'est correcte
-	*/
-	unsigned int choixCarte(Joueur joueur, Joueur autreJoueur) {
-		unsigned int numeroCarteChoisie;
-		bool carteChoisie  = false;
-		while (!carteChoisie){
-			cin >> numeroCarteChoisie;
+    unsigned int choixCarte(Joueur joueur, Joueur autreJoueur) {
+        unsigned int numeroCarteChoisie;
+        bool choixFait = false;
+        while (!choixFait) {
+            cin >> numeroCarteChoisie;
 
-			//la condition sur les cartes tactiques est incorrecte -> il y a un moyen avec c++ pour connaître le type
-			if (numeroCarteChoisie != 0 && joueur.getNbreCartes() >= numeroCarteChoisie && joueur.getnbreCartesTactiquesJoués() <= autreJoueur.getnbreCartesTactiquesJoués()) {// !=0 signifie que l'utilisateur n'a pas entre un nombre
-				carteChoisie = true;
-				return numeroCarteChoisie;
-			}
-		}
-	}
+            if (numeroCarteChoisie != 0 && joueur.getNbreCartes() >= numeroCarteChoisie) { // != 0 signifie que l'utilisateur n'a pas entré un nombre
+                Carte* carteChoisie = joueur.getCarteMainPosition(numeroCarteChoisie - 1); //-1 carte la carte 1 est à la position 0
 
-	/*
-	demande au joueur les choix que peut faire sa carte
-	*/
-	vector<unsigned int> choixApplicationCarte(Carte carte);
+                CarteTactique* carteTactique = dynamic_cast<CarteTactique*>(carteChoisie);
+                if (carteTactique) {// si c'est une carte Tactique
+                    cout << "La carte sélectionnée est une instance de la classe CarteTactique" << endl;
+
+                    if (joueur.getnbreCartesTactiquesJoués() <= autreJoueur.getnbreCartesTactiquesJoués()) { // S'il peut jouer sa carte tactique
+                        choixFait = true;
+                        return numeroCarteChoisie;
+                    }
+                }
+                else { // Si ce n'est pas une carte tactique
+                    cout << "La carte sélectionnée n'est pas une instance de la classe CarteTactique" << endl;
+                    choixFait = true;
+                    return numeroCarteChoisie;
+                }
+            } 
+        }
+    }
+
+    vector<unsigned int> choixApplicationCarte(Carte carte);
 };
-#endif
+
+#endif // CONTROLEURDEMANDECARTE_HEADER
