@@ -3,7 +3,7 @@ using namespace std;
 #include <iostream>
 void VueParametre::erreurChoix()
 {
-    cout << "Ce caractère n'est pas valide" << endl;
+    cout << " \033[41m " << "Ce caractère n'est pas valide" << " \033[0m" << endl;
     choixIAHumain();
 }
 void VueParametre::affiche() {
@@ -12,7 +12,7 @@ void VueParametre::affiche() {
 
 void VueParametre::choixIAHumain()
 {
-    int mode;
+    unsigned int mode;
     cout << "Avec qui voulez vous jouez?" << endl;
     cout << "\t1: Humain VS Ordi" << endl;
     cout << "\t2: Humain VS Humain" << endl;

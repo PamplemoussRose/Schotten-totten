@@ -3,6 +3,7 @@
 #include <string>
 #include "Controleur.h"
 #include "Application.h"
+#include "ChoixUtilisateur.h"
 using namespace std;
 
 class Vue;
@@ -12,11 +13,6 @@ class ControleurVariante : public Controleur
 {
 private:
 	static ControleurVariante* instance;
-	/**
-	* Permet le stock de la variante choisie par l'utilisateur afin d'être utiliser
-	* lors de la création de EtatJeu dans ControleurJeu::initPartie
-	*/
-	static unsigned int choixVariante;
 
 	inline ControleurVariante();
 

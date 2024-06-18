@@ -4,7 +4,6 @@
 
 // Definition des attributs de classe
 ControleurVariante* ControleurVariante::instance = nullptr;
-unsigned int ControleurVariante::choixVariante = 0;
 
 // Constructeur et destructeur
 ControleurVariante::ControleurVariante() : Controleur((new VueVariante())) { getVue()->setControleur(this); }
@@ -28,8 +27,11 @@ void ControleurVariante::choisirVariante(unsigned int choix)
 		throw exception();
 	}
 
-	// Stock du choix + Changement de controleur vers les paramètres de joueurs
-	choixVariante = choix;
+	// Stock du choix
+	ChoixUtilisateur* stockageChoix = ChoixUtilisateur::getChoixUtilisateur(); 
+	stockageChoix->setChoixVariante(choix);
+
+	// Changement de controleur vers les paramètres de joueurs
 	Application * app = Application::getApplication(); 
 	app->changeControleurParametre();
 }
