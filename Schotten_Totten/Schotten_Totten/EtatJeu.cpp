@@ -1,4 +1,5 @@
 #include "EtatJeu.h"
+EtatJeu* EtatJeu::instance = nullptr;
 
 EtatJeu* EtatJeu::getInstance()
 {
