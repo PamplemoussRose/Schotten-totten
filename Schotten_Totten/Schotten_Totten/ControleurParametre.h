@@ -3,6 +3,7 @@
 #include <vector>
 #include "Controleur.h"
 #include "Application.h"
+#include "ChoixUtilisateur.h"
 using namespace std;
 
 class Vue;
@@ -41,7 +42,7 @@ public:
 	* Entrée : le choix fait par l'utilisateur
 	* Exception si le choix n'est pas dans les critères (ie pas 1 ou 2)
 	*/
-	void definirParametresJeu(int mode);
+	void definirParametresJeu(unsigned int mode);
 	
 };
 #endif

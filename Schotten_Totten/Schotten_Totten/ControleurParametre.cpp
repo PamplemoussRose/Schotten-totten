@@ -20,14 +20,17 @@ ControleurParametre* ControleurParametre::getControleurParametre()
 };
 
 // Méthode
-void ControleurParametre::definirParametresJeu(int mode)
+void ControleurParametre::definirParametresJeu(unsigned int mode)
 {
 	// Gestion des erreurs
 	if (mode != 1 && mode != 2 && mode != 3) {
 		throw exception();
 	}
 
-	// Stock du choix + Changement de controleur vers la partie
-	// -----
+	// Stock du choix 
+	ChoixUtilisateur* stockageChoix = ChoixUtilisateur::getChoixUtilisateur();
+	stockageChoix->setChoixVariante(mode);
+
+	// Changement de controleur vers la partie
 	Application::getApplication()->changeControleurVariante();
 }
