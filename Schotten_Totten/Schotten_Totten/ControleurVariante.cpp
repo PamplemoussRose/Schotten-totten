@@ -8,6 +8,9 @@ unsigned int ControleurVariante::choixVariante = 0;
 
 // Methode
 ControleurVariante::ControleurVariante() : Controleur((new VueVariante())) { getVue()->setControleur(this); }
+ControleurVariante::~ControleurVariante() {
+	instance = nullptr;
+};
 
 ControleurVariante* ControleurVariante::getControleurVariante()
 {

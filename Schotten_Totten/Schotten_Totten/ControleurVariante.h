@@ -33,7 +33,7 @@ public:
 	/**
 	* Destruction de l'instance
 	*/
-	//~ControleurVariante() : Controleur::~Controleur() { delete instance; };
+	~ControleurVariante();
 
 	static ControleurVariante* getControleurVariante();
 

@@ -9,7 +9,7 @@ private:
 	//Attributs
 	Vue* vue;
 	
-public:
+protected:
 	//Methodes
 	/*!
 	* \Constructeur du controleur
@@ -18,6 +18,11 @@ public:
 		vue = pVue;
 	}
 
+	~Controleur() {
+		delete vue;
+	}
+
+public:
 	/*!
 	* \retourne la vue
 	*/

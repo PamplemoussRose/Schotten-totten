@@ -4,6 +4,7 @@
 #include "Plateau.h"
 #include "Couleurs.h"
 #include "Application.h"
+#include "ControleurVariante.h"
 
 #include <iostream>
 using namespace std;

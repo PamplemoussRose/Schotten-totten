@@ -3,7 +3,7 @@
 #include "Controleur.h"
 #include "ControleurVariante.h"
 #include "ControleurParametre.h"
-//#include "ControleurJeu.h"
+#include "ControleurJeu.h"
 
 class Application {
 private:

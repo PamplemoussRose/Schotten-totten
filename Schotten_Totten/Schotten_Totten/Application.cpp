@@ -19,16 +19,16 @@ void Application::commencerVueActuel(){
 
 void Application::changeControleurVariante() {
 	if (controleurActuel) {
-		delete controleurActuel;
+		delete (ControleurJeu*) controleurActuel;
 	}
 	controleurActuel = ControleurVariante::getControleurVariante();
 }
 
 void Application::changeControleurParametre() {
-	if (controleurActuel) {
-		delete controleurActuel;
+	if (controleurActuel!= nullptr) {
+		delete (ControleurVariante*) controleurActuel;
 	}
-	//controleurActuel = ControleurParametre::getControleurParametre();
+	controleurActuel = ControleurVariante::getControleurVariante();
 }
 
 void Application::changeControleurJeu() {
