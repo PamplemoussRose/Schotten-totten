@@ -4,7 +4,7 @@
 /*
 * \brief Enumeration des couleurs des cartes
 */
-enum Couleurs
+enum class Couleurs
 {
     vert,
     bleu,

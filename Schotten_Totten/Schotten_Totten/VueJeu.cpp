@@ -18,7 +18,7 @@ void VueJeu::affichePlateau()
 		for (int ligne = maxJ1; ligne > -1; ligne--) {
 			for (unsigned int b = 0; b < 9; b++) {
 				vector<Carte*> cartesJ1 = (*bornes[b]).getCartesJ1();
-				if (cartesJ1.size() >= ligne + 1) {
+				if (cartesJ1.size() >= (ligne + 1)) {
 					afficheCarte(cartesJ1[ligne]);
 				}
 				else { cout << "   "; }
@@ -34,10 +34,10 @@ void VueJeu::affichePlateau()
 	//Affichage des cartes de Joueur 2 en dessous des bornes
 	if ((*plateau).getMaxCartesJ2() != 0) {
 		unsigned int maxJ2 = (*plateau).getMaxCartesJ2() - 1;
-		for (int ligne = 0; ligne < maxJ2; ligne++) {
+		for (unsigned int ligne = 0; ligne < maxJ2; ligne++) {
 			for (unsigned int b = 0; b < 9; b++) {
 				vector<Carte*> cartesJ2 = (*bornes[b]).getCartesJ2();
-				if (cartesJ2.size() >= ligne + 1) {
+				if (cartesJ2.size() >= (ligne + 1)) {
 					afficheCarte(cartesJ2[ligne]);
 				}
 				else { cout << "   "; }
@@ -50,8 +50,9 @@ void VueJeu::affichePlateau()
 
 void VueJeu::afficheTour(Joueur& joueurActuel)
 {
-	Carte* carteChoisie;
-	unsigned int indiceCarte;
+	//Carte* carteChoisie;
+	//unsigned int indiceCarte;
+	//utilisez demandeCarte
 	unsigned int numBorne;
 	cout << "Quelle carte voulez vous jouer? (1-6)"<<endl;
 	afficheMain(joueurActuel);
