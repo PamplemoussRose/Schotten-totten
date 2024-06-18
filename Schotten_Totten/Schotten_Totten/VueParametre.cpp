@@ -13,13 +13,18 @@ void VueParametre::affiche() {
 void VueParametre::choixIAHumain()
 {
     int mode;
-    cout << "Avec qui voulez vous jouez? (1,2 ou 3";
-    cout << "1: Humain VS Ordi";
-    cout << "2: Humain VS Humain";
-    cout << "3: Ordi VS Ordi";
+    cout << "Avec qui voulez vous jouez?" << endl;
+    cout << "\t1: Humain VS Ordi" << endl;
+    cout << "\t2: Humain VS Humain" << endl;
+    cout << "\t3: Ordi VS Ordi" << endl;
+    cout << "Choix :";
     cin >> mode;
 
-    getControleur()->definirParametresJeu(mode);
-    
+    try {
+        getControleur()->definirParametresJeu(mode);
+    }
+    catch (exception exp) {
+        erreurChoix();
+    }
 
 }

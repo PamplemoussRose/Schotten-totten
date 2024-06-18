@@ -6,7 +6,7 @@
 ControleurVariante* ControleurVariante::instance = nullptr;
 unsigned int ControleurVariante::choixVariante = 0;
 
-// Methode
+// Constructeur et destructeur
 ControleurVariante::ControleurVariante() : Controleur((new VueVariante())) { getVue()->setControleur(this); }
 ControleurVariante::~ControleurVariante() {
 	instance = nullptr;
@@ -20,6 +20,7 @@ ControleurVariante* ControleurVariante::getControleurVariante()
 	return instance;
 };
 
+// Méthode
 void ControleurVariante::choisirVariante(unsigned int choix)
 {
 	// Gestion de l'erreur
@@ -29,5 +30,6 @@ void ControleurVariante::choisirVariante(unsigned int choix)
 
 	// Stock du choix + Changement de controleur vers les paramètres de joueurs
 	choixVariante = choix;
-	Application::getApplication()->changeControleurParametre();
+	Application * app = Application::getApplication(); 
+	app->changeControleurParametre();
 }

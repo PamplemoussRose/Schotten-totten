@@ -19,7 +19,6 @@ private:
 	static unsigned int choixVariante;
 
 	inline ControleurVariante();
-	//inline ControleurVariante(VueVariante* vue);
 
 public:
 	/**
@@ -39,6 +38,11 @@ public:
 
 	VueVariante* getVue() { return (VueVariante*) Controleur::getVue(); }
 
+	/**
+	* Test et stock du choix de la variante par l'utilisateur et demande à l'app de changer le controleur actuel
+	* Entrée : le choix fait par l'utilisateur
+	* Exception si le choix n'est pas dans les critères (ie pas 1 ou 2)
+	*/
 	void choisirVariante(unsigned int choix);
 };
 #endif
