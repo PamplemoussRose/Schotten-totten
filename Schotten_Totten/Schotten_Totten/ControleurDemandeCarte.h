@@ -6,17 +6,23 @@
 #include "Carte.h"
 #include "CarteTactique.h"
 #include "Joueur.h"
-
+#include "VueDemandeCarte.h"
 using namespace std;
 
 class ControleurDemandeCarte {
+private :
+    VueDemandeCarte vue;
+
 public:
+    /*
+    demande au joueur la carte qu'il souhaite jouer et la retourne si c'est correcte
+    */
     unsigned int choixCarte(Joueur joueur, Joueur autreJoueur) {
         unsigned int numeroCarteChoisie;
         bool choixFait = false;
         while (!choixFait) {
-            cin >> numeroCarteChoisie;
-
+            //cin >> numeroCarteChoisie;
+            numeroCarteChoisie = vue.demandeCarte();
             if (numeroCarteChoisie != 0 && joueur.getNbreCartes() >= numeroCarteChoisie) { // != 0 signifie que l'utilisateur n'a pas entré un nombre
                 Carte* carteChoisie = joueur.getCarteMainPosition(numeroCarteChoisie - 1); //-1 carte la carte 1 est à la position 0
 
@@ -37,8 +43,10 @@ public:
             } 
         }
     }
-
+    /*
+    demande au joueur les choix que peut faire sa carte
+    */
     vector<unsigned int> choixApplicationCarte(Carte carte);
 };
 
-#endif // CONTROLEURDEMANDECARTE_HEADER
+#endif
