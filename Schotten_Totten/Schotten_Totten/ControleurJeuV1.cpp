@@ -29,6 +29,10 @@ void ControleurJeuV1::deroulementPartie()
 {
 }
 
-void ControleurJeuV1::finPartie()
-{
+
+void ControleurJeuV1::finPartie() {
+
+
+	delete getEtatJeu()->getPlateau()->getInstance();
 }
+

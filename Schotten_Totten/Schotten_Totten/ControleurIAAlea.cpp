@@ -5,7 +5,7 @@ void ControleurIAAlea::jouerCarte(Joueur& joueur, Carte& carte){
 		//gerer exception si les deux bornes selectionnes sont les memes
 		//voir aussi le fait que les ia ne peuvent pas jouer trop de cartes tactiques
 
-/*		unsigned int nCarte = (rand() % joueur.getNbreCartes()) + 1; //prend un nombre aléatoire entre 1 et nbreCartes
+/*		unsigned int nCarte = (rand() % joueur.getNbreCartes()) + 1; //prend un nombre alï¿½atoire entre 1 et nbreCartes
 		Carte* carteRecuperee = joueur.getCarteMainPosition(nCarte);
 
 		vector<vector<unsigned int>> lstChoix = carteRecuperee->choixEffet(1); // Pas d'affichage : retourne les choix

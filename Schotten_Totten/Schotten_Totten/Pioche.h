@@ -10,28 +10,31 @@ class Carte;
 class Pioche {
 private:
 	//Attributs
-	int nbCartesRestantes;
-	int nbTotal;
+	unsigned int nbCartesRestantes;
+	unsigned int nbTotal;
 	vector<Carte*> pioche;
 public:
-	//Constructeur
-	/*!
-	* \brief construit la pioche
-	*/
-	Pioche() :pioche() { nbCartesRestantes, nbTotal = 0; };
 	//Methodes
+	/*!
+	* \brief assigne une nouvelle valuer au nombre de cartes restantes
+	*/
+	void setNbCartesRestantes(unsigned int nbReste) { nbCartesRestantes = nbReste; }
 	/*!
 	* \brief retourne nombre cartes restantes dans pioche
 	*/
-	int getNbCartesRestantes() { return nbCartesRestantes; };
+	unsigned int getNbCartesRestantes() { return nbCartesRestantes; }
+	/*!
+	* \brief assigne une nouvelle valeur au nopbre de carte total
+	*/
+	void setNbTotal(unsigned int nbTot) { nbTotal = nbTot; }
 	/*!
 	* \brief retourne nombre total des le depart
 	*/
-	int getNbTotal() { return nbTotal; };
+	unsigned int getNbTotal() { return nbTotal; }
 	/*!
 	* \brief retourne pioche de cartes
 	*/
-	vector<Carte*>& getPioche() { return pioche; };
+	vector<Carte*>& getPioche() { return pioche; }
 	/*!
 	* \brief enleve une carte de la pioche et la renvoie
 	*/

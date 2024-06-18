@@ -13,9 +13,6 @@ public:
 	/*!
 	* \brief construit la pioche de carte clan
 	*/
-	PiocheClan() :Pioche() {};
-	//Methodes
-
-
+	PiocheClan();
 };
 #endif
