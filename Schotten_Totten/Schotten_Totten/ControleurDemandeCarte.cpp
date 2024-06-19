@@ -7,20 +7,20 @@ unsigned int ControleurDemandeCarte::choixCarte(Joueur joueur, Joueur autreJoueu
     while (!choixFait) {
         //cin >> numeroCarteChoisie;
         numeroCarteChoisie = vue.demandeCarte();
-        if (numeroCarteChoisie != 0 && joueur.getNbreCartes() >= numeroCarteChoisie) { // != 0 signifie que l'utilisateur n'a pas entré un nombre
-            Carte* carteChoisie = joueur.getCarteMainPosition(numeroCarteChoisie - 1); //-1 carte la carte 1 est à la position 0
+        if (numeroCarteChoisie != 0 && joueur.getNbreCartes() >= numeroCarteChoisie) { // != 0 signifie que l'utilisateur n'a pas entrï¿½ un nombre
+            Carte* carteChoisie = joueur.getCarteMainPosition(numeroCarteChoisie - 1); //-1 carte la carte 1 est ï¿½ la position 0
 
             CarteTactique* carteTactique = dynamic_cast<CarteTactique*>(carteChoisie);
             if (carteTactique) {// si c'est une carte Tactique
-                cout << "La carte sélectionnée est une instance de la classe CarteTactique" << endl;
+                cout << "La carte sï¿½lectionnï¿½e est une instance de la classe CarteTactique" << endl;
 
-                if (joueur.getnbreCartesTactiquesJoués() <= autreJoueur.getnbreCartesTactiquesJoués()) { // S'il peut jouer sa carte tactique
+                if (joueur.getnbreCartesTactiquesJouï¿½s() <= autreJoueur.getnbreCartesTactiquesJouï¿½s()) { // S'il peut jouer sa carte tactique
                     choixFait = true;
                     return numeroCarteChoisie;
                 }
             }
             else { // Si ce n'est pas une carte tactique
-                cout << "La carte sélectionnée n'est pas une instance de la classe CarteTactique" << endl;
+                cout << "La carte sï¿½lectionnï¿½e n'est pas une instance de la classe CarteTactique" << endl;
                 choixFait = true;
                 return numeroCarteChoisie;
             }
@@ -28,7 +28,9 @@ unsigned int ControleurDemandeCarte::choixCarte(Joueur joueur, Joueur autreJoueu
     }
 }
 
-vector<unsigned int> ControleurDemandeCarte::choixApplicationCarte(Carte carte)
-{
-    return vector<unsigned int>();
-}
+
+
+vector<unsigned int> ControleurDemandeCarte::choixApplicationCarte(Carte carte) {
+    return { 0 };
+};
+

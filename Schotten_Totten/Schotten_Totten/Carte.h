@@ -20,6 +20,11 @@ public:
 	*/
 	template<class ...Args> void effet(Args... args);
 
+	/**
+	* Permet de transformer le vecteur pour appeler la version variadic de la methode
+	*/
+	void effet(vector<unsigned int> lstChoix);
+
 	virtual ~Carte() = default;  // Destructeur virtuel pour rendre la classe polymorphe
 
 	
