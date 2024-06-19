@@ -26,6 +26,7 @@ unsigned int ControleurDemandeCarte::choixCarte(Joueur& joueur, Joueur& autreJou
             }
         }
     }
+    return 0;
 }
 
 

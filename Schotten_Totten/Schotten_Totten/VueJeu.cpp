@@ -18,10 +18,10 @@ void VueJeu::affichePlateau()
 	//Affichage des cartes de Joueur 1 au dessus des bornes
 	if ((*plateau).getMaxCartesJ1() != 0) {
 		unsigned int maxJ1 = (*plateau).getMaxCartesJ1() - 1;
-		for (int ligne = maxJ1; ligne > -1; ligne--) {
+		for (unsigned int ligne = maxJ1; ligne > -1; ligne--) {
 			for (unsigned int b = 0; b < 9; b++) {
 				vector<Carte*> cartesJ1 = (*bornes[b]).getCartesJ1();
-				if (cartesJ1.size() >= (static_cast<long long>(ligne) + 1)) {
+				if (cartesJ1.size() >= (static_cast<size_t>(ligne) + 1)) {
 					afficheCarte(cartesJ1[ligne]);
 				}
 				else { cout << "   "; }
@@ -40,7 +40,7 @@ void VueJeu::affichePlateau()
 		for (unsigned int ligne = 0; ligne < maxJ2; ligne++) {
 			for (unsigned int b = 0; b < 9; b++) {
 				vector<Carte*> cartesJ2 = (*bornes[b]).getCartesJ2();
-				if (cartesJ2.size() >= (static_cast<long long>(ligne) + 1)) {
+				if (cartesJ2.size() >= (static_cast<size_t>(ligne) + 1)) {
 					afficheCarte(cartesJ2[ligne]);
 				}
 				else { cout << "   "; }
