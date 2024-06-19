@@ -1,4 +1,4 @@
-#include"VueJeuV1.h"
+#include "VueJeuV1.h"
 #include "ControleurJeuV1.h"
 
 void VueJeuV1::afficheTour(Joueur& joueurActuel)
@@ -33,5 +33,4 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	}
 	
 	cout << "Fin de votre tour" << endl;//avec appli ou etatjeu changement de joueur
-
-}
+	}

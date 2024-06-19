@@ -3,6 +3,7 @@
 #include "CarteClan.h"
 #include <memory>
 #include <iostream>
+#include <vector>
 class CarteClan;
 
 class Borne {
