@@ -12,15 +12,18 @@ class VueJeu;
 
 class ControleurJeu : public Controleur{
 private:
-	vector<ControleurBorne*> bornes;
+	vector<ControleurBorne*> controleurBornes;
 	VueJeu* vueJeu;
 	EtatJeu* etatJeu;
+	int joueurAct; //1 ou 2
 protected:
 	ControleurJeu(VueJeu* vue);
 public:
 	VueJeu* getVue() {return vueJeu;};
 
-	vector<ControleurBorne*> getBornes(){ return bornes; };
+	vector<ControleurBorne*> getBornes(){ return controleurBornes; };
+
+	int getJoueurActuel() { return joueurAct; };
 	/*!
 	* \retourne etatJeu
 	*/
@@ -30,9 +33,10 @@ public:
 	*/
 	virtual void initPartie()=0;
 	/*!
-	* \methode virtuelle pour le deroulement du tour
+	* \ revendique la borne avec ce numero
 	*/
-	//virtual void deroulementTours()=0;
+	void revendiqueBorne(unsigned int numBorne);
+
 	/*!
 	* \methode virtuelle pour deroulement de la partie
 	*/

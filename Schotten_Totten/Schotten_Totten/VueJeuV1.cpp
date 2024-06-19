@@ -1,7 +1,9 @@
 #include"VueJeuV1.h"
 #include "ControleurJeuV1.h"
+
 void VueJeuV1::afficheTour(Joueur& joueurActuel)
 {
+	affichePlateau();
 	unsigned int indiceCarte;
 	unsigned int numBorne;
 	cout << "Quelle carte voulez vous jouer? (1-6)" << endl;
@@ -14,7 +16,7 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	vector<Borne*> bornes = plateau->getBornes();
 	controleurV1->jouerCarteSurBorne(*carteChoisie,*bornes[numBorne-1]); 
 	controleurV1->revendiqueBorne(numBorne); //revendication de la borne ou pas
-	Carte* cartePiochée = controleurV1->getPioche()->piocher(*plateau->getPiocheClan(),joueurActuel); //le joueur pioche
+	Carte* cartePiochée = controleurV1->getControPioche()->piocher(*plateau->getPiocheClan(),joueurActuel); //le joueur pioche
 	cout << "Vous avez pioché";
 	afficheCarte(cartePiochée);
 	cout << "Fin de votre tour" << endl;//avec appli ou etatjeu changement de joueur

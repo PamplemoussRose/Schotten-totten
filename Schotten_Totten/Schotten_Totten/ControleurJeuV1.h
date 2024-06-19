@@ -25,7 +25,7 @@ public:
 	/*!
 	* \brief retourne le controleur de la pioche clan
 	*/
-	ControleurPioche* getPioche() { return controleurPiocheClan; };
+	ControleurPioche* getControPioche() { return controleurPiocheClan; };
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/
@@ -42,10 +42,7 @@ public:
 	* \ initialise la partie
 	*/
 	void initPartie();
-	/*!
-	* \ revedique la borne avec ce numero
-	*/
-	void revendiqueBorne(unsigned int numBorne);
+
 	/*!
 	* \ le joueur actuel joue la carte sur cette borne
 	*/

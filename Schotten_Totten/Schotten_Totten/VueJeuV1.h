@@ -12,6 +12,9 @@ private:
 public:
 	void setControleur(ControleurJeuV1* pControleur) { controleurV1 = pControleur; };
 	ControleurJeuV1* getControleur() { return controleurV1; }
+	/*!
+	* \brief affichage du tour du joueur 
+	*/
 	void afficheTour(Joueur& joueurActuel) override;
 };
 #endif

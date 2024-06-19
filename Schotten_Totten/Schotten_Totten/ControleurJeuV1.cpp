@@ -41,37 +41,14 @@ void ControleurJeuV1::initPartie() {
 	ControleurDemandeCarte* controleurPerso2 = new ControleurDemandeCarte();
 }
 
-void ControleurJeuV1::revendiqueBorne(unsigned int numBorne)
-{
-	shared_ptr<Plateau> plateau = getEtatJeu()->getPlateau();
-	vector<Borne*> bornes = plateau->getBornes();
-	if ((bornes[numBorne - 1])->revendicable()) {
-		string rep;
-		cout << " Revendiquer(1) ou piocher(2) ? " << endl;
-		cin >> rep;
-		if (rep == "1") {
-			//si joueur 1
-			if ((getBornes()[numBorne - 1])->calculeRevendication(*bornes[numBorne - 1]) == 1) {
-				bornes[numBorne - 1]->setStatut(1);
-				cout << "Le joueur 1 revendique la borne" << endl;
-			}
-			//si joueur 2
-			if ((getBornes()[numBorne - 1])->calculeRevendication(*bornes[numBorne - 1]) == 2) {
-				bornes[numBorne - 1]->setStatut(-1);
-				cout << "Le joueur 2 revendique la borne" << endl;
-			}
-		}
-
-	}
-}
 
 void ControleurJeuV1::jouerCarteSurBorne(CarteClan& carte, Borne& borne)
 {
-	if (true) {// si joueur 1
+	if (getJoueurActuel()==1) { // si joueur 1
 		borne.AjouterCarteJ1(carte);
 	}
 	else {
-		borne.AjouterCarteJ1(carte);
+		borne.AjouterCarteJ2(carte);
 	}
 
 }

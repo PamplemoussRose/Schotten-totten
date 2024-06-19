@@ -23,8 +23,14 @@ void ControleurJeuTactique::initPartie()
 {
 }
 
-void ControleurJeuTactique::deroulementTours()
+void ControleurJeuTactique::jouerCarteSurBorne(CarteClan& carte, Borne& borne)
 {
+	if (true) {// si joueur 1
+		borne.AjouterCarteJ1(carte);
+	}
+	else {
+		borne.AjouterCarteJ2(carte);
+	}
 }
 
 void ControleurJeuTactique::deroulementPartie()

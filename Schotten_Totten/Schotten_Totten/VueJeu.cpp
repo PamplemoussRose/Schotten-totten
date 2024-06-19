@@ -4,7 +4,10 @@ void VueJeu::affiche()
 	cout << "DEBUT DU JEU" << endl;
 	bool partie = true;
 	while(partie){
-		//je vois deja pour le tour d'un joueur
+		//afficheTour(joueur1);
+		//changement de joueur 
+		//afficheTour(joueur2);
+		//changement de joueur
 	}
 }
 

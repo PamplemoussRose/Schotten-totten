@@ -21,7 +21,10 @@ public:
 	* \brief retourne l'instance unique de la classe
 	*/
 	ControleurJeuTactique* getInstance();
-
+	ControleurPersonnage* getControPerso1() { return controleurPerso1; };
+	ControleurPersonnage* getControPerso2() { return controleurPerso2; };
+	ControleurPioche* getControPiocheTact() { return controleurPiocheTactique; };
+	ControleurPioche* getControPiocheClan() { return controleurPiocheClan; };
 	// Suppression des constructeurs de copie et d'affectation
 	ControleurJeuTactique(const ControleurJeuTactique&) = delete;
 	ControleurJeuTactique& operator=(const ControleurJeuTactique&) = delete;
@@ -34,9 +37,9 @@ public:
 	*/
 	void initPartie();
 	/*!
-	* \deroulement du tour
+	* \ le joueur actuel joue la carte sur cette borne
 	*/
-	void deroulementTours();
+	void jouerCarteSurBorne(CarteClan& carte, Borne& borne);
 	/*!
 	* \deroulement de la partie
 	*/
