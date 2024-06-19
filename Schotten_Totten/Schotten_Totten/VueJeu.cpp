@@ -7,7 +7,7 @@ void VueJeu::affiche()
 		//je vois deja pour le tour d'un joueur
 	}
 }
-/*
+
 void VueJeu::affichePlateau()
 {
 	shared_ptr<Plateau> plateau = (*(*controleur).getEtatJeu()).getPlateau();
@@ -46,7 +46,7 @@ void VueJeu::affichePlateau()
 		}
 	}
 }
-*/
+
 
 void VueJeu::afficheTour(Joueur& joueurActuel)
 {

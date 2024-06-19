@@ -5,6 +5,7 @@
 #include "ControleurDemandeCarte.h"
 #include "ControleurIAAlea.h"
 #include "ControleurHumain.h"
+#include "ChoixUtilisateur.h"
 
 class ControleurJeuV1 : public ControleurJeu{
 	//Attributs

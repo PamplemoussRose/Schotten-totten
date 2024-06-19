@@ -14,10 +14,19 @@ void ControleurJeuV1::initPartie() {
 	getEtatJeu()->getPlateau();
 	PiocheClan* piocheClan = (PiocheClan*)(getEtatJeu()->getPlateau())->getPiocheClan();
 	ControleurPioche* controleurPiocheClan = new ControleurPioche();
-
-	//ControleurPersonnage* controleurPerso2= new ControleurHumain();
-	//ControleurPersonnage* controleurPerso1 = new ControleurIAAlea();
-
+	ChoixUtilisateur* choixU=ChoixUtilisateur::getChoixUtilisateur();
+	if(choixU->estHvsH()){
+		ControleurPersonnage* controleurPerso1 = new ControleurHumain();
+		ControleurPersonnage* controleurPerso2 = new ControleurHumain();
+	}
+	else if (choixU->estHvsIA()) {
+		ControleurPersonnage* controleurPerso1= new ControleurHumain();
+		ControleurPersonnage* controleurPerso2 = new ControleurIAAlea();
+	}
+	else {
+		ControleurPersonnage* controleurPerso1 = new ControleurIAAlea();
+		ControleurPersonnage* controleurPerso2 = new ControleurIAAlea();
+	}
 	ControleurDemandeCarte* controleurPerso2 = new ControleurDemandeCarte();
 }
 
