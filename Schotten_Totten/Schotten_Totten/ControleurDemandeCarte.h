@@ -18,7 +18,7 @@ public:
     /*
     demande au joueur la carte qu'il souhaite jouer et la retourne si c'est correcte
     */
-    unsigned int choixCarte(Joueur& joueur, Joueur& autreJoueur);
+    Carte* choixCarte(Joueur& joueur, Joueur& autreJoueur);
 
     /*
     demande au joueur les choix que peut faire sa carte
