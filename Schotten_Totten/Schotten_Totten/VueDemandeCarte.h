@@ -1,5 +1,6 @@
 #ifndef VUEDEMANDECARTE_HEADER
 #define VUEDEMANDECARTE_HEADER
+#include <iostream>
 #include <vector>
 using namespace std;
 class VueDemandeCarte {
