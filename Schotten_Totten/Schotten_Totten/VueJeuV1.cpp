@@ -2,6 +2,7 @@
 #include "ControleurJeuV1.h"
 void VueJeuV1::afficheTour(Joueur& joueurActuel)
 {
+	/*
 	unsigned int indiceCarte;
 	unsigned int numBorne;
 	cout << "Quelle carte voulez vous jouer? (1-6)" << endl;
@@ -10,7 +11,7 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	CarteClan* carteChoisie;// = DemandeCarte::indiceCarte-1
 	cout << "Sur quel borne? (numéro::1-9)" << endl;
 	cin >> numBorne;
-	shared_ptr<Plateau> plateau = controleurV1->getEtatJeu()->getPlateau();
+	Plateau* plateau = controleurV1->getEtatJeu()->getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
 	controleurV1->jouerCarteSurBorne(*carteChoisie,*bornes[numBorne-1]); 
 	controleurV1->revendiqueBorne(numBorne); //revendication de la borne ou pas
@@ -18,4 +19,5 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	cout << "Vous avez pioché";
 	afficheCarte(cartePiochée);
 	cout << "Fin de votre tour" << endl;//avec appli ou etatjeu changement de joueur
+	*/
 }

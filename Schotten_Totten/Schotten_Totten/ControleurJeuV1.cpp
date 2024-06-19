@@ -2,9 +2,10 @@
 #include "VueJeuV1.h"
 ControleurJeuV1* ControleurJeuV1::instance = nullptr;
 
-inline ControleurJeuV1::ControleurJeuV1() :ControleurJeu((VueJeu*)new VueJeuV1())
+inline ControleurJeuV1::ControleurJeuV1(Builder* plateauBuilder) : ControleurJeu(new VueJeuV1())
 {
-
+	EtatJeu* etatJeu = EtatJeu::getInstance(plateauBuilder);
+	initPartie(plateauBuilder);
 }
 
 ControleurJeuV1* ControleurJeuV1::getInstance(Builder* plateauBuilder)
@@ -20,7 +21,7 @@ ControleurJeuV1::~ControleurJeuV1()
 	instance = nullptr;
 }
 
-void ControleurJeuV1::initPartie(Builder* plateauBuilder = nullptr) {
+void ControleurJeuV1::initPartie(Builder* plateauBuilder) {
 	getEtatJeu()->getInstance();
 	getEtatJeu()->getPlateau();
 	PiocheClan* piocheClan = (PiocheClan*)(getEtatJeu()->getPlateau())->getPiocheClan();
@@ -43,7 +44,7 @@ void ControleurJeuV1::initPartie(Builder* plateauBuilder = nullptr) {
 
 void ControleurJeuV1::revendiqueBorne(unsigned int numBorne)
 {
-	shared_ptr<Plateau> plateau = getEtatJeu()->getPlateau();
+	Plateau* plateau = getEtatJeu()->getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
 	if ((bornes[numBorne - 1])->revendicable()) {
 		string rep;

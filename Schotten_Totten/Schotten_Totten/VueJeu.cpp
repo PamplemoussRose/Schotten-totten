@@ -48,6 +48,7 @@ void VueJeu::affichePlateau()
 }
 
 
+// Est ce qu'il en a besoin ?
 void VueJeu::afficheTour(Joueur& joueurActuel)
 {
 	//Carte* carteChoisie;
@@ -79,6 +80,7 @@ void VueJeu::afficheTour(Joueur& joueurActuel)
 		}
 		
 	}*/
+
 	//controleurjeu piocher joueur qui regarde la carte piochée
 	cout << "Vous avez pioché";//<<afficheCarte()<< endl;
 	cout << "Changement de joueur!Au tour du joueur" << endl;//avec appli ou etatjeu

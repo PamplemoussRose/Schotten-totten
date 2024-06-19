@@ -13,12 +13,11 @@ class VueJeu;
 class ControleurJeu : public Controleur{
 private:
 	vector<ControleurBorne*> bornes;
-	VueJeu* vueJeu;
 	EtatJeu* etatJeu;
 protected:
 	ControleurJeu(VueJeu* vue);
 public:
-	VueJeu* getVue() {return vueJeu;};
+	VueJeu* getVue() { return (VueJeu*)Controleur::getVue();};
 
 	vector<ControleurBorne*> getBornes(){ return bornes; };
 	/*!
