@@ -13,14 +13,12 @@ class VueJeu;
 class ControleurJeu : public Controleur{
 private:
 	vector<ControleurBorne*> bornes;
-
+	VueJeu* vueJeu;
 	EtatJeu* etatJeu;
 protected:
-	ControleurJeu();
-
+	ControleurJeu(VueJeu* vue);
 public:
-
-	VueJeu* getVue();
+	VueJeu* getVue() {return vueJeu;};
 
 	vector<ControleurBorne*> getBornes(){ return bornes; };
 	/*!
@@ -34,7 +32,7 @@ public:
 	/*!
 	* \methode virtuelle pour le deroulement du tour
 	*/
-	virtual void deroulementTours()=0;
+	//virtual void deroulementTours()=0;
 	/*!
 	* \methode virtuelle pour deroulement de la partie
 	*/

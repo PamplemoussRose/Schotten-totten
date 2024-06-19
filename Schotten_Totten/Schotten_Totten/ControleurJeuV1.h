@@ -6,18 +6,27 @@
 #include "ControleurIAAlea.h"
 #include "ControleurHumain.h"
 #include "ChoixUtilisateur.h"
+class VueJeuV1;
 #include "Builder.h"
 
+//classe de controleur jeu gérant la version normale
 class ControleurJeuV1 : public ControleurJeu{
-	//Attributs
 private:
+	//Attributs
 	ControleurPioche* controleurPiocheClan;
 	ControleurPersonnage* controleurPerso1;
 	ControleurPersonnage* controleurPerso2;
 	ControleurDemandeCarte* demandeCarte;
 	static ControleurJeuV1* instance;
-	ControleurJeuV1(Builder* plateauBuilder) : ControleurJeu() { initPartie(plateauBuilder); }
+	/*!
+	* \brief constructeur de jeuV1
+	*/
+	inline ControleurJeuV1(Builder* plateauBuilder);
 public:
+	/*!
+	* \brief retourne le controleur de la pioche clan
+	*/
+	ControleurPioche* getPioche() { return controleurPiocheClan; };
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/
@@ -35,9 +44,14 @@ public:
 	*/
 	void initPartie(Builder* plateauBuilder);
 	/*!
-	* \deroulement du tour
+	* \ revedique la borne avec ce numero
 	*/
-	void deroulementTours();
+	void revendiqueBorne(unsigned int numBorne);
+	/*!
+	* \ le joueur actuel joue la carte sur cette borne
+	*/
+	void jouerCarteSurBorne(CarteClan& carte, Borne& borne);
+
 	/*!
 	* \deroulement de la partie
 	*/
