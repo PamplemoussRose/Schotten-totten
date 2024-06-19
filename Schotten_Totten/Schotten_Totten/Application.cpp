@@ -3,6 +3,11 @@
 Application* Application::instance = nullptr;
 
 Application::Application() {
+	// Charge les builder
+	builderClassique = new BuilderClassique();
+	builderClassique->setBornesBuilder();
+	builderClassique->setPiocheBuilder();
+
 	changeControleurVariante();
 }
 
@@ -40,7 +45,7 @@ void Application::changeControleurJeu() {
 	// Construction du 
 	ChoixUtilisateur* stockageChoix = ChoixUtilisateur::getChoixUtilisateur();
 	if (stockageChoix->estPartieClassique()) {
-		controleurActuel = ControleurJeuV1::getInstance();
+		controleurActuel = ControleurJeuV1::getInstance(builderClassique);
 	}
 	else if (stockageChoix->estPartieTactique()) {
 		// Ajout de l'instance de ControleurJeuTactique

@@ -9,7 +9,7 @@ inline ControleurJeuTactique::ControleurJeuTactique() :ControleurJeu(new VueJeuT
 ControleurJeuTactique* ControleurJeuTactique::getInstance()
 {
 	if (instance == nullptr) {
-		instance = new ControleurJeuTactique();
+		//instance = new ControleurJeuTactique();
 
 	}
 	return instance;

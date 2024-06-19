@@ -9,11 +9,8 @@ VueJeu* ControleurJeu::getVue()
 	return (VueJeu*)Controleur::getVue();
 }*/
 
-ControleurJeu::ControleurJeu(VueJeu* vue)
-	:Controleur((Vue*)vue) {
-	initPartie();
+ControleurJeu::ControleurJeu(VueJeu* vue):Controleur(vue) {
 	getVue()->setControleur(this);
-	EtatJeu* etatJeu = EtatJeu::getInstance();
 }
 
 void ControleurJeu::revendiqueBorne(unsigned int numBorne)

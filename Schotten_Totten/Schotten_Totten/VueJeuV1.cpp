@@ -3,6 +3,7 @@
 
 void VueJeuV1::afficheTour(Joueur& joueurActuel)
 {
+
 	affichePlateau();
 	unsigned int indiceCarte;
 	unsigned int numBorne;
@@ -10,14 +11,15 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	afficheMain(joueurActuel);
 	cin >> indiceCarte;
 	CarteClan* carteChoisie;// = DemandeCarte::indiceCarte-1
-	cout << "Sur quel borne? (numéro::1-9)" << endl;
+	cout << "Sur quel borne? (numï¿½ro::1-9)" << endl;
 	cin >> numBorne;
-	shared_ptr<Plateau> plateau = controleurV1->getEtatJeu()->getPlateau();
+	Plateau* plateau = controleurV1->getEtatJeu()->getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
 	controleurV1->jouerCarteSurBorne(*carteChoisie,*bornes[numBorne-1]); 
 	controleurV1->revendiqueBorne(numBorne); //revendication de la borne ou pas
-	Carte* cartePiochée = controleurV1->getControPioche()->piocher(*plateau->getPiocheClan(),joueurActuel); //le joueur pioche
-	cout << "Vous avez pioché";
-	afficheCarte(cartePiochée);
+	Carte* cartePiochï¿½e = controleurV1->getControPioche()->piocher(*plateau->getPiocheClan(),joueurActuel); //le joueur pioche
+	cout << "Vous avez pioche";
+	afficheCarte(cartePiochï¿½e);
 	cout << "Fin de votre tour" << endl;//avec appli ou etatjeu changement de joueur
+
 }

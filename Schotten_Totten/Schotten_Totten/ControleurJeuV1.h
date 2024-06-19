@@ -7,8 +7,9 @@
 #include "ControleurHumain.h"
 #include "ChoixUtilisateur.h"
 class VueJeuV1;
+#include "Builder.h"
 
-//classe de controleur jeu gérant la version normale
+//classe de controleur jeu gerant la version normale
 class ControleurJeuV1 : public ControleurJeu{
 private:
 	//Attributs
@@ -20,7 +21,7 @@ private:
 	/*!
 	* \brief constructeur de jeuV1
 	*/
-	inline ControleurJeuV1();
+	inline ControleurJeuV1(Builder* plateauBuilder);
 public:
 	/*!
 	* \brief retourne le controleur de la pioche clan
@@ -29,7 +30,7 @@ public:
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/
-	static ControleurJeuV1* getInstance();
+	static ControleurJeuV1* getInstance(Builder* plateauBuilder = nullptr);
 
 	// Suppression des constructeurs de copie et d'affectation
 	ControleurJeuV1(const ControleurJeuV1&) = delete;
@@ -41,7 +42,12 @@ public:
 	/*!
 	* \ initialise la partie
 	*/
-	void initPartie();
+
+	void initPartie(Builder* plateauBuilder);
+	/*!
+	* \ revedique la borne avec ce numero
+	*/
+	void revendiqueBorne(unsigned int numBorne);
 
 	/*!
 	* \ le joueur actuel joue la carte sur cette borne

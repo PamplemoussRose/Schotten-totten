@@ -2,15 +2,15 @@
 #include "VueJeuV1.h"
 ControleurJeuV1* ControleurJeuV1::instance = nullptr;
 
-inline ControleurJeuV1::ControleurJeuV1() :ControleurJeu((VueJeu*)new VueJeuV1())
+inline ControleurJeuV1::ControleurJeuV1(Builder* plateauBuilder) : ControleurJeu(new VueJeuV1())
 {
-
+	initPartie(plateauBuilder);
 }
 
-ControleurJeuV1* ControleurJeuV1::getInstance()
+ControleurJeuV1* ControleurJeuV1::getInstance(Builder* plateauBuilder)
 {
 	if (instance == nullptr) {
-		instance = new ControleurJeuV1();
+		instance = new ControleurJeuV1(plateauBuilder);
 	}
 	return instance;
 }
@@ -20,7 +20,8 @@ ControleurJeuV1::~ControleurJeuV1()
 	instance = nullptr;
 }
 
-void ControleurJeuV1::initPartie() {
+void ControleurJeuV1::initPartie(Builder* plateauBuilder) {
+	EtatJeu* etatJeu = EtatJeu::getInstance(plateauBuilder);
 	getEtatJeu()->getInstance();
 	getEtatJeu()->getPlateau();
 	PiocheClan* piocheClan = (PiocheClan*)(getEtatJeu()->getPlateau())->getPiocheClan();
@@ -40,7 +41,6 @@ void ControleurJeuV1::initPartie() {
 	}
 	ControleurDemandeCarte* controleurPerso2 = new ControleurDemandeCarte();
 }
-
 
 void ControleurJeuV1::jouerCarteSurBorne(CarteClan& carte, Borne& borne)
 {

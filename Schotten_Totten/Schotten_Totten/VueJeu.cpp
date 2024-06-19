@@ -13,7 +13,7 @@ void VueJeu::affiche()
 
 void VueJeu::affichePlateau()
 {
-	shared_ptr<Plateau> plateau = (*(*controleur).getEtatJeu()).getPlateau();
+	Plateau* plateau = (*(*controleur).getEtatJeu()).getPlateau();
 	vector<Borne*> bornes = (*plateau).getBornes();
 	//Affichage des cartes de Joueur 1 au dessus des bornes
 	if ((*plateau).getMaxCartesJ1() != 0) {
@@ -51,6 +51,45 @@ void VueJeu::affichePlateau()
 }
 
 
+// Est ce qu'il en a besoin ?
+void VueJeu::afficheTour(Joueur& joueurActuel)
+{
+	//Carte* carteChoisie;
+	//unsigned int indiceCarte;
+	//utilisez demandeCarte
+	unsigned int numBorne;
+	cout << "Quelle carte voulez vous jouer? (1-6)"<<endl;
+	afficheMain(joueurActuel);
+	cout << "Sur quel borne? (numéro::1-9)" << endl;
+	cin >> numBorne;
+	Plateau* plateau = (*(*controleur).getEtatJeu()).getPlateau();
+	vector<Borne*> bornes = (*plateau).getBornes();
+	//JouerCarteSurBorne;
+	/*if (bornes[numBorne - 1].revendiquable()) {
+		string rep;
+		cout <<" Revendiquer(1) ou piocher(2) ? "<<endl;
+		cin >> rep;
+		if (rep == "1") {
+			//si joueur 1
+			if (controleur->getBornes()[numBorne - 1]).calculeRevendication() == 1) {
+			controleur.getBornes()[numBorne - 1].setStatut("Revendiquée:1");
+			cout << "Le joueur 1 revendique la borne" << endl;
+			}
+			//si joueur 2
+			if (controleur->getBornes()[numBorne - 1]).calculeRevendication() == 2) {
+			controleur.getBornes()[numBorne - 1].setStatut("Revendiquée:2");
+			cout << "Le joueur 2 revendique la borne" << endl;
+			}
+		}
+		
+	}*/
+
+	//controleurjeu piocher joueur qui regarde la carte piochée
+	cout << "Vous avez pioché";//<<afficheCarte()<< endl;
+	cout << "Changement de joueur!Au tour du joueur" << endl;//avec appli ou etatjeu
+
+
+}
 
 void VueJeu::afficheCarteClan(CarteClan* carte)
 {

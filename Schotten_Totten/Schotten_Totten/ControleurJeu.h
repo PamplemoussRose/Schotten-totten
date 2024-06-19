@@ -19,7 +19,7 @@ private:
 protected:
 	ControleurJeu(VueJeu* vue);
 public:
-	VueJeu* getVue() {return vueJeu;};
+	VueJeu* getVue() { return (VueJeu*)Controleur::getVue();};
 
 	vector<ControleurBorne*> getBornes(){ return controleurBornes; };
 
@@ -31,7 +31,7 @@ public:
 	/*!
 	* \methode virtuelle pour initialiser la partie
 	*/
-	virtual void initPartie()=0;
+	virtual void initPartie(Builder* plateauBuilder)=0;
 	/*!
 	* \ revendique la borne avec ce numero
 	*/

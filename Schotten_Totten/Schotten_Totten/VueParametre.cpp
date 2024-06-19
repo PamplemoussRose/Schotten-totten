@@ -17,7 +17,7 @@ void VueParametre::choixIAHumain()
     cout << "\t1: Humain VS Ordi" << endl;
     cout << "\t2: Humain VS Humain" << endl;
     cout << "\t3: Ordi VS Ordi" << endl;
-    cout << "Choix :";
+    cout << "Choix : ";
     cin >> mode;
 
     try {
