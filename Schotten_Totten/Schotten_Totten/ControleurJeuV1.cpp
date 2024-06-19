@@ -9,6 +9,11 @@ ControleurJeuV1* ControleurJeuV1::getInstance()
 	return instance;
 }
 
+ControleurJeuV1::~ControleurJeuV1()
+{
+	instance = nullptr;
+}
+
 void ControleurJeuV1::initPartie() {
 	getEtatJeu()->getInstance();
 	getEtatJeu()->getPlateau();

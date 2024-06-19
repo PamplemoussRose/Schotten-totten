@@ -23,6 +23,10 @@ public:
 	// Suppression des constructeurs de copie et d'affectation
 	ControleurJeuTactique(const ControleurJeuTactique&) = delete;
 	ControleurJeuTactique& operator=(const ControleurJeuTactique&) = delete;
+	/**
+	* Destruction de l'instance
+	*/
+	~ControleurJeuTactique();
 	/*!
 	* \ initialise la partie
 	*/

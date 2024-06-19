@@ -26,6 +26,10 @@ public:
 	ControleurJeuV1(const ControleurJeuV1&) = delete;
 	ControleurJeuV1& operator=(const ControleurJeuV1&) = delete;
 	/*!
+	* Destruction de l'instance
+	*/
+	~ControleurJeuV1();
+	/*!
 	* \ initialise la partie
 	*/
 	void initPartie();

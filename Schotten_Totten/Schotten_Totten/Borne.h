@@ -14,7 +14,7 @@ private:
 	vector<Carte*> cartesJ1;
 	vector<Carte*> cartesJ2;
 public:
-	Borne() :cartesJ1(), cartesJ2() { numero, statut,nbCartesRevendiquer = 0; };
+	Borne() :cartesJ1(), cartesJ2() { numero, statut = 0; nbCartesRevendiquer = 0; };
 	//Methodes
 	/*!
 	* \brief retourne le numero

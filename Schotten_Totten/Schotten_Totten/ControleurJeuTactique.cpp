@@ -10,6 +10,10 @@ ControleurJeuTactique* ControleurJeuTactique::getInstance()
 	return instance;
 }
 
+ControleurJeuTactique::~ControleurJeuTactique() {
+	instance = nullptr;
+};
+
 void ControleurJeuTactique::initPartie()
 {
 }

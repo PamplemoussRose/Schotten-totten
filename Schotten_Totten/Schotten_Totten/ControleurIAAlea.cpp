@@ -1,6 +1,6 @@
 #include "ControleurIAAlea.h"
 
-void ControleurIAAlea::jouerCarte(Joueur& joueur, Carte& carte){
+void ControleurIAAlea::jouerCarte(Carte& carte, ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& ia){
 
 		//gerer exception si les deux bornes selectionnes sont les memes
 		//voir aussi le fait que les ia ne peuvent pas jouer trop de cartes tactiques
