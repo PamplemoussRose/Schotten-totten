@@ -15,7 +15,7 @@ ControleurJeu::ControleurJeu(VueJeu* vue):Controleur(vue) {
 
 void ControleurJeu::revendiqueBorne(unsigned int numBorne)
 {
-	shared_ptr<Plateau> plateau = etatJeu->getPlateau();
+	Plateau* plateau = etatJeu->getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
 	if ((bornes[numBorne - 1])->revendicable()) {
 		string rep;

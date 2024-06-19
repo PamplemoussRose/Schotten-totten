@@ -8,7 +8,7 @@ void VueJeuTactique::afficheTour(Joueur& joueurActuel)
 	afficheMain(joueurActuel);
 	cin >> indiceCarte;
 	Carte* carteChoisie;// = DemandeCarte::indiceCarte-1 --> carte clan ou tactique
-	shared_ptr<Plateau> plateau = controleurT->getEtatJeu()->getPlateau();
+	Plateau* plateau = controleurT->getEtatJeu()->getPlateau();
 	if (typeid(carteChoisie) == typeid(CarteClan)) {	//si carte clan choisie
 		cout << "Sur quel borne? (numéro::1-9)" << endl;
 		cin >> numBorne;

@@ -17,9 +17,9 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	vector<Borne*> bornes = plateau->getBornes();
 	controleurV1->jouerCarteSurBorne(*carteChoisie,*bornes[numBorne-1]); 
 	controleurV1->revendiqueBorne(numBorne); //revendication de la borne ou pas
-	Carte* cartePioch�e = controleurV1->getControPioche()->piocher(*plateau->getPiocheClan(),joueurActuel); //le joueur pioche
+	Carte* cartePiochee = controleurV1->getControPioche()->piocher(*plateau->getPiocheClan(),joueurActuel); //le joueur pioche
 	cout << "Vous avez pioche";
-	afficheCarte(cartePioch�e);
+	afficheCarte(cartePiochee);
 	cout << "Fin de votre tour" << endl;//avec appli ou etatjeu changement de joueur
 
 }
