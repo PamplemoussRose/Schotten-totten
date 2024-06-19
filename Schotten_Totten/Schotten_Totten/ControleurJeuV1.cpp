@@ -4,7 +4,6 @@ ControleurJeuV1* ControleurJeuV1::instance = nullptr;
 
 inline ControleurJeuV1::ControleurJeuV1(Builder* plateauBuilder) : ControleurJeu(new VueJeuV1())
 {
-	EtatJeu* etatJeu = EtatJeu::getInstance(plateauBuilder);
 	initPartie(plateauBuilder);
 }
 
@@ -22,6 +21,7 @@ ControleurJeuV1::~ControleurJeuV1()
 }
 
 void ControleurJeuV1::initPartie(Builder* plateauBuilder) {
+	EtatJeu* etatJeu = EtatJeu::getInstance(plateauBuilder);
 	getEtatJeu()->getInstance();
 	getEtatJeu()->getPlateau();
 	PiocheClan* piocheClan = (PiocheClan*)(getEtatJeu()->getPlateau())->getPiocheClan();
