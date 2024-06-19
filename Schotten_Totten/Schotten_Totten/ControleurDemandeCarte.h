@@ -21,8 +21,8 @@ public:
         unsigned int numeroCarteChoisie;
         bool choixFait = false;
         while (!choixFait) {
-            //cin >> numeroCarteChoisie;
             numeroCarteChoisie = vue.demandeCarte();
+            //cin >> numeroCarteChoisie;
             if (numeroCarteChoisie != 0 && joueur.getNbreCartes() >= numeroCarteChoisie) { // != 0 signifie que l'utilisateur n'a pas entré un nombre
                 Carte* carteChoisie = joueur.getCarteMainPosition(numeroCarteChoisie - 1); //-1 carte la carte 1 est à la position 0
 
