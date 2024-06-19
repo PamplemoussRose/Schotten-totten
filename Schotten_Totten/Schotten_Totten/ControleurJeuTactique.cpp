@@ -1,5 +1,10 @@
 #include "ControleurJeuTactique.h"
+#include "VueJeuTactique.h"
 ControleurJeuTactique* ControleurJeuTactique::instance = nullptr;
+
+inline ControleurJeuTactique::ControleurJeuTactique() :ControleurJeu(new VueJeuTactique())
+{
+}
 
 ControleurJeuTactique* ControleurJeuTactique::getInstance()
 {

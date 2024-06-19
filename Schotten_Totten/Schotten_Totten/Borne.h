@@ -49,6 +49,7 @@ public:
 	*/
 	vector<Carte*> getCartesJ2() { return cartesJ2; };
 
+	bool revendicable();
 	/*!
 	* \brief Ajoute une carte de J1 à la borne
 	*/

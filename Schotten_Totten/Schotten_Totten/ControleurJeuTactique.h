@@ -4,6 +4,8 @@
 #include "ControleurPioche.h"
 #include "ControleurPersonnage.h"
 #include "ControleurDemandeCarte.h"
+class VueJeuTactique;
+
 class ControleurJeuTactique : public ControleurJeu {
 	//Attributs
 private:
@@ -13,7 +15,7 @@ private:
 	ControleurPersonnage* controleurPerso2;
 	ControleurDemandeCarte* demandeCarte;
 	static ControleurJeuTactique* instance;
-	inline ControleurJeuTactique() :ControleurJeu() {}
+	inline ControleurJeuTactique();
 public:
 	/*!
 	* \brief retourne l'instance unique de la classe

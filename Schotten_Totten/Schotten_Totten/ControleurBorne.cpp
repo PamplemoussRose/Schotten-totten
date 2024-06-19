@@ -76,7 +76,7 @@ vector<string> ControleurBorne::combinaisonCartesJoueur(Borne& borne)
 	return vector<string>();
 }
 
-void ControleurBorne::calculeRevendication(Borne& borne)
+int ControleurBorne::calculeRevendication(Borne& borne)
 {
 	vector<string> combi = combinaisonCartesJoueur(borne);
 	int win = 0; //1: joueur 1 revendique 2: joueur 2 gagne
@@ -114,14 +114,15 @@ void ControleurBorne::calculeRevendication(Borne& borne)
 	else if (combi[0] == "Suite") { win = 1; }
 	else if (combi[1] == "Suite") { win = 2; }
 	else { cout << "pas d'autres cas normalement" << endl; }
+	return win;
 }
 
 void ControleurBorne::modeCombatBoue(Borne& borne)
 {
 	borne.setNbCartesRevendiquer(4);
 }
-bool ControleurBorne::revendiquable(Borne& borne)
+bool ControleurBorne::revendicable(Borne& borne)
 {
-	return (borne.getCartesJ1().size() == borne.getNbCartesRevendiquer() && borne.getCartesJ2().size() == borne.getNbCartesRevendiquer());
+	return borne.revendicable();
 }
 

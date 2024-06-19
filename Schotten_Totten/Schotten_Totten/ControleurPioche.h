@@ -7,7 +7,7 @@ public:
 	/*!
 	* \brief fait piocher unne carte dans la pioche au joueur
 	*/
-	void piocher(Pioche& pioche,Joueur& joueur);
+	Carte* piocher(Pioche& pioche,Joueur& joueur);
 	/*!
 	* \brief renvoie true si pioche vide
 	*/

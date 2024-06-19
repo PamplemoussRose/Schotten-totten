@@ -29,7 +29,7 @@ public:
 	/*!
 	* \brief affichage du tour du joueur
 	*/
-	void afficheTour(Joueur& joueurActuel);
+	virtual void afficheTour(Joueur& joueurActuel)=0;
 	/*!
 	* \brief affiche sur console la carte clan
 	*/

@@ -15,11 +15,11 @@ public:
 	/**
 * \brief retourne vrai si cette borne peut etre revendiquée
 */
-	bool revendiquable(Borne& borne);
+	bool revendicable(Borne& borne);
 	/*!
 	* \brief retourne 1 si joueur1 l'emporte 2 sinon
 	*/
-	void calculeRevendication(Borne& borne);
+	int calculeRevendication(Borne& borne);
 	/*!
 	* \brief met le nb de cartes pour revendiquer à 4
 	*/

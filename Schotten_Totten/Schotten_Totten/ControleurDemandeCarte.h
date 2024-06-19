@@ -14,6 +14,7 @@ private :
     VueDemandeCarte vue;
 
 public:
+    ControleurDemandeCarte() :vue() {};
     /*
     demande au joueur la carte qu'il souhaite jouer et la retourne si c'est correcte
     */
