@@ -34,7 +34,7 @@ public:
     /*!
     * \brief renitialise le plateau
     */
-    void Reset();
+    void reset();
 
     /*!
     * \brief creation de 9 bornes et ajout des bornes au jeu
@@ -49,7 +49,7 @@ public:
     /*!
     * \brief copie le plateau actuel et le retourne avec un pointeur et renitilise le plateau
     */
-    Plateau* GetResult();
+    Plateau* getResult() ;
 };
 
 #endif

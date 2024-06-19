@@ -3,6 +3,9 @@
 Application* Application::instance = nullptr;
 
 Application::Application() {
+	// Charge les builder
+	builderClassique = new BuilderClassique();
+
 	changeControleurVariante();
 }
 

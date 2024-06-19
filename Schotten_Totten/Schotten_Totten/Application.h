@@ -4,12 +4,15 @@
 #include "ControleurVariante.h"
 #include "ControleurParametre.h"
 #include "ControleurJeuV1.h"
+#include "BuilderClassique.h"
 
 class Application {
 private:
 	static Application* instance;
 
 	Controleur* controleurActuel;
+
+	BuilderClassique* builderClassique;
 
 	Application();
 

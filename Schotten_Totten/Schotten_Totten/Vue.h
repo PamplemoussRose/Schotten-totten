@@ -27,7 +27,7 @@ public:
 
 public:
 	/*!
-	* \methode virtuelle d'affichage
+	* \methode virtuelle daffichage
 	*/
 	virtual void affiche()=0;
 };

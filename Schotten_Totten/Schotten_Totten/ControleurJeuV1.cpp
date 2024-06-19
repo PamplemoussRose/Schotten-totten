@@ -1,10 +1,10 @@
 #include "ControleurJeuV1.h"
 ControleurJeuV1* ControleurJeuV1::instance = nullptr;
 
-ControleurJeuV1* ControleurJeuV1::getInstance()
+ControleurJeuV1* ControleurJeuV1::getInstance(Builder* plateauBuilder)
 {
 	if (instance == nullptr) {
-		instance = new ControleurJeuV1();
+		instance = new ControleurJeuV1(plateauBuilder);
 	}
 	return instance;
 }
@@ -14,7 +14,7 @@ ControleurJeuV1::~ControleurJeuV1()
 	instance = nullptr;
 }
 
-void ControleurJeuV1::initPartie() {
+void ControleurJeuV1::initPartie(Builder* plateauBuilder = nullptr) {
 	getEtatJeu()->getInstance();
 	getEtatJeu()->getPlateau();
 	PiocheClan* piocheClan = (PiocheClan*)(getEtatJeu()->getPlateau())->getPiocheClan();

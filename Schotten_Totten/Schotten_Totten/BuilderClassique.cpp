@@ -2,7 +2,7 @@
 
 BuilderClassique::BuilderClassique()
 {
-    this->Reset();
+    this->reset();
 }
 
 BuilderClassique::BuilderClassique(BuilderClassique&& other) noexcept
@@ -16,7 +16,7 @@ BuilderClassique::~BuilderClassique()
     delete plateauBuild;
 }
 
-void BuilderClassique::Reset()
+void BuilderClassique::reset()
 {
     plateauBuild = Plateau::getInstance();
 }
@@ -37,9 +37,9 @@ void BuilderClassique::setPiocheBuilder()
     plateauBuild->setPiocheClan(move(lstPioche));
 }
 
-Plateau* BuilderClassique::GetResult()
+Plateau* BuilderClassique::getResult()
 {
     Plateau * result = this->plateauBuild;
-    this->Reset();
+    this->reset();
     return result;
 }

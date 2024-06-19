@@ -30,7 +30,7 @@ public:
 	/*!
 	* \methode virtuelle pour initialiser la partie
 	*/
-	virtual void initPartie()=0;
+	virtual void initPartie(Builder* plateauBuilder)=0;
 	/*!
 	* \methode virtuelle pour le deroulement du tour
 	*/

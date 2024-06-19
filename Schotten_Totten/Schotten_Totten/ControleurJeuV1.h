@@ -6,6 +6,7 @@
 #include "ControleurIAAlea.h"
 #include "ControleurHumain.h"
 #include "ChoixUtilisateur.h"
+#include "Builder.h"
 
 class ControleurJeuV1 : public ControleurJeu{
 	//Attributs
@@ -15,12 +16,12 @@ private:
 	ControleurPersonnage* controleurPerso2;
 	ControleurDemandeCarte* demandeCarte;
 	static ControleurJeuV1* instance;
-	ControleurJeuV1() :ControleurJeu() { initPartie(); }
+	ControleurJeuV1(Builder* plateauBuilder) : ControleurJeu() { initPartie(plateauBuilder); }
 public:
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/
-	static ControleurJeuV1* getInstance();
+	static ControleurJeuV1* getInstance(Builder* plateauBuilder = nullptr);
 
 	// Suppression des constructeurs de copie et d'affectation
 	ControleurJeuV1(const ControleurJeuV1&) = delete;
@@ -32,7 +33,7 @@ public:
 	/*!
 	* \ initialise la partie
 	*/
-	void initPartie();
+	void initPartie(Builder* plateauBuilder);
 	/*!
 	* \deroulement du tour
 	*/

@@ -17,19 +17,19 @@ public:
 	/*!
 	* \brief methode virtuelle pure pour renitialiser
 	*/
-	virtual void reset() const = 0;
+	virtual void reset() = 0;
 	/*!
 	* \brief methode virtuelle pure pour les bornes du builder
 	*/
-	virtual void setBornesBuilder() const = 0;
+	virtual void setBornesBuilder() = 0;
 	/*!
 	* \brief methode virtuelle pure pour la pioche du builder
 	*/
-	virtual void setPiocheBuilder() const = 0;
+	virtual void setPiocheBuilder() = 0;
 	/*!
 	* \brief methode virtuelle pure pour retourner le plateau construit
 	*/
-	virtual Plateau getResult() const = 0;
+	virtual Plateau* getResult() = 0;
 };
 #endif
 

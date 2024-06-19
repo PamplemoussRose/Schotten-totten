@@ -10,7 +10,7 @@ void VueJeu::affiche()
 
 void VueJeu::affichePlateau()
 {
-	shared_ptr<Plateau> plateau = (*(*controleur).getEtatJeu()).getPlateau();
+	Plateau* plateau = (*(*controleur).getEtatJeu()).getPlateau();
 	vector<Borne*> bornes = (*plateau).getBornes();
 	//Affichage des cartes de Joueur 1 au dessus des bornes
 	if ((*plateau).getMaxCartesJ1() != 0) {
@@ -58,7 +58,7 @@ void VueJeu::afficheTour(Joueur& joueurActuel)
 	afficheMain(joueurActuel);
 	cout << "Sur quel borne? (numéro::1-9)" << endl;
 	cin >> numBorne;
-	shared_ptr<Plateau> plateau = (*(*controleur).getEtatJeu()).getPlateau();
+	Plateau* plateau = (*(*controleur).getEtatJeu()).getPlateau();
 	vector<Borne*> bornes = (*plateau).getBornes();
 	//JouerCarteSurBorne;
 	/*if (bornes[numBorne - 1].revendiquable()) {

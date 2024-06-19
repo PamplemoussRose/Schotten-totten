@@ -1,18 +1,18 @@
 #include "EtatJeu.h"
 EtatJeu* EtatJeu::instance = nullptr;
 
-EtatJeu* EtatJeu::getInstance()
+EtatJeu* EtatJeu::getInstance(Builder* plateauBuilder)
 {
 	if (instance == nullptr) {
-		instance = new EtatJeu();
+		instance = new EtatJeu(plateauBuilder);
 	}
 	return instance;
 }
 
-EtatJeu::EtatJeu() {
-	plateau = NULL;
-	joueur1 = NULL;
-	joueur2 = NULL;
+EtatJeu::EtatJeu(Builder* plateauBuilder) {
+	plateau = plateauBuilder->getResult();
+	joueur1 = new Joueur();
+	joueur2 = new Joueur();
 }
 
 /* Pour initialiser plateau
