@@ -8,7 +8,7 @@
 #include "Couleurs.h"
 #include "ControleurJeu.h"
 class ControleurJeu;
-class VueJeu : public Vue 
+class VueJeu : public Vue
 {
 private:
 	//Attributs
@@ -29,7 +29,7 @@ public:
 	/*!
 	* \brief affichage du tour du joueur
 	*/
-	virtual void afficheTour(Joueur& joueurActuel)=0;
+	virtual void afficheTour(Joueur& joueurActuel) = 0;
 	/*!
 	* \brief affiche sur console la carte clan
 	*/
@@ -62,6 +62,6 @@ public:
 	* \brief affiche le gagnant du jeu
 	*/
 	void afficheGagnant(Joueur* joueur);
-	
+
 };
 #endif
