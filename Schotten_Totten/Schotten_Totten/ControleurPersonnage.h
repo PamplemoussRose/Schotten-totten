@@ -4,8 +4,8 @@
 #include <iostream>
 #include "Joueur.h"
 #include "ControleurDemandeCarte.h"
-#include "CarteClan.h"
-#include "CarteTactique.h"
+#include "Carte.h"
+
 using namespace std;
 
 class ControleurPersonnage {

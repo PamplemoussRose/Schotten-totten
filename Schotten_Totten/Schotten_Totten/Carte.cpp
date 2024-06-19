@@ -29,3 +29,7 @@ template<class ...Args>
 inline void Carte::effet(Args ...args) {
 
 }
+
+void Carte::effet(vector<unsigned int> lstChoix) {
+
+}

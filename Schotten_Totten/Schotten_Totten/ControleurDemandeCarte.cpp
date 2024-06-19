@@ -27,3 +27,8 @@ unsigned int ControleurDemandeCarte::choixCarte(Joueur joueur, Joueur autreJoueu
         }
     }
 }
+
+
+vector<unsigned int> ControleurDemandeCarte::choixApplicationCarte(Carte carte) {
+    return { 0 };
+};
