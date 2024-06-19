@@ -8,19 +8,19 @@ class Joueur {
 private:
 	//Attributs
 	unsigned int nbreCartes; //nombre de cartes dans sa main
-	unsigned int nbreCartesTactiquesJoués;
+	unsigned int nbreCartesTactiquesJoues;
 	vector<Carte*> mainJoueur;
 public:
 	//Constructeur
 	/*!
 	* \brief construit Joueur
 	*/
-	Joueur() : nbreCartesTactiquesJoués(0), mainJoueur() {nbreCartes, nbreCartesTactiquesJoués= 0;};
+	Joueur() : nbreCartesTactiquesJoues(0), mainJoueur() {nbreCartes, nbreCartesTactiquesJoues= 0;};
 
 	/*!
 	* \brief construit Joueur avec nombre de cartes en parametre
 	*/
-	Joueur(unsigned int nbreCartesParam) : nbreCartesTactiquesJoués(0), mainJoueur() {
+	Joueur(unsigned int nbreCartesParam) : nbreCartesTactiquesJoues(0), mainJoueur() {
 		nbreCartes = nbreCartesParam;
 	}
 	//Methodes
@@ -31,7 +31,7 @@ public:
 	/*!
 	* \brief retourne nombre cartes tactiques joués
 	*/
-	unsigned int getnbreCartesTactiquesJoués() { return nbreCartesTactiquesJoués; };
+	unsigned int getnbreCartesTactiquesJoues() { return nbreCartesTactiquesJoues; };
 	/*!
 	* \brief ajoute carte dans sa main
 	*/

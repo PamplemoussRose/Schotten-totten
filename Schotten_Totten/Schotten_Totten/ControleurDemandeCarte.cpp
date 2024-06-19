@@ -1,6 +1,6 @@
 #include "ControleurDemandeCarte.h"
 
-unsigned int ControleurDemandeCarte::choixCarte(Joueur joueur, Joueur autreJoueur)
+unsigned int ControleurDemandeCarte::choixCarte(Joueur& joueur, Joueur& autreJoueur)
 {
     unsigned int numeroCarteChoisie;
     bool choixFait = false;
@@ -14,7 +14,7 @@ unsigned int ControleurDemandeCarte::choixCarte(Joueur joueur, Joueur autreJoueu
             if (carteTactique) {// si c'est une carte Tactique
                 cout << "La carte s�lectionn�e est une instance de la classe CarteTactique" << endl;
 
-                if (joueur.getnbreCartesTactiquesJou�s() <= autreJoueur.getnbreCartesTactiquesJou�s()) { // S'il peut jouer sa carte tactique
+                if (joueur.getnbreCartesTactiquesJoues() <= autreJoueur.getnbreCartesTactiquesJoues()) { // S'il peut jouer sa carte tactique
                     choixFait = true;
                     return numeroCarteChoisie;
                 }
@@ -30,7 +30,7 @@ unsigned int ControleurDemandeCarte::choixCarte(Joueur joueur, Joueur autreJoueu
 
 
 
-vector<unsigned int> ControleurDemandeCarte::choixApplicationCarte(Carte carte) {
+vector<unsigned int> ControleurDemandeCarte::choixApplicationCarte(Carte& carte) {
     return { 0 };
 };
 
