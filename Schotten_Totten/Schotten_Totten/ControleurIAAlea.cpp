@@ -14,7 +14,7 @@ void ControleurIAAlea::jouerCarte(Carte& carte, ControleurDemandeCarte& controle
 		}*/
 
 		vector<int> v1;
-/*		for (int j = 0; j < 9; j++) {
+/*	for (int j = 0; j < 9; j++) {
 			v1.push_back(rand() % lstChoix.size() + 1);//choisi
 		}
 		//lstChoix.push_back(v1);

@@ -20,19 +20,34 @@ void VueJeuTactique::afficheTour(Joueur& joueurActuel)
 		cout << "CARTES TACTIQUES A FAIRE" << endl;
 	}
 	int choixPioche;
-	cout << "Voulez vous piochez unne carte clan(1) ou une carte tactique(2)"<<endl;
-	cin >> choixPioche;
-	Carte* cartePiochée;
-	if (choixPioche == 1) {
-		cartePiochée = controleurT->getControPiocheClan()->piocher(*plateau->getPiocheClan(), joueurActuel); //le joueur pioche
+	//si les 2 pioches sont non vides
+	if (plateau->getPiocheClan()->getNbCartesRestantes() != 0 && plateau->getPiocheTactique()->getNbCartesRestantes() != 0) {
+		cout << "Voulez vous piochez une carte clan(1) ou une carte tactique(2)?" << endl;
+		cin >> choixPioche;
+		Carte* cartePiochée;
+		if (choixPioche == 1) {
+			cartePiochée = controleurT->getControPiocheClan()->piocher(*plateau->getPiocheClan(), joueurActuel); //le joueur pioche
+		}
+		else if (choixPioche == 2) {
+			cartePiochée = controleurT->getControPiocheTact()->piocher(*plateau->getPiocheTactique(), joueurActuel);
+		}
+		else {
+			cout << "error" << endl;
+		}
+		cout << "Vous avez pioché";
+		afficheCarte(cartePiochée);
 	}
-	else if (choixPioche == 2) {
-		cartePiochée = controleurT->getControPiocheTact()->piocher(*plateau->getPiocheTactique(), joueurActuel);
+	else if (plateau->getPiocheClan()->getNbCartesRestantes() == 0) {
+		cout << "Voulez vous piochez une carte tactique(1) ou passez(2)?" << endl;
+		cin >> choixPioche;
+		Carte* cartePiochée;
+		if (choixPioche == 1) {
+			cartePiochée = controleurT->getControPiocheTact()->piocher(*plateau->getPiocheTactique(), joueurActuel); //le joueur pioche carte tactique
+			cout << "Vous avez pioché";
+			afficheCarte(cartePiochée);
+		}
 	}
-	else {
-		cout << "error" << endl;
-	}
-	cout << "Vous avez pioché";
-	afficheCarte(cartePiochée);
+	
+	
 	cout << "Fin de votre tour" << endl;//avec appli ou etatjeu changement de joueur
 }

@@ -41,7 +41,7 @@ Carte* ControleurDemandeCarte::choixCarte(Joueur& joueur, Joueur& autreJoueur)
 
             CarteTactique* carteTactique = dynamic_cast<CarteTactique*>(carteChoisie);
             if (carteTactique) {// si c'est une carte Tactique
-                cout << "La carte s�lectionn�e est une instance de la classe CarteTactique" << endl;
+                cout << "La carte selectionnee est une instance de la classe CarteTactique" << endl;
 
                 if (joueur.getnbreCartesTactiquesJoues() <= autreJoueur.getnbreCartesTactiquesJoues()) { // S'il peut jouer sa carte tactique
                     choixFait = true;
@@ -49,7 +49,7 @@ Carte* ControleurDemandeCarte::choixCarte(Joueur& joueur, Joueur& autreJoueur)
                 }
             }
             else { // Si ce n'est pas une carte tactique
-                cout << "La carte s�lectionn�e n'est pas une instance de la classe CarteTactique" << endl;
+                cout << "La carte selectionnee n'est pas une instance de la classe CarteTactique" << endl;
                 choixFait = true;
                 return carteChoisie;
             }

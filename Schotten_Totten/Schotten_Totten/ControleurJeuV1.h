@@ -27,6 +27,8 @@ public:
 	* \brief retourne le controleur de la pioche clan
 	*/
 	ControleurPioche* getControPioche() { return controleurPiocheClan; };
+	ControleurPersonnage* getControPerso1() { return controleurPerso1; };
+	ControleurPersonnage* getControPerso2() { return controleurPerso2; };
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/
