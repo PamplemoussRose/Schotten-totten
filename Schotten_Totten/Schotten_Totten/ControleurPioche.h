@@ -9,7 +9,7 @@ private:
 public:
 	ControleurPioche() = delete;
 	ControleurPioche(Pioche* pPioche) { pioche = pPioche; };
-
+	Pioche* getPioche();
 	/*!
 	* \brief fait piocher unne carte dans la pioche au joueur
 	*/

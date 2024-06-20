@@ -41,13 +41,13 @@ void ControleurHumain::revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<Co
 }
 
 
-Carte* ControleurHumain::piocheT(Pioche& piocheClan, Pioche& piochetactique, ControleurPioche& controlPioche, Joueur& joueurActuel)
+Carte* ControleurHumain::piocheT(ControleurPioche& controlPiocheClan, ControleurPioche& controlPiocheTact, Joueur& joueurActuel)
 {
 	int choixPioche;
-	if (piocheClan.getNbCartesRestantes() != 0 && piochetactique.getNbCartesRestantes() != 0) {
+	if (controlPiocheClan.getPioche()->getNbCartesRestantes() != 0 && controlPiocheTact.getPioche()->getNbCartesRestantes() != 0) {
 		cout << "Voulez vous piochez une carte clan(1) ou une carte tactique(2)?"<<endl;
 	}
-	else if (piocheClan.getNbCartesRestantes() == 0) {
+	else if (controlPiocheClan.getPioche()->getNbCartesRestantes() == 0) {
 		cout << "Voulez vous piochez une carte tactique(2) ou passez(0)?"<<endl;
 	}
 	else {
@@ -55,12 +55,12 @@ Carte* ControleurHumain::piocheT(Pioche& piocheClan, Pioche& piochetactique, Con
 	}
 	cin >> choixPioche;
 	if (choixPioche == 1) {
-		Carte* cartePiochee = controlPioche.piocher(joueurActuel); //le joueur pioche
+		Carte* cartePiochee = controlPiocheClan.piocher(joueurActuel); //le joueur pioche
 		cout << "Vous avez pioché une carte clan:"<<endl;
 		return cartePiochee;
 	}
 	else if (choixPioche == 2) {
-		Carte* cartePiochee = controlPioche.piocher(joueurActuel); //le joueur pioche
+		Carte* cartePiochee = controlPiocheTact.piocher(joueurActuel); //le joueur pioche
 		cout << "Vous avez pioché une carte tactique:"<<endl;
 		return cartePiochee;
 	}

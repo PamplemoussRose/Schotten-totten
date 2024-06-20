@@ -25,6 +25,7 @@ public:
 	ControleurPersonnage* getControPerso2() { return controleurPerso2; };
 	ControleurPioche* getControPiocheTact() { return controleurPiocheTactique; };
 	ControleurPioche* getControPiocheClan() { return controleurPiocheClan; };
+	ControleurDemandeCarte* getDemandeCarte() { return demandeCarte; };
 	// Suppression des constructeurs de copie et d'affectation
 	ControleurJeuTactique(const ControleurJeuTactique&) = delete;
 	ControleurJeuTactique& operator=(const ControleurJeuTactique&) = delete;
