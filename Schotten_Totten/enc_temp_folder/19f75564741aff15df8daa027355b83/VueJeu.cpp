@@ -109,7 +109,6 @@ void VueJeu::afficheCarteTactique(CarteTactique* carte)
 		cout << "\033[40;38; 2; 234; 34; 103m T \033[0m " << endl;
 	}
 }
-
 void VueJeu::afficheCarte(Carte* carte) {
 	if (typeid(carte) == typeid(CarteClan)) {
 		afficheCarteClan((CarteClan*)(carte));

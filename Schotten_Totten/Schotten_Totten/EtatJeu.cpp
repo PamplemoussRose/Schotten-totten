@@ -13,6 +13,7 @@ EtatJeu::EtatJeu(Builder* plateauBuilder) {
 	plateau = plateauBuilder->getResult();
 	joueur1 = new Joueur();
 	joueur2 = new Joueur();
+	joueurActuel = 1;
 }
 
 /* Pour initialiser plateau

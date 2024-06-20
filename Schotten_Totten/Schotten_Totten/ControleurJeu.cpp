@@ -10,5 +10,6 @@ VueJeu* ControleurJeu::getVue()
 }*/
 
 ControleurJeu::ControleurJeu(VueJeu* vue):Controleur(vue) {
+	getVue()->setControleur(this);
 }
 
