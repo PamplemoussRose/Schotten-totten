@@ -30,27 +30,25 @@ void ControleurJeuV1::initPartie(Builder* plateauBuilder) {
 	PiocheClan* piocheClan = getEtatJeu()->getPlateau()->getPiocheClan();
 	ControleurPioche* controleurPiocheClan = new ControleurPioche(piocheClan);
 
-	// Pas besoin deja melangé : controleurPiocheClan->melanger();
 	for (unsigned int i = 0; i < 6; i++) {
 		controleurPiocheClan->piocher( *(getEtatJeu()->getJoueur1()) );
-		cout << "Ajout carte j1";
 		controleurPiocheClan->piocher( *(getEtatJeu()->getJoueur2()) );
 	}
 
-	ChoixUtilisateur* choixU=ChoixUtilisateur::getChoixUtilisateur();
+	ChoixUtilisateur * choixU = ChoixUtilisateur::getChoixUtilisateur();
 	if(choixU->estHvsH()){
-		ControleurPersonnage* controleurPerso1 = new ControleurHumain();
-		ControleurPersonnage* controleurPerso2 = new ControleurHumain();
+		controleurPerso1 = new ControleurHumain();
+		controleurPerso2 = new ControleurHumain();
 	}
 	else if (choixU->estHvsIA()) {
-		ControleurPersonnage* controleurPerso1= new ControleurHumain();
-		ControleurPersonnage* controleurPerso2 = new ControleurIAAlea();
+		controleurPerso1= new ControleurHumain();
+		controleurPerso2 = new ControleurIAAlea();
 	}
 	else {
-		ControleurPersonnage* controleurPerso1 = new ControleurIAAlea();
-		ControleurPersonnage* controleurPerso2 = new ControleurIAAlea();
+		controleurPerso1 = new ControleurIAAlea();
+		controleurPerso2 = new ControleurIAAlea();
 	}
-	ControleurDemandeCarte* controleurPerso2 = new ControleurDemandeCarte();
+	demandeCarte = new ControleurDemandeCarte();
 }
 
 
