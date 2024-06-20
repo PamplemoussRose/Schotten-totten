@@ -10,7 +10,7 @@ void ControleurIAAlea::jouerCarte(ControleurDemandeCarte& controleurDemandeCarte
 	// Choix pour l'effet
 	ControleurJeu* controleurJeu = (ControleurJeu*) Application::getApplication()->getControleurActuel();
 	unsigned int joueurActuel = controleurJeu->getEtatJeu()->getNumJoueurActuel();
-	vector<vector<unsigned int>> lstChoixPossibles = carteRecuperee->choixEffet(1); // Pas d'affichage : retourne les choix
+	vector<vector<unsigned int>> lstChoixPossibles = carteRecuperee->choixEffet(joueurActuel); // Pas d'affichage : retourne les choix
 	vector<unsigned int> lstValeursChoisies;
 	for (vector<unsigned int>& lstValeursPossibles : lstChoixPossibles) {
 		lstValeursChoisies.push_back(rand() % lstValeursPossibles.size() + 1); // choisie aléatoirement
@@ -48,8 +48,11 @@ void ControleurIAAlea::revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<C
 	}
 }
 
-Carte* ControleurIAAlea::piocheT(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel) {
+
+Carte* ControleurIAAlea::piocheT(Pioche& piocheClan, Pioche& piochetactique, ControleurPioche& controlPioche, Joueur& joueurActuel) {
 	cout << "to Do";
 	Carte* carte = new CarteClan(Couleurs::bleu, 1);
+	
 	return carte;
 }
+
