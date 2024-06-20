@@ -35,7 +35,30 @@ void ControleurHumain::revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<Co
 }
 
 
-Carte* ControleurHumain::piocheT(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel)
+Carte* ControleurHumain::piocheT(Pioche& piocheClan, Pioche& piochetactique, ControleurPioche& controlPioche, Joueur& joueurActuel)
 {
-	return nullptr;
+	int choixPioche;
+	if (piocheClan.getNbCartesRestantes() != 0 && piochetactique.getNbCartesRestantes() != 0) {
+		cout << "Voulez vous piochez une carte clan(1) ou une carte tactique(2)?"<<endl;
+	}
+	else if (piocheClan.getNbCartesRestantes() == 0) {
+		cout << "Voulez vous piochez une carte tactique(2) ou passez(0)?"<<endl;
+	}
+	else {
+		cout << "Voulez vous piochez une carte clan(1) ou passez(0)?"<<endl;
+	}
+	cin >> choixPioche;
+	if (choixPioche == 1) {
+		Carte* cartePiochee = controlPioche.piocher(piocheClan, joueurActuel); //le joueur pioche
+		cout << "Vous avez pioché une carte clan:"<<endl;
+		return cartePiochee;
+	}
+	else if (choixPioche == 2) {
+		Carte* cartePiochee = controlPioche.piocher(piochetactique, joueurActuel); //le joueur pioche
+		cout << "Vous avez pioché une carte tactique:"<<endl;
+		return cartePiochee;
+	}
+	else{
+		cout << "Votre tour est passé" << endl;
+	}
 }

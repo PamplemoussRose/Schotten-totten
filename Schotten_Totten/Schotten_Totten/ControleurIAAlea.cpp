@@ -45,7 +45,7 @@ void ControleurIAAlea::revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<C
 }
 
 
-Carte* ControleurIAAlea::piocheT(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel) {
+Carte* ControleurIAAlea::piocheT(Pioche& piocheClan, Pioche& piochetactique, ControleurPioche& controlPioche, Joueur& joueurActuel) {
 	Carte* carte = new Carte();
 	return carte;
 }

@@ -23,6 +23,6 @@ public:
 	/*!
 	* pioche  une carte tactique ou une carte clan
 	*/
-	Carte* piocheT(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel)override;
+	Carte* piocheT(Pioche& piocheClan, Pioche& piochetactique, ControleurPioche& controlPioche, Joueur& joueurActuel)override;
 };
 #endif
