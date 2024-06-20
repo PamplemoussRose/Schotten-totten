@@ -18,8 +18,6 @@ vector<unsigned int> ControleurHumain::jouerCarte( ControleurDemandeCarte& contr
 void ControleurHumain::revendiqueBorne(Borne& borneJouee,int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
 {
 	unsigned int numBorne= borneJouee.getNumero();
-	//cout << "Revendiquer quelle borne? (numero:1-9)" << endl; //sur la borne jouée precedemment si possible
-	//cin >> numBorne;
 	Plateau* plateau = etatJeu.getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
 	if (borneJouee.revendicable()) {
