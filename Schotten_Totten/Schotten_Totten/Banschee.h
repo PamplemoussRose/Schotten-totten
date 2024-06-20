@@ -16,11 +16,11 @@ public:
 	// Methodes
 
 	/*!
-	* Methode donnant les choix possibles avec leurs valeurs possibles
+	* \brief Methode donnant les choix possibles avec leurs valeurs possibles
 	*/
 	vector<vector<unsigned int>> choixEffet();
 	/*!
-	* Methode d'effet de la carte banschee
+	* \brief Methode d'effet de la carte banschee
 	*/
 	void effet(unsigned int borne, unsigned int carte, unsigned int joueur);
 };

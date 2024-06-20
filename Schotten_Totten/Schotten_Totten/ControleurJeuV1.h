@@ -25,11 +25,10 @@ private:
 	*/
 	inline ControleurJeuV1();
 public:
-
-	VueJeuV1 * getVue();
 	/*!
-	* \brief retourne le controleur de la pioche clan
+	* \brief retourne la vue jeu de la version 1
 	*/
+	VueJeuV1 * getVue();
 	ControleurPioche* getControPioche() { return controleurPiocheClan; };
 	ControleurPersonnage* getControPerso1() { return controleurPerso1; };
 	ControleurPersonnage* getControPerso2() { return controleurPerso2; };
