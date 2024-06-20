@@ -130,9 +130,10 @@ void VueJeu::afficheBornes()
 void VueJeu::afficheMain(Joueur& joueur)
 {
 	vector<Carte*> main = joueur.getMainJoueur();
-	cout << "Ta main:" << endl;
+	cout << "Ta main : " ;
 	for (auto iter = main.begin(); iter < main.end(); iter++) {
 		afficheCarte(*iter);
 	}
+	cout << endl;
 }
 

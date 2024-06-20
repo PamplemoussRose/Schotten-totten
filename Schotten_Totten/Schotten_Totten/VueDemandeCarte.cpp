@@ -3,8 +3,8 @@
 
 unsigned int VueDemandeCarte::demandeCarte() {
     //Joueur joueurActuel = vue->getControleur()->getJoueurActuel();
-    //vue->afficheMain(joueurActuel);//affiche la main du joueur
     cout << "Quelle carte voulez-vous jouer ?" << endl;
+    cout << "Choix : ";
     unsigned int numeroCarteChoisie;
     cin >> numeroCarteChoisie;
     return numeroCarteChoisie;
