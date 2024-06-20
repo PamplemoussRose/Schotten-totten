@@ -11,11 +11,11 @@ unsigned int VueDemandeCarte::demandeCarte() {
 }
 
 vector<unsigned int> VueDemandeCarte::demandeCarteClan() {
-    // Demande sur quel borne poser la carte
+    // Demande sur quelle borne poser la carte
     unsigned int nBorneChoisie;
     EtatJeu* etatJeu = EtatJeu::getInstance();
     unsigned int nbBornes = etatJeu->getPlateau()->getBornes().size();
-    cout << "Sur quel bornes voulez vous poser cette carte (de 1 à " << nbBornes << ")" << endl;
+    cout << "Sur quelle borne voulez vous poser cette carte (de 1 a " << nbBornes << ")" << endl;
     cout << "Choix : ";
     cin >> nBorneChoisie;
     return { nBorneChoisie, etatJeu->getNumJoueurActuel() };
