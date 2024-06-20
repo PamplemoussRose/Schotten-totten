@@ -58,6 +58,8 @@ Carte* ControleurDemandeCarte::choixCarte(Joueur& joueur, Joueur& autreJoueur)
     return nullptr;
 }
 vector<unsigned int> ControleurDemandeCarte::choixApplicationCarte(Carte& carte) {
-    return { 0 };
+    if (CarteClan* carteClan = dynamic_cast<CarteClan*>(&carte)) {
+        return vue.demandeCarteClan();
+    }
 };
 

@@ -15,7 +15,7 @@ void CarteClan::effet(unsigned int numBorne, unsigned int joueur) {
 
 vector<vector<unsigned int>> CarteClan::choixEffet(unsigned int joueur) {
 	unsigned int compteur = 0;
-	vector<vector<unsigned int>> choix = vector<vector<unsigned int>>();
+	vector<vector<unsigned int>> choix = vector<vector<unsigned int>>({ {},{joueur} }); // effet à besoin du numJoueur
 	if (joueur == 1) {
 		for (Borne* borne : EtatJeu::getInstance()->getPlateau()->getBornes()) {
 			if (borne->getCartesJ1().size() >= borne->getNbCartesRevendiquer())

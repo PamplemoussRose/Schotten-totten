@@ -7,6 +7,7 @@
 #include "CarteTactique.h"
 #include "Joueur.h"
 #include "VueDemandeCarte.h"
+#include "CarteClan.h"
 using namespace std;
 
 class ControleurDemandeCarte {

@@ -111,6 +111,7 @@ void VueJeu::afficheCarteTactique(CarteTactique* carte)
 }
 
 void VueJeu::afficheCarte(Carte* carte) {
+	// On regarde de quel type est la carte
 	if (CarteClan* carteClan = dynamic_cast<CarteClan*>(carte)) {
 		afficheCarteClan((CarteClan*)(carteClan));
 	}
