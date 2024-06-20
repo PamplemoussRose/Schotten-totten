@@ -6,7 +6,7 @@
 vector<unsigned int> ControleurIAAlea::jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur){
 	vector<unsigned int> infoApresEffet; // Ex : sur quel borne la carte est joué
 	// Choix de la carte
-	unsigned int nCarte = (rand() % joueur.getNbreCartes()-1) ; //prend un nombre aleatoire entre 0 et nbreCartes-1
+	unsigned int nCarte = rand() % joueur.getNbreCartes() ; //prend un nombre aleatoire entre 0 et nbreCartes-1
 	Carte* carteRecuperee = joueur.getCarteMainPosition(nCarte);
 
 	// Choix pour l'effet
@@ -33,7 +33,7 @@ void ControleurIAAlea::revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<C
 {
 	Plateau* plateau = etatJeu.getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
-	//Verifie pour chaque borne si ielle est revendicable
+	//Verifie pour chaque borne si elle est revendicable
 	for (int numBorne = 0; numBorne < 9; numBorne++) {
 		if ((bornes[numBorne])->revendicable()) { //revendication
 			//si joueur 1

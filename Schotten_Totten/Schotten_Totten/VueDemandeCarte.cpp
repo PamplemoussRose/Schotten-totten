@@ -18,5 +18,5 @@ vector<unsigned int> VueDemandeCarte::demandeCarteClan() {
     cout << "Sur quelle borne voulez vous poser cette carte (de 1 a " << nbBornes << ")" << endl;
     cout << "Choix : ";
     cin >> nBorneChoisie;
-    return { nBorneChoisie, etatJeu->getNumJoueurActuel() };
+    return { nBorneChoisie-1, etatJeu->getNumJoueurActuel() };
 };
