@@ -27,6 +27,6 @@ public:
 	/*!
 	* \brief la seule combinaison pour cette borne sera la somme
 	*/
-	void ModeColinMaillard(Borne& borne);
+	void modeColinMaillard(Borne& borne);
 };
 #endif
