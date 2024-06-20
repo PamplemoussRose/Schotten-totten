@@ -7,8 +7,6 @@ class ControleurJeuTactique;
 class VueJeuTactique : public VueJeu {
 private:
 	ControleurJeuTactique* controleurT;
-	ControleurPioche* controleurPiocheClan;
-	ControleurPioche* controleurPiocheTactique;
 
 public:
 	void setControleur(ControleurJeuTactique* pControleur) { controleurT = pControleur; };

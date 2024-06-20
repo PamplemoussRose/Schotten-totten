@@ -54,18 +54,7 @@ public:
 	* \brief affiche la main du joueur en cours
 	*/
 	void afficheMain(Joueur& joueur);
-	/*!
-	* \brief affiche la carte choisit par l'adversaire
-	*/
-	void afficheCarteJouee(Carte* carte);// -->UTILE??
-	/*!
-	* \brief affiche la carte piochee par le joueur en cours
-	*/
-	void affichecartePiochee(Carte* carte); //-->UTILE?
-	/*!
-	* \brief affiche le gagnant du jeu
-	*/
-	void afficheGagnant(Joueur* joueur);
+
 
 };
 #endif

@@ -135,7 +135,6 @@ void VueJeu::afficheBornes()
 	}
 }
 
-
 void VueJeu::afficheMain(Joueur& joueur)
 {
 	vector<Carte*> main = joueur.getMainJoueur();
@@ -145,25 +144,3 @@ void VueJeu::afficheMain(Joueur& joueur)
 	}
 }
 
-void VueJeu::afficheCarteJouee(Carte* carte)
-{
-	cout << "Carte jouée" << endl;
-	afficheCarte(carte);
-}
-
-void VueJeu::affichecartePiochee(Carte* carte)
-{
-	cout << "Carte piochée:" << endl;
-	afficheCarte(carte);
-}
-
-void VueJeu::afficheGagnant(Joueur* joueur)
-{
-	/*
-	if (joueur==)
-		cout << "Le gagnant est le joueur 1"<< endl;
-	else{
-		cout << "Le gagnant est le joueur 2"<< endl;
-	}
-	*/
-}
