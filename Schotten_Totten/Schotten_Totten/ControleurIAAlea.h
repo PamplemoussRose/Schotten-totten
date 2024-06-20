@@ -1,13 +1,17 @@
 #ifndef GUARD_CONTROLEURIAALEA
 #define GUARD_CONTROLEURIAALEA
 #include "ControleurPersonnage.h"
+
 class ControleurIAAlea : public ControleurPersonnage {
 public:
 	ControleurIAAlea() :ControleurPersonnage() {};
 	/*!
 	* joue une carte
 	*/
-	void jouerCarte(Carte& carte, ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& ia)override;
-
+	void jouerCarte( ControleurDemandeCarte& controleurDemandeCarte, Joueur& ia, Joueur& autreJoueur)override;
+	/*!
+	* \ revendique la borne avec ce numero
+	*/
+	void revendiqueBorne(EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes);
 };
 #endif

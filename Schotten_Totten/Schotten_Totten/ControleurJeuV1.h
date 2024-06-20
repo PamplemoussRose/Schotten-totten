@@ -29,6 +29,7 @@ public:
 	ControleurPioche* getControPioche() { return controleurPiocheClan; };
 	ControleurPersonnage* getControPerso1() { return controleurPerso1; };
 	ControleurPersonnage* getControPerso2() { return controleurPerso2; };
+	ControleurDemandeCarte* getDemandeCarte() { return demandeCarte; };
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/

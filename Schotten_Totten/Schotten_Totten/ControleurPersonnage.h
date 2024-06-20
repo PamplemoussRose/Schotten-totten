@@ -5,6 +5,9 @@
 #include "Joueur.h"
 #include "ControleurDemandeCarte.h"
 #include "Carte.h"
+#include "Plateau.h"
+#include "ControleurBorne.h"
+#include "EtatJeu.h"
 
 using namespace std;
 
@@ -13,6 +16,10 @@ public :
 	/*!
 	* méthode virtuelle de joue une carte
 	*/
-	virtual void jouerCarte(Carte& carte, ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur) = 0;
+	virtual void jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur) = 0;
+	/*!
+	* \ revendique la borne avec ce numero
+	*/
+	virtual void revendiqueBorne( EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes) =0;
 };
 #endif

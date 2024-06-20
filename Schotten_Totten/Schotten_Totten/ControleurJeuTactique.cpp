@@ -33,9 +33,6 @@ void ControleurJeuTactique::jouerCarteSurBorne(CarteClan& carte, Borne& borne)
 	}
 }
 
-void ControleurJeuTactique::deroulementPartie()
-{
-}
 
 void ControleurJeuTactique::finPartie()
 {
