@@ -16,7 +16,7 @@ void ControleurHumain::jouerCarte( ControleurDemandeCarte& controleurDemandeCart
 void ControleurHumain::revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
 {
 	unsigned int numBorne;
-	cout << "Sur quel borne? (numero::1-9)" << endl; //CA C EST SURR QUELLE BORNE ON A JOU2 PRECEDEMMENT
+	cout << "Revendiquer sur quel borne? (numero::1-9)" << endl; //CA C EST SURR QUELLE BORNE ON A JOU2 PRECEDEMMENT
 	cin >> numBorne;
 	Plateau* plateau = etatJeu.getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
