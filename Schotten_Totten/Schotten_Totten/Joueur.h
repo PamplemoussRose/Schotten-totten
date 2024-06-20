@@ -33,10 +33,6 @@ public:
 	*/
 	unsigned int getnbreCartesTactiquesJoues() { return nbreCartesTactiquesJoues; };
 	/*!
-	* \brief ajoute carte dans sa main
-	*/
-	void ajoutCarte(Carte& carte);
-	/*!
 	* \brief retourne main joueur
 	*/
 	vector<Carte*> getMainJoueur() {return mainJoueur;};
@@ -44,7 +40,10 @@ public:
 	* \brief retourne une carte de la main a une position donnee
 	*/
 	Carte* getCarteMainPosition(unsigned int position);
-
+	/*!
+* \brief ajoute carte dans sa main
+*/
+	void ajoutCarte(Carte& carte);
 	/*!
 	* \brief retire carte dans sa main
 	*/

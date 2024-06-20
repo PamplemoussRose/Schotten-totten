@@ -49,7 +49,9 @@ public:
 	* \brief retourne les cartes de J2 sur la borne
 	*/
 	vector<Carte*> getCartesJ2() { return cartesJ2; };
-
+	/*!
+	* \retourne true si le nb de carte pour revendiquer est bon
+	*/
 	bool revendicable();
 	/*!
 	* \brief Ajoute une carte de J1 à la borne
