@@ -111,11 +111,11 @@ void VueJeu::afficheCarteTactique(CarteTactique* carte)
 }
 
 void VueJeu::afficheCarte(Carte* carte) {
-	if (typeid(carte) == typeid(CarteClan)) {
-		afficheCarteClan((CarteClan*)(carte));
+	if (CarteClan* carteClan = dynamic_cast<CarteClan*>(carte)) {
+		afficheCarteClan((CarteClan*)(carteClan));
 	}
-	else {
-		afficheCarteTactique((CarteTactique*)(carte));
+	else if (CarteTactique* carteTactique = dynamic_cast<CarteTactique*>(carte)){
+		afficheCarteTactique((CarteTactique*)(carteTactique));
 	}
 }
 

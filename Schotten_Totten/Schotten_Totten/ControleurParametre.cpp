@@ -29,7 +29,7 @@ void ControleurParametre::definirParametresJeu(unsigned int mode)
 
 	// Stock du choix 
 	ChoixUtilisateur* stockageChoix = ChoixUtilisateur::getChoixUtilisateur();
-	stockageChoix->setChoixVariante(mode);
+	stockageChoix->setChoixParam(mode);
 
 	// Changement de controleur vers la partie
 	Application::getApplication()->changeControleurJeu();
