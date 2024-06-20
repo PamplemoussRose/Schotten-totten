@@ -69,7 +69,7 @@ void VueJeu::afficheCarteClan(CarteClan* carte)
 		std::cout << " \033[45m " << v << " \033[0m";
 	}
 	else if (cl == Couleurs::bleu) {
-		std::cout << " \033[46m" << v << " \033[0m";
+		std::cout << " \033[46m " << v << " \033[0m";
 	}
 	else if (cl == Couleurs::marron) {
 		std::cout << " \033[94; 53; 17; 0; 255m "<< v<<" \033[0m";
