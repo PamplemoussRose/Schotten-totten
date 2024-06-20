@@ -16,6 +16,7 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	if (controleurV1->getEtatJeu()->getNumJoueurActuel() == 1) {
 		unsigned int numBorne = controleurV1->getControPerso1()->jouerCarte(*getControleur()->getDemandeCarte(),joueurActuel, *controleurV1->getEtatJeu()->getJoueur2())[0];
 		Borne* borneJouee = plateau->getBornes()[numBorne - 1];
+		affichePlateau();
 		if (borneJouee->revendicable()) {
 			controleurV1->getControPerso1()->revendiqueBorne(*borneJouee,getControleur()->getEtatJeu()->getNumJoueurActuel(), *controleurV1->getEtatJeu(), controleurV1->getBornes());
 		}

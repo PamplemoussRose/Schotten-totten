@@ -1,16 +1,54 @@
 ﻿  Application.cpp
+  Banschee.cpp
+  Borne.cpp
+  Builder.cpp
+  BuilderClassique.cpp
+  Carte.cpp
+  CarteClan.cpp
+  ChasseurTete.cpp
+  ChoixUtilisateur.cpp
+  ColinMaillard.cpp
+  CombatBoue.cpp
+  ControleurBorne.cpp
+  ControleurDemandeCarte.cpp
+  ControleurHumain.cpp
   ControleurIAAlea.cpp
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurIAAlea.cpp(11,69): error C2660: 'Carte::choixEffet' : la fonction ne prend pas 0 arguments
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Carte.h(17,31): message : voir la déclaration de 'Carte::choixEffet'
   ControleurJeu.cpp
+  ControleurJeuTactique.cpp
   ControleurJeuV1.cpp
   ControleurParametre.cpp
+  ControleurPersonnage.cpp
+  Génération de code en cours...
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurIAAlea.cpp(74): warning C4715: 'ControleurIAAlea::piocheT' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurHumain.cpp(70): warning C4715: 'ControleurHumain::piocheT' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurDemandeCarte.cpp(64): warning C4715: 'ControleurDemandeCarte::choixApplicationCarte' : les chemins de contrôle ne retournent pas tous une valeur
+  Compilation en cours...
+  ControleurPioche.cpp
   ControleurVariante.cpp
+  ControleurVictoire.cpp
+  Espion.cpp
+  EtatJeu.cpp
+  Joker.cpp
+  Joueur.cpp
+  Pioche.cpp
+  PiocheClan.cpp
+  Plateau.cpp
+  PorteBouclier.cpp
   Schotten_Totten.cpp
+  Stratege.cpp
   Test.cpp
+  Traitre.cpp
+  Vue.cpp
+  VueDemandeCarte.cpp
   VueJeu.cpp
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurJeu.h(19,15): error C2027: utilisation du type non défini 'VueJeu'
-C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\ControleurJeu.h(11): message : voir la déclaration de 'VueJeu'
+  VueJeuTactique.cpp
+  VueJeuV1.cpp
+  Génération de code en cours...
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\EtatJeu.h(54): warning C4715: 'EtatJeu::getJoueurActuel' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Schotten_Totten\Joueur.cpp(17): warning C4715: 'Joueur::getCarteMainPosition' : les chemins de contrôle ne retournent pas tous une valeur
+  Compilation en cours...
   VueParametre.cpp
   VueVariante.cpp
   Génération de code en cours...
+  LINK : C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Debug\Schotten_Totten.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+  Schotten_Totten.vcxproj -> C:\Users\robin\OneDrive\Polytech\3A DI\C++\Projet 2\Schotten-totten\Schotten_Totten\Debug\Schotten_Totten.exe
