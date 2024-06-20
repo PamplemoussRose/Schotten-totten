@@ -16,7 +16,6 @@ private:
 	vector<ControleurBorne*> controleurBornes;
 	VueJeu* vueJeu;
 	EtatJeu* etatJeu;
-	int joueurAct; //1 ou 2
 	ControleurVictoire* controleurVictoire;
 protected:
 	ControleurJeu(VueJeu* vue);
@@ -25,8 +24,6 @@ public:
 
 	vector<ControleurBorne*> getBornes(){ return controleurBornes; };
 
-	int getJoueurActuel() { return joueurAct; };
-	void setJoueurActuel(int newJoueur) { joueurAct= newJoueur; };
 	ControleurVictoire* getControleurVictoire() { return controleurVictoire; };
 	/*!
 	* \retourne etatJeu

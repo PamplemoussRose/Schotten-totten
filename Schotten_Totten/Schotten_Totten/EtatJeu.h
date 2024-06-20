@@ -14,6 +14,7 @@ private:
 	Plateau* plateau;
 	Joueur* joueur1;
 	Joueur* joueur2;
+	unsigned int joueurActuel; //1 ou 2
 	/*!
 	* \brief Constructeur privé
 	*/
@@ -42,7 +43,16 @@ public:
 	* \brief retourne le joueur2
 	*/
 	Joueur* getJoueur2() { return joueur2; };
-
+	unsigned int getNumJoueurActuel() { return joueurActuel; };
+	Joueur* getJoueurActuel() {
+		if (joueurActuel == 1) {
+			return getJoueur1();
+		}
+		else if (joueurActuel==2) {
+			return getJoueur2();
+		}
+	}
+	void setnumJoueurActuel(unsigned int newJoueur) { joueurActuel = newJoueur; };
 };
 
 #endif

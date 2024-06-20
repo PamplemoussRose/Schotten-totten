@@ -1,25 +1,29 @@
 #include "ControleurIAAlea.h"
 
+#include "Application.h"
 
 void ControleurIAAlea::jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur){
+	// Choix de la carte
+	unsigned int nCarte = (rand() % joueur.getNbreCartes()) + 1; //prend un nombre aleatoire entre 1 et nbreCartes
+	Carte* carteRecuperee = joueur.getCarteMainPosition(nCarte);
 
-		//gerer exception si les deux bornes selectionnes sont les memes
-		//voir aussi le fait que les ia ne peuvent pas jouer trop de cartes tactiques
+	// Choix pour l'effet
+	ControleurJeu* controleurJeu = (ControleurJeu*) Application::getApplication()->getControleurActuel();
+	unsigned int joueurActuel = controleurJeu->getEtatJeu()->getNumJoueurActuel();
+	vector<vector<unsigned int>> lstChoixPossibles = carteRecuperee->choixEffet(joueurActuel); // Pas d'affichage : retourne les choix
+	vector<unsigned int> lstValeursChoisies;
+	for (vector<unsigned int>& lstValeursPossibles : lstChoixPossibles) {
+		lstValeursChoisies.push_back(rand() % lstValeursPossibles.size() + 1); // choisie aléatoirement
+	}
 
-		unsigned int nCarte = (rand() % joueur.getNbreCartes()) + 1; //prend un nombre aleatoire entre 1 et nbreCartes
-		Carte* carteRecuperee = joueur.getCarteMainPosition(nCarte);
-
-		vector<vector<unsigned int>> lstChoix = carteRecuperee->choixEffet(1); // Pas d'affichage : retourne les choix
-		for (auto iter = lstChoix.begin(); iter != lstChoix.end(); iter++) {
-			iter;
-		}
-
-		vector<int> v1;
-		for (int j = 0; j < 9; j++) {
-			v1.push_back(rand() % lstChoix.size() + 1);//choisi
-		}
-		//lstChoix.push_back(v1);
-		//carteRecuperee->effet(lstChoix);
+	// Action 
+	try {
+		carteRecuperee->effet(lstValeursChoisies);
+	}
+	catch (exception exc) {
+		jouerCarte(controleurDemandeCarte, joueur, autreJoueur);
+	}
+		
 
 }
 
@@ -45,7 +49,9 @@ void ControleurIAAlea::revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<C
 }
 
 Carte* ControleurIAAlea::piocheT(Pioche& piocheClan, Pioche& piochetactique, ControleurPioche& controlPioche, Joueur& joueurActuel) {
-	Carte* carte = new Carte();
+	cout << "to Do";
+	Carte* carte = new CarteClan(Couleurs::bleu, 1);
+	
 	return carte;
 }
 

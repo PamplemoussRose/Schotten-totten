@@ -1,18 +1,4 @@
 #include "VueJeu.h"
-void VueJeu::affiche()
-{
-	cout << "DEBUT DU JEU" << endl;
-	bool partie = true;
-	while(controleur->getControleurVictoire()->estGagnant()==0){
-		controleur->setJoueurActuel(1);
-		afficheTour(*controleur->getEtatJeu()->getJoueur1());
-		controleur->setJoueurActuel(2);
-		afficheTour(*controleur->getEtatJeu()->getJoueur2());
-	}
-	afficheFinPartie();
-	controleur->finPartie();
-
-}
 
 void VueJeu::afficheFinPartie()
 {

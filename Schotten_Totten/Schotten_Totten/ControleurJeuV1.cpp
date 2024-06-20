@@ -4,6 +4,8 @@ ControleurJeuV1* ControleurJeuV1::instance = nullptr;
 
 inline ControleurJeuV1::ControleurJeuV1(Builder* plateauBuilder) : ControleurJeu(new VueJeuV1())
 {
+	getVue()->setControleur(this); // On doit le mettre ici car le l'attribut du controleur est dans VueJeuV1 
+		// (On aurait préféré mettre un getControleur qui réutilise celui de VueJeu)
 	initPartie(plateauBuilder);
 }
 
@@ -45,7 +47,7 @@ void ControleurJeuV1::initPartie(Builder* plateauBuilder) {
 
 void ControleurJeuV1::jouerCarteSurBorne(CarteClan& carte, Borne& borne)
 {
-	if (getJoueurActuel()==1) { // si joueur 1
+	if (getEtatJeu()->getNumJoueurActuel()==1) { // si joueur 1
 		borne.AjouterCarteJ1(carte);
 	}
 	else {

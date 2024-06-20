@@ -45,7 +45,6 @@ public:
 	/*!
 	* \ initialise la partie
 	*/
-
 	void initPartie(Builder* plateauBuilder);
 
 

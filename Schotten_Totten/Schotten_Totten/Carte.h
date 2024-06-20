@@ -14,7 +14,7 @@ public:
 	/*!
 	* Methode donnant les choix possibles avec leurs valeurs possibles
 	*/
-	vector<vector<unsigned int>> choixEffet(unsigned int joueur);
+	virtual vector<vector<unsigned int>> choixEffet(unsigned int joueur)=0;
 	/*!
 	* Methode d'application de l'effet de la carte
 	*/

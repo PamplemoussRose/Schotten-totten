@@ -19,10 +19,6 @@ public:
 	void setControleur(ControleurJeu* pControleur) { controleur = pControleur; };
 	ControleurJeu* getControleur() { return controleur; }
 	/*!
-	* \brief affiche la vue pour jouer
-	*/
-	void affiche();
-	/*!
 	* \brief affiche la fin de la partie
 	*/
 	void afficheFinPartie();
