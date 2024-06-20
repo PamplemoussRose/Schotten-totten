@@ -19,7 +19,7 @@ public:
 	/*!
 	* \brief constructeur à deux parametres
 	*/
-	CarteClan(Couleurs coul, unsigned int val) { couleur = coul; valeur = val; }
+	CarteClan(Couleurs coul, unsigned int val) { couleur = coul; valeur = val; };
 
 	// Methodes
 	
