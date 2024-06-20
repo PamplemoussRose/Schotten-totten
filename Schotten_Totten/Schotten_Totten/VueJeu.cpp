@@ -134,5 +134,6 @@ void VueJeu::afficheMain(Joueur& joueur)
 	for (auto iter = main.begin(); iter < main.end(); iter++) {
 		afficheCarte(*iter);
 	}
+	cout << endl;
 }
 

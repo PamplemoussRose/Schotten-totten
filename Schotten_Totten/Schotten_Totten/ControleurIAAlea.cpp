@@ -4,7 +4,7 @@
 
 void ControleurIAAlea::jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur){
 	// Choix de la carte
-	unsigned int nCarte = (rand() % joueur.getNbreCartes()) + 1; //prend un nombre aleatoire entre 1 et nbreCartes
+	unsigned int nCarte = (rand() % joueur.getNbreCartes()-1) ; //prend un nombre aleatoire entre 0 et nbreCartes-1
 	Carte* carteRecuperee = joueur.getCarteMainPosition(nCarte);
 
 	// Choix pour l'effet
