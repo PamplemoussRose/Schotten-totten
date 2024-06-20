@@ -57,12 +57,6 @@ void ControleurJeuV1::jouerCarteSurBorne(CarteClan& carte, Borne& borne)
 
 }
 
-
-
-void ControleurJeuV1::deroulementPartie()
-{
-}
-
 void ControleurJeuV1::finPartie() {
 
 	delete getEtatJeu()->getPlateau()->getInstance();
