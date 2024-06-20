@@ -57,11 +57,11 @@ Borne* Plateau::getBornePosition(unsigned int position)
 	throw ::out_of_range("error dans getBornePosition");
 }
 
-void Plateau::setPiocheClan(Pioche* &&newPioche)
+void Plateau::setPiocheClan(PiocheClan* &&newPioche)
 {
 	this->piocheClan = move(newPioche);
 }
-void Plateau::setPiocheTactique(Pioche*&& newPioche)
+void Plateau::setPiocheTactique(PiocheTactique*&& newPioche)
 {
 	this->piocheTactique = move(newPioche);
 }

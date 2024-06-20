@@ -19,6 +19,7 @@ private:
 	ControleurPersonnage* controleurPerso1;
 	ControleurPersonnage* controleurPerso2;
 	ControleurDemandeCarte* demandeCarte;
+	EtatJeu* etatJeu;
 	static ControleurJeuV1* instance;
 	/*!
 	* \brief constructeur de jeuV1
@@ -34,6 +35,11 @@ public:
 	ControleurPersonnage* getControPerso1() { return controleurPerso1; };
 	ControleurPersonnage* getControPerso2() { return controleurPerso2; };
 	ControleurDemandeCarte* getDemandeCarte() { return demandeCarte; };
+	/*!
+	* \retourne etatJeu
+	*/
+	EtatJeu* getEtatJeu() const { return etatJeu; };
+	void setEtatJeu(EtatJeu* pEtatJeu) { etatJeu = pEtatJeu; }
 	/*!
 	* \brief retourne l'instance unique de la classe
 	*/

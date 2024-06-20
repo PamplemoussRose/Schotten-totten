@@ -32,7 +32,7 @@ void BuilderClassique::setBornesBuilder()
 
 void BuilderClassique::setPiocheBuilder()
 {//creation de Bornes et ajout de la pioche au jeu
-    PiocheClan* lstPioche;
+    PiocheClan* lstPioche = new PiocheClan();
     
     plateauBuild->setPiocheClan(move(lstPioche));
 }

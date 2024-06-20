@@ -4,7 +4,7 @@ ControleurJeuV1* ControleurJeuV1::instance = nullptr;
 
 inline ControleurJeuV1::ControleurJeuV1() : ControleurJeu(new VueJeuV1())
 {
-	getVue()->setControleur(this); // On doit le mettre ici car le l'attribut du controleur est dans VueJeuV1 
+	getVue()->setControleur(this); // On doit le mettre ici car l'attribut du controleur est dans VueJeuV1 
 		// (On aurait préféré mettre un getControleur qui réutilise celui de VueJeu)
 }
 
@@ -25,12 +25,17 @@ ControleurJeuV1::~ControleurJeuV1()
 VueJeuV1* ControleurJeuV1::getVue() { return (VueJeuV1*)ControleurJeu::getVue(); }
 
 void ControleurJeuV1::initPartie(Builder* plateauBuilder) {
-	setEtatJeu(EtatJeu::getInstance(plateauBuilder));
-	getEtatJeu()->getPlateau();
-	PiocheClan* piocheClan = (PiocheClan*)(getEtatJeu()->getPlateau())->getPiocheClan();
+	EtatJeu* etatJeu = EtatJeu::getInstance(plateauBuilder);
+	setEtatJeu(etatJeu);
+	PiocheClan* piocheClan = getEtatJeu()->getPlateau()->getPiocheClan();
 	ControleurPioche* controleurPiocheClan = new ControleurPioche(piocheClan);
 
-	controleurPiocheClan->melanger();
+	// Pas besoin deja melangé : controleurPiocheClan->melanger();
+	for (unsigned int i = 0; i < 6; i++) {
+		controleurPiocheClan->piocher( *(getEtatJeu()->getJoueur1()) );
+		cout << "Ajout carte j1";
+		controleurPiocheClan->piocher( *(getEtatJeu()->getJoueur2()) );
+	}
 
 	ChoixUtilisateur* choixU=ChoixUtilisateur::getChoixUtilisateur();
 	if(choixU->estHvsH()){

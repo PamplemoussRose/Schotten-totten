@@ -2,10 +2,13 @@
 #define PLATEAU_HEADER
 #include "Borne.h"
 #include "Pioche.h"
+#include "PiocheTactique.h"
 #include <stdexcept>
 
 class Borne;
 class Pioche;
+class PiocheClan;
+class PiocheTactique;
 
 class Plateau {
 private:
@@ -13,8 +16,8 @@ private:
 	static Plateau* instance;
 
 	vector<Borne*> vBornes;
-	Pioche* piocheClan;
-	Pioche* piocheTactique;
+	PiocheClan* piocheClan;
+	PiocheTactique* piocheTactique;
 
 	// Constructeur
 	/*!
@@ -55,19 +58,19 @@ public:
 	/*!
 	* \brief modifie la piocheClan du plateau
 	*/
-	void setPiocheClan(Pioche*&& newPioche);
+	void setPiocheClan(PiocheClan*&& newPioche);
 	/*!
 	* \brief modifie la piocheTactique du plateau
 	*/
-	void setPiocheTactique(Pioche*&& newPioche);
+	void setPiocheTactique(PiocheTactique*&& newPioche);
 	/*!
 	* \brief retourne un pointeur vers la piocheClan
 	*/
-	Pioche* getPiocheClan() {return piocheClan;};
+	PiocheClan* getPiocheClan() {return piocheClan;};
 	/*!
 	* \brief retourne un pointeur vers la piocheClan
 	*/
-	Pioche* getPiocheTactique() { return piocheTactique; };
+	PiocheTactique* getPiocheTactique() { return piocheTactique; };
 	/*!
 	* \brief retourne un pointeur vers la pioche a une position donnee
 	*/

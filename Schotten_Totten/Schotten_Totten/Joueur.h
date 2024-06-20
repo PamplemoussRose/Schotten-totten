@@ -15,7 +15,7 @@ public:
 	/*!
 	* \brief construit Joueur
 	*/
-	Joueur() : nbreCartesTactiquesJoues(0), mainJoueur() {nbreCartes, nbreCartesTactiquesJoues= 0;};
+	Joueur() : nbreCartesTactiquesJoues(0), mainJoueur() { nbreCartes=0, nbreCartesTactiquesJoues = 0; };
 
 	/*!
 	* \brief construit Joueur avec nombre de cartes en parametre
@@ -35,7 +35,7 @@ public:
 	/*!
 	* \brief retourne main joueur
 	*/
-	vector<Carte*> getMainJoueur() {return mainJoueur;};
+	vector<Carte*>& getMainJoueur() {return mainJoueur;};
 	/*!
 	* \brief retourne une carte de la main a une position donnee
 	*/

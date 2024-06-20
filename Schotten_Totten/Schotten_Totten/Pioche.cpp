@@ -3,7 +3,7 @@
 
 Carte* Pioche::enleverCarteDessus()
 {
-	Carte* carteEnlevée = *pioche.end() ;
+	Carte* carteEnlevée = *(pioche.end()-1) ;
 	pioche.pop_back();
 	nbCartesRestantes -= 1;
 	return carteEnlevée;
@@ -11,7 +11,7 @@ Carte* Pioche::enleverCarteDessus()
 
 void Pioche::ajouterDessous(Carte& carte)
 {
-	pioche.insert(pioche.begin(), &carte);
+	pioche.push_back(&carte);
 }
 
 void Pioche::melange()

@@ -1,4 +1,3 @@
-#pragma once
 #ifndef PIOCHE_HEADER
 #define PIOCHE_HEADER
 #include "Carte.h"

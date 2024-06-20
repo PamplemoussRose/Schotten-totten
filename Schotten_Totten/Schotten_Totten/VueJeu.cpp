@@ -12,6 +12,8 @@ void VueJeu::afficheFinPartie()
 
 void VueJeu::affichePlateau()
 {
+
+	// Plateau* plateau = (*(*controleur).getEtatJeu()).getPlateau();
 	Plateau* plateau = (*(*controleur).getEtatJeu()).getPlateau();
 	vector<Borne*> bornes = (*plateau).getBornes();
 	//Affichage des cartes de Joueur 1 au dessus des bornes
