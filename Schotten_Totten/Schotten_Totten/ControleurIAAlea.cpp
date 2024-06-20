@@ -23,8 +23,24 @@ void ControleurIAAlea::jouerCarte(ControleurDemandeCarte& controleurDemandeCarte
 
 }
 
-void ControleurIAAlea::revendiqueBorne(EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
+void ControleurIAAlea::revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
 {
-	
+	Plateau* plateau = etatJeu.getPlateau();
+	vector<Borne*> bornes = plateau->getBornes();
+	//Verifie pour chaque borne si ielle est revendicable
+	for (int numBorne = 0; numBorne < 9; numBorne++) {
+		if ((bornes[numBorne])->revendicable()) { //revendication
+			//si joueur 1
+			if (joueurAct == 1 && (controleurBornes[numBorne])->calculeRevendication(*bornes[numBorne]) == 1) {
+				bornes[numBorne]->setStatut(1);
+				cout << "Le joueur 1 revendique la borne" << endl;
+			}
+			//si joueur 2
+			if (joueurAct == 2 && (controleurBornes[numBorne])->calculeRevendication(*bornes[numBorne]) == 2) {
+				bornes[numBorne]->setStatut(-1);
+				cout << "Le joueur 2 revendique la borne" << endl;
+			}
+		}
+	}
 }
 

@@ -8,6 +8,7 @@
 #include "Plateau.h"
 #include "ControleurBorne.h"
 #include "EtatJeu.h"
+#include "ControleurPioche.h"
 
 using namespace std;
 
@@ -21,5 +22,6 @@ public :
 	* \ revendique la borne avec ce numero
 	*/
 	virtual void revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes) =0;
+	Carte* pioche(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel);
 };
 #endif

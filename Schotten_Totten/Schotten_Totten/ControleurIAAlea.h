@@ -1,6 +1,8 @@
 #ifndef GUARD_CONTROLEURIAALEA
 #define GUARD_CONTROLEURIAALEA
 #include "ControleurPersonnage.h"
+#include <random>
+using namespace std;
 
 class ControleurIAAlea : public ControleurPersonnage {
 public:

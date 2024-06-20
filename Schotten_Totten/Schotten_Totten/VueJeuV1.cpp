@@ -9,10 +9,14 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	if (controleurV1->getJoueurActuel() == 1) {
 		controleurV1->getControPerso1()->jouerCarte(*getControleur()->getDemandeCarte(),joueurActuel, *controleurV1->getEtatJeu()->getJoueur2());
 		controleurV1->getControPerso1()->revendiqueBorne(getControleur()->getJoueurActuel() ,*controleurV1->getEtatJeu(), controleurV1->getBornes());
+		Carte* cartePiochee =controleurV1->getControPerso1()->pioche(*plateau->getPiocheClan(), *controleurV1->getControPioche(),joueurActuel);
+		afficheCarte(cartePiochee);
 	}
 	else {
 		controleurV1->getControPerso2()->jouerCarte(*getControleur()->getDemandeCarte(), joueurActuel, *controleurV1->getEtatJeu()->getJoueur1());
 		controleurV1->getControPerso2()->revendiqueBorne(getControleur()->getJoueurActuel() ,*controleurV1->getEtatJeu(), controleurV1->getBornes());
+		Carte* cartePiochee = controleurV1->getControPerso2()->pioche(*plateau->getPiocheClan(), *controleurV1->getControPioche(), joueurActuel);
+		afficheCarte(cartePiochee);
 	}
 	/*
 	cout << "Quelle carte voulez vous jouer? (1-6)" << endl;
@@ -25,14 +29,6 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	controleurV1->jouerCarteSurBorne(*carteChoisie,*bornes[numBorne-1]); 
 
 	controleurV1->revendiqueBorne(numBorne); //revendication de la borne ou pas*/
-	if (plateau->getPiocheClan()->getNbCartesRestantes() != 0) {
-		Carte* cartePiochee = controleurV1->getControPioche()->piocher(*plateau->getPiocheClan(), joueurActuel); //le joueur pioche
-		cout << "Vous avez pioche";
-		afficheCarte(cartePiochee);
-	}
-	else {
-		cout << "Pioche vide"<<endl;
-	}
 	
 	cout << "Fin de votre tour" << endl;//avec appli ou etatjeu changement de joueur
 	}

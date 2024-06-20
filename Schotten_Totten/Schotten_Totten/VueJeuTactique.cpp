@@ -24,27 +24,27 @@ void VueJeuTactique::afficheTour(Joueur& joueurActuel)
 	if (plateau->getPiocheClan()->getNbCartesRestantes() != 0 && plateau->getPiocheTactique()->getNbCartesRestantes() != 0) {
 		cout << "Voulez vous piochez une carte clan(1) ou une carte tactique(2)?" << endl;
 		cin >> choixPioche;
-		Carte* cartePiochée;
+		Carte* cartePiochee;
 		if (choixPioche == 1) {
-			cartePiochée = controleurT->getControPiocheClan()->piocher(*plateau->getPiocheClan(), joueurActuel); //le joueur pioche
+			cartePiochee = controleurT->getControPiocheClan()->piocher(*plateau->getPiocheClan(), joueurActuel); //le joueur pioche
 		}
 		else if (choixPioche == 2) {
-			cartePiochée = controleurT->getControPiocheTact()->piocher(*plateau->getPiocheTactique(), joueurActuel);
+			cartePiochee = controleurT->getControPiocheTact()->piocher(*plateau->getPiocheTactique(), joueurActuel);
 		}
 		else {
 			cout << "error" << endl;
 		}
 		cout << "Vous avez pioché";
-		afficheCarte(cartePiochée);
+		afficheCarte(cartePiochee);
 	}
 	else if (plateau->getPiocheClan()->getNbCartesRestantes() == 0) {
 		cout << "Voulez vous piochez une carte tactique(1) ou passez(2)?" << endl;
 		cin >> choixPioche;
-		Carte* cartePiochée;
+		Carte* cartePiochee;
 		if (choixPioche == 1) {
-			cartePiochée = controleurT->getControPiocheTact()->piocher(*plateau->getPiocheTactique(), joueurActuel); //le joueur pioche carte tactique
+			cartePiochee = controleurT->getControPiocheTact()->piocher(*plateau->getPiocheTactique(), joueurActuel); //le joueur pioche carte tactique
 			cout << "Vous avez pioché";
-			afficheCarte(cartePiochée);
+			afficheCarte(cartePiochee);
 		}
 	}
 	
