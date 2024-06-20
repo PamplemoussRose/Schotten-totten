@@ -22,8 +22,9 @@ public:
 
 	/**
 	* Permet de transformer le vecteur pour appeler la version variadic de la methode
+	* sortie : infoApresEffet par Ex : sur quel borne la carte est joué
 	*/
-	void effet(vector<unsigned int> lstChoix);
+	vector<unsigned int> effet(vector<unsigned int> lstChoix);
 
 	virtual ~Carte() = default;  // Destructeur virtuel pour rendre la classe polymorphe
 

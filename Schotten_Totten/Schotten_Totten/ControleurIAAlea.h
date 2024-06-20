@@ -13,7 +13,7 @@ public:
 	/*!
 	* joue une carte
 	*/
-	void jouerCarte( ControleurDemandeCarte& controleurDemandeCarte, Joueur& ia, Joueur& autreJoueur)override;
+	vector<unsigned int> jouerCarte( ControleurDemandeCarte& controleurDemandeCarte, Joueur& ia, Joueur& autreJoueur)override;
 	/*!
 	* \ revendique la borne avec ce numero
 	*/
