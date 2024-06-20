@@ -13,14 +13,14 @@ void ControleurHumain::jouerCarte( ControleurDemandeCarte& controleurDemandeCart
 	}
 }
 
-void ControleurHumain::revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
+void ControleurHumain::revendiqueBorne(Borne& borneJouee,int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
 {
-	unsigned int numBorne;
-	cout << "Revendiquer quelle borne? (numero:1-9)" << endl; //CA C EST SURR QUELLE BORNE ON A JOU2 PRECEDEMMENT
-	cin >> numBorne;
+	unsigned int numBorne= borneJouee.getNumero();
+	//cout << "Revendiquer quelle borne? (numero:1-9)" << endl; //sur la borne jouée precedemment si possible
+	//cin >> numBorne;
 	Plateau* plateau = etatJeu.getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
-	if ((bornes[numBorne - 1])->revendicable()) {
+	if (borneJouee.revendicable()) {
 		string rep;
 		cout << " Revendiquer(1) ou piocher(2) ? " << endl;
 		cin >> rep;

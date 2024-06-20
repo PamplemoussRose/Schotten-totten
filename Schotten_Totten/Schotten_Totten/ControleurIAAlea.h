@@ -17,7 +17,7 @@ public:
 	/*!
 	* \ revendique la borne avec ce numero
 	*/
-	void revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes);
+	void revendiqueBorne(Borne& borneJouee,int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes);
 	/*!
 	* \ le joueur pioche en version tactique
 	*/
