@@ -10,6 +10,8 @@ void VueJeu::affiche()
 		afficheTour(*controleur->getEtatJeu()->getJoueur2());
 	}
 	afficheFinPartie();
+	controleur->finPartie();
+
 }
 
 void VueJeu::afficheFinPartie()

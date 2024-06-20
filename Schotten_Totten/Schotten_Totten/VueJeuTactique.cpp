@@ -19,7 +19,8 @@ void VueJeuTactique::afficheTour(Joueur& joueurActuel)
 		afficheCarte(cartePiochee);
 	}
 	*/
-////////////////////////////////////////:
+////////////////////////////////////////
+/*
 	unsigned int indiceCarte;
 	unsigned int numBorne;
 	cout << "Quelle carte voulez vous jouer? (1-7)" << endl;// toujours 7 cartes en main
@@ -46,12 +47,9 @@ void VueJeuTactique::afficheTour(Joueur& joueurActuel)
 		if (choixPioche == 1) {
 			cartePiochee = controleurT->getControPiocheClan()->piocher(*plateau->getPiocheClan(), joueurActuel); //le joueur pioche
 		}
-		else if (choixPioche == 2) {
+		else{
 			cartePiochee = controleurT->getControPiocheTact()->piocher(*plateau->getPiocheTactique(), joueurActuel);
-		}
-		else {
-			cout << "error" << endl;
-		}
+		}//gestion erreur à faire
 		cout << "Vous avez pioché";
 		afficheCarte(cartePiochee);
 	}
@@ -68,4 +66,5 @@ void VueJeuTactique::afficheTour(Joueur& joueurActuel)
 	
 	
 	cout << "Fin de votre tour" << endl;//avec appli ou etatjeu changement de joueur
+*/
 }

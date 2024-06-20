@@ -47,15 +47,13 @@ public:
 	*/
 
 	void initPartie(Builder* plateauBuilder);
-	/*!
-	* \ revedique la borne avec ce numero
-	*/
-	void revendiqueBorne(unsigned int numBorne);
+
 
 	/*!
 	* \ le joueur actuel joue la carte sur cette borne
 	*/
 	void jouerCarteSurBorne(CarteClan& carte, Borne& borne);
+
 	/*!
 	* \ fin de la partie
 	*/

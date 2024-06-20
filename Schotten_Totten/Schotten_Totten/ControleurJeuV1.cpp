@@ -42,9 +42,6 @@ void ControleurJeuV1::initPartie(Builder* plateauBuilder) {
 	ControleurDemandeCarte* controleurPerso2 = new ControleurDemandeCarte();
 }
 
-void ControleurJeuV1::revendiqueBorne(unsigned int numBorne)
-{
-}
 
 void ControleurJeuV1::jouerCarteSurBorne(CarteClan& carte, Borne& borne)
 {
