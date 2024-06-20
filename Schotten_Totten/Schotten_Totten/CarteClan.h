@@ -43,6 +43,8 @@ public:
 	* \brief methode d'effet de la carte
 	*/
 	void effet(unsigned int numBorne, unsigned int joueur);
+
+	vector<vector<unsigned int>> choixEffet(unsigned int joueur) override;
 };
 
 #endif // !CARTECLAN_HEADER

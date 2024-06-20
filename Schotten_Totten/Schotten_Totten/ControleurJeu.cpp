@@ -1,7 +1,7 @@
 #include "ControleurJeu.h"
 #include "VueJeu.h"
 
-// Construction (Attention pas de destructeur) ++++++++++++++++++++++++++++++++
+// Construction (Attention pas de destructeur - à faire) ++++++++++++++++++++++++++++++++
 
 /*
 VueJeu* ControleurJeu::getVue()
@@ -10,6 +10,5 @@ VueJeu* ControleurJeu::getVue()
 }*/
 
 ControleurJeu::ControleurJeu(VueJeu* vue):Controleur(vue) {
-	getVue()->setControleur(this);
 }
 

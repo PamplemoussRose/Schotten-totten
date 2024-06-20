@@ -14,5 +14,7 @@ public:
 	* \brief affichage du tour du joueur en version normale
 	*/
 	void afficheTour(Joueur& joueurActuel) override;
+
+	void affiche() override;
 };
 #endif

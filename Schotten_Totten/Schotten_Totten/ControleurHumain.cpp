@@ -4,7 +4,13 @@ void ControleurHumain::jouerCarte( ControleurDemandeCarte& controleurDemandeCart
 {
 	Carte* carte = controleurDemandeCarte.choixCarte(joueur,autreJoueur);
 	vector<unsigned int> lstChoix = controleurDemandeCarte.choixApplicationCarte(*carte);
-	carte->effet(lstChoix);
+	try {
+		carte->effet(lstChoix);
+	}
+	catch (exception exc) {
+		cout << "Ces choix ne sont pas possible : merci de choisir à nouveau"; // A mettre dans ControleurDemandeCarte
+		jouerCarte(controleurDemandeCarte, joueur, autreJoueur);
+	}
 }
 
 void ControleurHumain::revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)

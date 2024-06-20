@@ -45,5 +45,6 @@ public:
 	* \ fin de la partie
 	*/
 	void finPartie();
+
 };
 #endif

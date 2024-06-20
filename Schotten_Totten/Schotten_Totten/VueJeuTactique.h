@@ -15,5 +15,6 @@ public:
 	* \brief affichage du tour du joueur en version tactique
 	*/
 	void afficheTour(Joueur& joueurActuel) override;
+	void affiche() {}; //Devrait être dans VueJeu
 };
 #endif

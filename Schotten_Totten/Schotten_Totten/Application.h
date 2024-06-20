@@ -28,6 +28,10 @@ public:
 
 	static Application* getApplication();
 
+	Controleur* getControleurActuel() {
+		return controleurActuel;
+	}
+
 	/**
 	* Commencer l'affichage de la vue actuel
 	*/
