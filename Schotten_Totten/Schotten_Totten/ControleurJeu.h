@@ -24,6 +24,7 @@ public:
 	vector<ControleurBorne*> getBornes(){ return controleurBornes; };
 
 	int getJoueurActuel() { return joueurAct; };
+	void setJoueurActuel(int newJoueur) { joueurAct= newJoueur; };
 	/*!
 	* \retourne etatJeu
 	*/
