@@ -36,15 +36,7 @@ public:
 	* \methode virtuelle pour initialiser la partie
 	*/
 	virtual void initPartie(Builder* plateauBuilder)=0;
-	/*!
-	* \ revendique la borne avec ce numero
-	*/
-	void revendiqueBorne(unsigned int numBorne);
 
-	/*!
-	* \methode virtuelle pour deroulement de la partie
-	*/
-	virtual void deroulementPartie()=0;
 	/*!
 	* \methode virtuelle pour la fin de la partie
 	*/
