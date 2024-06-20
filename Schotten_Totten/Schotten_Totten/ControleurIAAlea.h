@@ -21,6 +21,6 @@ public:
 	/*!
 	* \ le joueur pioche en version tactique
 	*/
-	Carte* piocheT(Pioche& piocheClan, Pioche& piochetactique, ControleurPioche& controlPioche, Joueur& joueurActuel);
+	Carte* piocheT(ControleurPioche& controlPiocheClan,ControleurPioche& controlPiocheTact, Joueur& joueurActuel);
 };
 #endif

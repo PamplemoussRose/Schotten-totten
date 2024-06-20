@@ -25,10 +25,10 @@ public :
 	/*!
 	* \ pioche en version normal
 	*/
-	Carte* piocheV1(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel);
+	Carte* piocheV1( ControleurPioche& controlPioche, Joueur& joueurActuel);
 	/*!
 	* \ pioche en version tactique
 	*/
-	virtual Carte* piocheT(Pioche& piocheClan, Pioche& piochetactique, ControleurPioche& controlPioche, Joueur& joueurActuel)=0;
+	virtual Carte* piocheT(ControleurPioche& controlPiocheClan, ControleurPioche& controlPiocheTact, Joueur& joueurActuel)=0;
 };
 #endif
