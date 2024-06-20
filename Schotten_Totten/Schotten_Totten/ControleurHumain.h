@@ -16,6 +16,6 @@ public:
 	* joue une carte
 	*/
 	void jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur) override;
-	void revendiqueBorne(EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)override;
+	void revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)override;
 };
 #endif

@@ -8,11 +8,11 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	afficheMain(joueurActuel);
 	if (controleurV1->getJoueurActuel() == 1) {
 		controleurV1->getControPerso1()->jouerCarte(*getControleur()->getDemandeCarte(),joueurActuel, *controleurV1->getEtatJeu()->getJoueur2());
-		controleurV1->getControPerso1()->revendiqueBorne(*controleurV1->getEtatJeu(), controleurV1->getBornes());
+		controleurV1->getControPerso1()->revendiqueBorne(getControleur()->getJoueurActuel() ,*controleurV1->getEtatJeu(), controleurV1->getBornes());
 	}
 	else {
 		controleurV1->getControPerso2()->jouerCarte(*getControleur()->getDemandeCarte(), joueurActuel, *controleurV1->getEtatJeu()->getJoueur1());
-		controleurV1->getControPerso2()->revendiqueBorne(*controleurV1->getEtatJeu(), controleurV1->getBornes());
+		controleurV1->getControPerso2()->revendiqueBorne(getControleur()->getJoueurActuel() ,*controleurV1->getEtatJeu(), controleurV1->getBornes());
 	}
 	/*
 	cout << "Quelle carte voulez vous jouer? (1-6)" << endl;

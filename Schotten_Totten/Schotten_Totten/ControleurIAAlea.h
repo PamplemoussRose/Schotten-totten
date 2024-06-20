@@ -12,6 +12,6 @@ public:
 	/*!
 	* \ revendique la borne avec ce numero
 	*/
-	void revendiqueBorne(EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes);
+	void revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes);
 };
 #endif

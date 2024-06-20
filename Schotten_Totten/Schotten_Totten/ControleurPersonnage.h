@@ -20,6 +20,6 @@ public :
 	/*!
 	* \ revendique la borne avec ce numero
 	*/
-	virtual void revendiqueBorne( EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes) =0;
+	virtual void revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes) =0;
 };
 #endif

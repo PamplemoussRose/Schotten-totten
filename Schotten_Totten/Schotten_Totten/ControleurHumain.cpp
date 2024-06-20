@@ -7,7 +7,7 @@ void ControleurHumain::jouerCarte( ControleurDemandeCarte& controleurDemandeCart
 	carte->effet(lstChoix);
 }
 
-void ControleurHumain::revendiqueBorne(EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
+void ControleurHumain::revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
 {
 	unsigned int numBorne;
 	cout << "Sur quel borne? (numero::1-9)" << endl;
@@ -20,12 +20,12 @@ void ControleurHumain::revendiqueBorne(EtatJeu& etatJeu, vector<ControleurBorne*
 		cin >> rep;
 		if (rep == "1") {
 			//si joueur 1
-			if ((controleurBornes[numBorne - 1])->calculeRevendication(*bornes[numBorne - 1]) == 1) {
+			if (joueurAct==1 &&(controleurBornes[numBorne - 1])->calculeRevendication(*bornes[numBorne - 1]) == 1) {
 				bornes[numBorne - 1]->setStatut(1);
 				cout << "Le joueur 1 revendique la borne" << endl;
 			}
 			//si joueur 2
-			if ((controleurBornes[numBorne - 1])->calculeRevendication(*bornes[numBorne - 1]) == 2) {
+			if (joueurAct == 2 && (controleurBornes[numBorne - 1])->calculeRevendication(*bornes[numBorne - 1]) == 2) {
 				bornes[numBorne - 1]->setStatut(-1);
 				cout << "Le joueur 2 revendique la borne" << endl;
 			}
