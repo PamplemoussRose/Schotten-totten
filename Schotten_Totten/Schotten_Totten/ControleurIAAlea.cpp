@@ -49,9 +49,27 @@ void ControleurIAAlea::revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<C
 }
 
 Carte* ControleurIAAlea::piocheT(ControleurPioche& controlPiocheClan, ControleurPioche& controlPiocheTact, Joueur& joueurActuel) {
-	cout << "to Do";
-	Carte* carte = new CarteClan(Couleurs::bleu, 1);
-	
-	return carte;
+	int choixPioche;
+	if (controlPiocheClan.getPioche()->getNbCartesRestantes() != 0 && controlPiocheTact.getPioche()->getNbCartesRestantes() != 0) {
+		choixPioche = (rand() % 2) + 1;//nombre entre 1 et 2
+	}
+	else if (controlPiocheClan.getPioche()->getNbCartesRestantes() == 0) {
+		choixPioche = (rand() % 1) * 2;//nombre soit 0 soit 2
+	}
+	else {
+		choixPioche = (rand() % 1);//nombre soit 0 soit 1
+	}
+	cin >> choixPioche;
+	if (choixPioche == 1) {
+		Carte* cartePiochee = controlPiocheClan.piocher(joueurActuel); //le joueur pioche une carte clan
+		return cartePiochee;
+	}
+	else if (choixPioche == 2) {
+		Carte* cartePiochee = controlPiocheTact.piocher(joueurActuel); //le joueur pioche unne carte tactique
+		return cartePiochee;
+	}
+	else {
+		cout << " tour passe" << endl;
+	}
 }
 
