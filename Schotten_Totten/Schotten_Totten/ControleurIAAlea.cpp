@@ -19,7 +19,7 @@ void ControleurIAAlea::jouerCarte(ControleurDemandeCarte& controleurDemandeCarte
 			v1.push_back(rand() % lstChoix.size() + 1);//choisi
 		}
 		//lstChoix.push_back(v1);
-		carteRecuperee->effet(lstChoix);
+		//carteRecuperee->effet(lstChoix);
 
 }
 
