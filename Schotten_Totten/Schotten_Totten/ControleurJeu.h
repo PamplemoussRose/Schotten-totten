@@ -28,7 +28,8 @@ public:
 	/*!
 	* \retourne etatJeu
 	*/
-	EtatJeu* getEtatJeu() { return etatJeu; };
+	EtatJeu* getEtatJeu() const { return etatJeu; };
+	void setEtatJeu(EtatJeu* pEtatJeu) { etatJeu = pEtatJeu; }
 	/*!
 	* \methode virtuelle pour initialiser la partie
 	*/

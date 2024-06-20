@@ -6,6 +6,8 @@
 #include "ControleurIAAlea.h"
 #include "ControleurHumain.h"
 #include "ChoixUtilisateur.h"
+#include "PiocheClan.h"
+
 class VueJeuV1;
 #include "Builder.h"
 
@@ -21,8 +23,10 @@ private:
 	/*!
 	* \brief constructeur de jeuV1
 	*/
-	inline ControleurJeuV1(Builder* plateauBuilder);
+	inline ControleurJeuV1();
 public:
+
+	VueJeuV1 * getVue();
 	/*!
 	* \brief retourne le controleur de la pioche clan
 	*/

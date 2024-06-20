@@ -2,17 +2,17 @@
 #include "VueJeuV1.h"
 ControleurJeuV1* ControleurJeuV1::instance = nullptr;
 
-inline ControleurJeuV1::ControleurJeuV1(Builder* plateauBuilder) : ControleurJeu(new VueJeuV1())
+inline ControleurJeuV1::ControleurJeuV1() : ControleurJeu(new VueJeuV1())
 {
 	getVue()->setControleur(this); // On doit le mettre ici car le l'attribut du controleur est dans VueJeuV1 
 		// (On aurait préféré mettre un getControleur qui réutilise celui de VueJeu)
-	initPartie(plateauBuilder);
 }
 
 ControleurJeuV1* ControleurJeuV1::getInstance(Builder* plateauBuilder)
 {
 	if (instance == nullptr) {
-		instance = new ControleurJeuV1(plateauBuilder);
+		instance = new ControleurJeuV1();
+		instance->initPartie(plateauBuilder);
 	}
 	return instance;
 }
@@ -22,12 +22,16 @@ ControleurJeuV1::~ControleurJeuV1()
 	instance = nullptr;
 }
 
+VueJeuV1* ControleurJeuV1::getVue() { return (VueJeuV1*)ControleurJeu::getVue(); }
+
 void ControleurJeuV1::initPartie(Builder* plateauBuilder) {
-	EtatJeu* etatJeu = EtatJeu::getInstance(plateauBuilder);
-	getEtatJeu()->getInstance();
+	setEtatJeu(EtatJeu::getInstance(plateauBuilder));
 	getEtatJeu()->getPlateau();
 	PiocheClan* piocheClan = (PiocheClan*)(getEtatJeu()->getPlateau())->getPiocheClan();
-	ControleurPioche* controleurPiocheClan = new ControleurPioche();
+	ControleurPioche* controleurPiocheClan = new ControleurPioche(piocheClan);
+
+	controleurPiocheClan->melanger();
+
 	ChoixUtilisateur* choixU=ChoixUtilisateur::getChoixUtilisateur();
 	if(choixU->estHvsH()){
 		ControleurPersonnage* controleurPerso1 = new ControleurHumain();

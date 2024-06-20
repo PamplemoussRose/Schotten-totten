@@ -1,20 +1,26 @@
 #ifndef GUARD_CONTROLEURPIOCHE
 #define GUARD_CONTROLEURPIOCHE
-#include "PiocheClan.h"
+#include "Pioche.h"
 #include "Joueur.h"
 class ControleurPioche {
+private:
+	Pioche* pioche;
+
 public:
+	ControleurPioche() = delete;
+	ControleurPioche(Pioche* pPioche) { pioche = pPioche; };
+
 	/*!
 	* \brief fait piocher unne carte dans la pioche au joueur
 	*/
-	Carte* piocher(Pioche& pioche,Joueur& joueur);
+	Carte* piocher(Joueur& joueur);
 	/*!
 	* \brief renvoie true si pioche vide
 	*/
-	bool estVide(Pioche& pioche);
+	bool estVide();
 	/*!
 	* \brief melange les cartes dans la pioche
 	*/
-	void melanger(Pioche& pioche);
+	void melanger();
 };
 #endif

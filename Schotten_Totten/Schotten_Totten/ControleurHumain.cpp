@@ -55,12 +55,12 @@ Carte* ControleurHumain::piocheT(Pioche& piocheClan, Pioche& piochetactique, Con
 	}
 	cin >> choixPioche;
 	if (choixPioche == 1) {
-		Carte* cartePiochee = controlPioche.piocher(piocheClan, joueurActuel); //le joueur pioche
+		Carte* cartePiochee = controlPioche.piocher(joueurActuel); //le joueur pioche
 		cout << "Vous avez pioché une carte clan:"<<endl;
 		return cartePiochee;
 	}
 	else if (choixPioche == 2) {
-		Carte* cartePiochee = controlPioche.piocher(piochetactique, joueurActuel); //le joueur pioche
+		Carte* cartePiochee = controlPioche.piocher(joueurActuel); //le joueur pioche
 		cout << "Vous avez pioché une carte tactique:"<<endl;
 		return cartePiochee;
 	}

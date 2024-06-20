@@ -1,21 +1,21 @@
 #include "ControleurPioche.h"
 
-Carte* ControleurPioche::piocher(Pioche& pioche,Joueur& joueur)
+Carte* ControleurPioche::piocher(Joueur& joueur)
 {
 	Carte* carte;
-	carte=pioche.enleverCarteDessus();
+	carte=pioche->enleverCarteDessus();
 	joueur.ajoutCarte(*carte);
 	return carte;
 }
 
-bool ControleurPioche::estVide(Pioche& pioche)
+bool ControleurPioche::estVide()
 {
-	return (pioche.getNbCartesRestantes() == 0);
+	return (pioche->getNbCartesRestantes() == 0);
 }
 
-void ControleurPioche::melanger(Pioche& pioche)
+void ControleurPioche::melanger()
 {
-	pioche.melange();
+	pioche->melange();
 }
 
 
