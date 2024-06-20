@@ -2,7 +2,7 @@
 
 vector<unsigned int> ControleurHumain::jouerCarte( ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur)
 {
-	vector<unsigned int> infoApresEffet; // Ex : sur quel borne la carte est joué
+	vector<unsigned int> infoApresEffet; // Ex : sur quelle borne la carte est jouée
 	Carte* carte = controleurDemandeCarte.choixCarte(joueur,autreJoueur);
 	vector<unsigned int> lstChoix = controleurDemandeCarte.choixApplicationCarte(*carte);
 	try {

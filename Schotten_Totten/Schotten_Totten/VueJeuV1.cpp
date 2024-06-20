@@ -14,7 +14,8 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 	Plateau* plateau = controleurV1->getEtatJeu()->getPlateau();
 	afficheMain(joueurActuel);
 	if (controleurV1->getEtatJeu()->getNumJoueurActuel() == 1) {
-		Borne* borneJouee = controleurV1->getControPerso1()->jouerCarte(*getControleur()->getDemandeCarte(),joueurActuel, *controleurV1->getEtatJeu()->getJoueur2());
+		unsigned int numBorne = controleurV1->getControPerso1()->jouerCarte(*getControleur()->getDemandeCarte(),joueurActuel, *controleurV1->getEtatJeu()->getJoueur2())[0];
+		Borne* borneJouee = plateau->getBornes()[numBorne - 1];
 		if (borneJouee->revendicable()) {
 			controleurV1->getControPerso1()->revendiqueBorne(*borneJouee,getControleur()->getEtatJeu()->getNumJoueurActuel(), *controleurV1->getEtatJeu(), controleurV1->getBornes());
 		}
@@ -22,7 +23,8 @@ void VueJeuV1::afficheTour(Joueur& joueurActuel)
 		afficheCarte(cartePiochee);
 	}
 	else {
-		Borne* borneJouee = controleurV1->getControPerso2()->jouerCarte(*getControleur()->getDemandeCarte(), joueurActuel, *controleurV1->getEtatJeu()->getJoueur1());
+		unsigned int numBorne = controleurV1->getControPerso2()->jouerCarte(*getControleur()->getDemandeCarte(), joueurActuel, *controleurV1->getEtatJeu()->getJoueur1())[0];
+		Borne* borneJouee = plateau->getBornes()[numBorne - 1];
 		if (borneJouee->revendicable()) {
 			controleurV1->getControPerso2()->revendiqueBorne(*borneJouee, getControleur()->getEtatJeu()->getNumJoueurActuel(), *controleurV1->getEtatJeu(), controleurV1->getBornes());
 		}
