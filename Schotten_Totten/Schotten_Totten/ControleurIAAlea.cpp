@@ -1,15 +1,17 @@
 #include "ControleurIAAlea.h"
 
 #include "Application.h"
+#include "ControleurJeu.h"
 
-void ControleurIAAlea::jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur){
+vector<unsigned int> ControleurIAAlea::jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur){
+	vector<unsigned int> infoApresEffet; // Ex : sur quel borne la carte est joué
 	// Choix de la carte
 	unsigned int nCarte = (rand() % joueur.getNbreCartes()-1) ; //prend un nombre aleatoire entre 0 et nbreCartes-1
 	Carte* carteRecuperee = joueur.getCarteMainPosition(nCarte);
 
 	// Choix pour l'effet
-	ControleurJeu* controleurJeu = (ControleurJeu*) Application::getApplication()->getControleurActuel();
-	unsigned int joueurActuel = controleurJeu->getEtatJeu()->getNumJoueurActuel();
+	//ControleurJeu* controleurJeu = dynamic_cast<ControleurJeu*>((Application::getApplication())->getControleurActuel());
+	unsigned int joueurActuel = EtatJeu::getInstance()->getNumJoueurActuel();
 	vector<vector<unsigned int>> lstChoixPossibles = carteRecuperee->choixEffet(joueurActuel); // Pas d'affichage : retourne les choix
 	vector<unsigned int> lstValeursChoisies;
 	for (vector<unsigned int>& lstValeursPossibles : lstChoixPossibles) {
@@ -18,13 +20,13 @@ void ControleurIAAlea::jouerCarte(ControleurDemandeCarte& controleurDemandeCarte
 
 	// Action 
 	try {
-		carteRecuperee->effet(lstValeursChoisies);
+		infoApresEffet = carteRecuperee->effet(lstValeursChoisies);
 	}
 	catch (exception exc) {
 		jouerCarte(controleurDemandeCarte, joueur, autreJoueur);
 	}
 		
-
+	return infoApresEffet;
 }
 
 void ControleurIAAlea::revendiqueBorne(Borne& borneJouee,int joueurAct, EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)

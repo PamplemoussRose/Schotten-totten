@@ -1,16 +1,18 @@
 #include "ControleurHumain.h"
 
-void ControleurHumain::jouerCarte( ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur)
+vector<unsigned int> ControleurHumain::jouerCarte( ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur)
 {
+	vector<unsigned int> infoApresEffet; // Ex : sur quel borne la carte est joué
 	Carte* carte = controleurDemandeCarte.choixCarte(joueur,autreJoueur);
 	vector<unsigned int> lstChoix = controleurDemandeCarte.choixApplicationCarte(*carte);
 	try {
-		carte->effet(lstChoix);
+		infoApresEffet = carte->effet(lstChoix);
 	}
 	catch (exception exc) {
 		cout << "Ces choix ne sont pas possible : merci de choisir à nouveau"; // A mettre dans ControleurDemandeCarte
 		jouerCarte(controleurDemandeCarte, joueur, autreJoueur);
 	}
+	return infoApresEffet;
 }
 
 void ControleurHumain::revendiqueBorne(Borne& borneJouee,int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)

@@ -17,7 +17,7 @@ public :
 	/*!
 	* méthode virtuelle de joue une carte
 	*/
-	virtual void jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur) = 0;
+	virtual vector<unsigned int> jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur) = 0;
 	/*!
 	* \ revendique la borne avec ce numero
 	*/
