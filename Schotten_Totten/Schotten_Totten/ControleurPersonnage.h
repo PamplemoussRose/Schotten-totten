@@ -22,6 +22,7 @@ public :
 	* \ revendique la borne avec ce numero
 	*/
 	virtual void revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes) =0;
-	Carte* pioche(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel);
+	Carte* piocheV1(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel);
+	virtual Carte* piocheT(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel)=0;
 };
 #endif

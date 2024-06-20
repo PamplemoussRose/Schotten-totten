@@ -16,6 +16,13 @@ public:
 	* joue une carte
 	*/
 	void jouerCarte(ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur) override;
+	/*!
+	* revendique borne
+	*/
 	void revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)override;
+	/*!
+	* pioche  une carte tactique ou une carte clan
+	*/
+	Carte* piocheT(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel)override;
 };
 #endif

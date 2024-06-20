@@ -33,3 +33,9 @@ void ControleurHumain::revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<Co
 
 	}
 }
+
+
+Carte* ControleurHumain::piocheT(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel)
+{
+	return nullptr;
+}

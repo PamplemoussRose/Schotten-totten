@@ -42,6 +42,10 @@ void ControleurJeuV1::initPartie(Builder* plateauBuilder) {
 	ControleurDemandeCarte* controleurPerso2 = new ControleurDemandeCarte();
 }
 
+void ControleurJeuV1::revendiqueBorne(unsigned int numBorne)
+{
+}
+
 void ControleurJeuV1::jouerCarteSurBorne(CarteClan& carte, Borne& borne)
 {
 	if (getJoueurActuel()==1) { // si joueur 1
@@ -54,6 +58,10 @@ void ControleurJeuV1::jouerCarteSurBorne(CarteClan& carte, Borne& borne)
 }
 
 
+
+void ControleurJeuV1::deroulementPartie()
+{
+}
 
 void ControleurJeuV1::finPartie() {
 

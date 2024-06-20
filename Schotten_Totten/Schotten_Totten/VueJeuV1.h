@@ -11,7 +11,7 @@ public:
 	void setControleur(ControleurJeuV1* pControleur) { controleurV1 = pControleur; };
 	ControleurJeuV1* getControleur() { return controleurV1; }
 	/*!
-	* \brief affichage du tour du joueur 
+	* \brief affichage du tour du joueur en version normale
 	*/
 	void afficheTour(Joueur& joueurActuel) override;
 };
