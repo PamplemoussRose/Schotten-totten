@@ -2,7 +2,7 @@
 
 vector<unsigned int> ControleurHumain::jouerCarte( ControleurDemandeCarte& controleurDemandeCarte, Joueur& joueur, Joueur& autreJoueur)
 {
-	vector<unsigned int> infoApresEffet; // Ex : sur quel borne la carte est joué
+	vector<unsigned int> infoApresEffet; // Ex : sur quelle borne la carte est jouée
 	Carte* carte = controleurDemandeCarte.choixCarte(joueur,autreJoueur);
 	vector<unsigned int> lstChoix = controleurDemandeCarte.choixApplicationCarte(*carte);
 	try {
@@ -15,14 +15,14 @@ vector<unsigned int> ControleurHumain::jouerCarte( ControleurDemandeCarte& contr
 	return infoApresEffet;
 }
 
-void ControleurHumain::revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
+void ControleurHumain::revendiqueBorne(Borne& borneJouee,int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
 {
-	unsigned int numBorne;
-	cout << "Revendiquer quelle borne? (numero:1-9)" << endl; //CA C EST SURR QUELLE BORNE ON A JOU2 PRECEDEMMENT
-	cin >> numBorne;
+	unsigned int numBorne= borneJouee.getNumero();
+	//cout << "Revendiquer quelle borne? (numero:1-9)" << endl; //sur la borne jouée precedemment si possible
+	//cin >> numBorne;
 	Plateau* plateau = etatJeu.getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
-	if ((bornes[numBorne - 1])->revendicable()) {
+	if (borneJouee.revendicable()) {
 		string rep;
 		cout << " Revendiquer(1) ou piocher(2) ? " << endl;
 		cin >> rep;

@@ -19,7 +19,7 @@ public:
 	/*!
 	* revendique borne
 	*/
-	void revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)override;
+	void revendiqueBorne(Borne& borneJouee,int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)override;
 	/*!
 	* pioche  une carte tactique ou une carte clan
 	*/

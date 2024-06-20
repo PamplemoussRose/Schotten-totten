@@ -29,23 +29,21 @@ vector<unsigned int> ControleurIAAlea::jouerCarte(ControleurDemandeCarte& contro
 	return infoApresEffet;
 }
 
-void ControleurIAAlea::revendiqueBorne(int joueurAct, EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
+void ControleurIAAlea::revendiqueBorne(Borne& borneJouee,int joueurAct, EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes)
 {
+	int numBorne = borneJouee.getNumero();
 	Plateau* plateau = etatJeu.getPlateau();
 	vector<Borne*> bornes = plateau->getBornes();
-	//Verifie pour chaque borne si elle est revendicable
-	for (int numBorne = 0; numBorne < 9; numBorne++) {
-		if ((bornes[numBorne])->revendicable()) { //revendication
-			//si joueur 1
-			if (joueurAct == 1 && (controleurBornes[numBorne])->calculeRevendication(*bornes[numBorne]) == 1) {
-				bornes[numBorne]->setStatut(1);
-				cout << "Le joueur 1 revendique la borne" << endl;
-			}
-			//si joueur 2
-			if (joueurAct == 2 && (controleurBornes[numBorne])->calculeRevendication(*bornes[numBorne]) == 2) {
-				bornes[numBorne]->setStatut(-1);
-				cout << "Le joueur 2 revendique la borne" << endl;
-			}
+	if (borneJouee.revendicable()) { //revendication
+		//si joueur 1
+		if (joueurAct == 1 && (controleurBornes[numBorne])->calculeRevendication(*bornes[numBorne]) == 1) {
+			bornes[numBorne]->setStatut(1);
+			cout << "Le joueur 1 revendique la borne" << endl;
+		}
+		//si joueur 2
+		if (joueurAct == 2 && (controleurBornes[numBorne])->calculeRevendication(*bornes[numBorne]) == 2) {
+			bornes[numBorne]->setStatut(-1);
+			cout << "Le joueur 2 revendique la borne" << endl;
 		}
 	}
 }
