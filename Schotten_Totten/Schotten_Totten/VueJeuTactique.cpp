@@ -8,14 +8,14 @@ void VueJeuTactique::afficheTour(Joueur& joueurActuel)
 	if (controleurT->getEtatJeu()->getNumJoueurActuel() == 1) {
 		controleurT->getControPerso1()->jouerCarte(*getControleur()->getDemandeCarte(), joueurActuel, *controleurT->getEtatJeu()->getJoueur2());
 		controleurT->getControPerso1()->revendiqueBorne(getControleur()->getEtatJeu()->getNumJoueurActuel(), *controleurT->getEtatJeu(), controleurT->getBornes());
-		Carte* cartePiochee = controleurT->getControPerso1()->piocheT(*plateau->getPiocheClan(), *plateau->getPiocheTactique() ,*controleurT->getControPioche(), joueurActuel);
+		Carte* cartePiochee = controleurT->getControPerso1()->piocheT(*controleurT->getControPiocheClan(), *controleurT->getControPiocheTact(), joueurActuel);
 		afficheCarte(cartePiochee);
 	}
 	else {
 		controleurT->getControPerso2()->jouerCarte(*getControleur()->getDemandeCarte(), joueurActuel, *controleurT->getEtatJeu()->getJoueur1());
-		controleurT->getControPerso2()->revendiqueBorne(getControleur()->getJoueurActuel(), *controleurT->getEtatJeu(), controleurT->getBornes());
+		controleurT->getControPerso2()->revendiqueBorne(getControleur()->getEtatJeu()->getNumJoueurActuel(), *controleurT->getEtatJeu(), controleurT->getBornes());
 
-		Carte* cartePiochee = controleurT->getControPerso2()->piocheT(*plateau->getPiocheClan(), *controleurT->getControPioche(), joueurActuel);
+		Carte* cartePiochee = controleurT->getControPerso2()->piocheT(*controleurT->getControPiocheClan(), *controleurT->getControPiocheTact(), joueurActuel);
 		afficheCarte(cartePiochee);
 	}
 
