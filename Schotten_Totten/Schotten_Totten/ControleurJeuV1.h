@@ -56,11 +56,6 @@ public:
 	* \ le joueur actuel joue la carte sur cette borne
 	*/
 	void jouerCarteSurBorne(CarteClan& carte, Borne& borne);
-
-	/*!
-	* \deroulement de la partie
-	*/
-	void deroulementPartie();
 	/*!
 	* \ fin de la partie
 	*/

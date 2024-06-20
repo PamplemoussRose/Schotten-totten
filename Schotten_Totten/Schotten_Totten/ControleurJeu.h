@@ -42,10 +42,6 @@ public:
 	void revendiqueBorne(unsigned int numBorne);
 
 	/*!
-	* \methode virtuelle pour deroulement de la partie
-	*/
-	virtual void deroulementPartie()=0;
-	/*!
 	* \methode virtuelle pour la fin de la partie
 	*/
 	virtual void finPartie()=0;

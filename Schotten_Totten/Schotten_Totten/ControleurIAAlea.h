@@ -2,6 +2,9 @@
 #define GUARD_CONTROLEURIAALEA
 #include "ControleurPersonnage.h"
 #include <random>
+#include <vector>
+#include "Carte.h"
+#include "Joueur.h"
 using namespace std;
 
 class ControleurIAAlea : public ControleurPersonnage {
