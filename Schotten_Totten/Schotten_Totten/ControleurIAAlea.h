@@ -15,5 +15,9 @@ public:
 	* \ revendique la borne avec ce numero
 	*/
 	void revendiqueBorne(int joueurAct,EtatJeu& etatJeu, vector<ControleurBorne*> controleurBornes);
+	/*!
+	* \ le joueur pioche en version tactique
+	*/
+	Carte* piocheT(Pioche& pioche, ControleurPioche& controlPioche, Joueur& joueurActuel);
 };
 #endif

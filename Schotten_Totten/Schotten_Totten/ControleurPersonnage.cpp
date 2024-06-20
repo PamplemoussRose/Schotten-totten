@@ -1,6 +1,6 @@
 #include "ControleurPersonnage.h"
 
-Carte* ControleurPersonnage::pioche(Pioche& pioche,ControleurPioche& controlPioche, Joueur& joueurActuel)
+Carte* ControleurPersonnage::piocheV1(Pioche& pioche,ControleurPioche& controlPioche, Joueur& joueurActuel)
 {
 	if (pioche.getNbCartesRestantes() != 0) {
 		Carte* cartePiochee = controlPioche.piocher(pioche, joueurActuel); //le joueur pioche
@@ -9,5 +9,6 @@ Carte* ControleurPersonnage::pioche(Pioche& pioche,ControleurPioche& controlPioc
 	}
 	else {
 		cout << "Pioche vide" << endl;
+		return nullptr;
 	}
 }
