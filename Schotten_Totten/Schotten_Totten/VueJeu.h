@@ -23,6 +23,10 @@ public:
 	*/
 	void affiche();
 	/*!
+	* \brief affiche la fin de la partie
+	*/
+	void afficheFinPartie();
+	/*!
 	* \brief affiche le plateau
 	*/
 	void affichePlateau();

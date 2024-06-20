@@ -3,11 +3,22 @@ void VueJeu::affiche()
 {
 	cout << "DEBUT DU JEU" << endl;
 	bool partie = true;
-	while(partie){
+	while(controleur->getControleurVictoire()->estGagnant()==0){
 		controleur->setJoueurActuel(1);
 		afficheTour(*controleur->getEtatJeu()->getJoueur1());
 		controleur->setJoueurActuel(2);
 		afficheTour(*controleur->getEtatJeu()->getJoueur2());
+	}
+	afficheFinPartie();
+}
+
+void VueJeu::afficheFinPartie()
+{
+	if (controleur->getControleurVictoire()->estGagnant() == 1) {
+		cout << "Joueur 1 a gagné !" << endl;
+	}
+	else {
+		cout << "Joueur 2 a gagné !" << endl;
 	}
 }
 

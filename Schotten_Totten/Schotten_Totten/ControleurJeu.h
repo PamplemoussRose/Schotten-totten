@@ -6,6 +6,7 @@ using namespace std;
 #include "Controleur.h"
 #include "EtatJeu.h"
 #include "VueJeu.h"
+#include"ControleurVictoire.h"
 
 class Vue;
 class VueJeu;
@@ -16,6 +17,7 @@ private:
 	VueJeu* vueJeu;
 	EtatJeu* etatJeu;
 	int joueurAct; //1 ou 2
+	ControleurVictoire* controleurVictoire;
 protected:
 	ControleurJeu(VueJeu* vue);
 public:
@@ -25,6 +27,7 @@ public:
 
 	int getJoueurActuel() { return joueurAct; };
 	void setJoueurActuel(int newJoueur) { joueurAct= newJoueur; };
+	ControleurVictoire* getControleurVictoire() { return controleurVictoire; };
 	/*!
 	* \retourne etatJeu
 	*/
